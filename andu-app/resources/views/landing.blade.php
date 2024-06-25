@@ -28,11 +28,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: red;
+            position: absolute;
+            top:0;
+            
         }
 
         header nav .logo {
-            width: 50px;
-            height: 50px;
+            width: 215px;
+            height: 62px;
         }
 
         header nav ul {
