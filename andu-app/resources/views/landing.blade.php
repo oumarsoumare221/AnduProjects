@@ -47,7 +47,7 @@
         }
 
         header nav .btn-login {
-            background-color: #007bff;
+            background-color: #419488;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -213,7 +213,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="{{ asset('images/learning-image.png') }}" alt="Apprentissage en ligne">
+                <img src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
             </div>
         </div>
     </header>
