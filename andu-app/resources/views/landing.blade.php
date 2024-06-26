@@ -132,7 +132,22 @@
             height: 355.09px;
             left: 82.5%;
             top: 38%;
-        }
+
+            animation: zigzack 3s linear infinite alternate-reverse;
+            }
+
+            @keyframes zigzack {
+            0% {
+                left: 82.5%;
+                top: 38%;
+            }
+
+            100% {
+                left: 85.5%;
+                top: 41%;
+            }
+            }
+                    
 
         .heroText h1 {
             /* Favoriser l'apprentissage, n'importe quand, n’importe où ! */
@@ -176,7 +191,7 @@
 
         .send-email {
             position: relative;
-            width: 77%;
+            width: 65%;
             height: 79px;
             left: 0;
             top: 20%;
@@ -190,12 +205,12 @@
                 /* Veuillez entrer votre adresse e-mail pour vous inscrire... */
 
             position: relative;
-            height: 60%;
+            height: 65%;
             width: 80%;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 29px;
             left: 2%;
             /* identical to box height */
@@ -235,7 +250,7 @@
             position: absolute;
             width: 60%;
             height: 15%;
-            left: 80%;
+            left: 70%;
             top: 620px;
 
         }
@@ -282,12 +297,64 @@
         }
 
 
+        .aboutTitle {
+            /* Dans les coulisees de ANDU */
+
+        top: 1030px;
+        position: relative;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        color: #000000;
+        height: 1200px;
+        
+        .histoire {
+            /* Notre Histoire */
+            position: absolute;
+            left: 5%;
+            top:40%;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+        }
 
 
+        
 
+        }
 
+        .aboutParagraph {
+        position: relative;
+        width: 80%;
+        text-align: center;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+        margin: auto;
 
+        color: #000000;
+        top:55px;
 
+        }
+        
+        /* “ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l’expérience d’apprentissage pour tous les acteurs impliqués. */
+        
+    
+       
 
 
 
@@ -308,7 +375,7 @@
             </ul>
         </nav>
     </header>
-    <a href="#login" class="btn btn-login"><div class="button-text-nav">Se Connecter</div></a>
+    <a href="#login" class="btn btn-login"><div class="button-text-nav">Prenez rendez-vous</div></a>
     <div class="hero">
         <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
         <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
@@ -359,10 +426,21 @@
                 </svg>
                 </button>
         </div>
+       
+       
+       
+       
         <div class="buttonContainer"><button class="DemoButton">Voir un Demo</button>
-        <button class="RendezVousButton">Prenez rendez-vous</button></div>
+        </div>
     </div>
     </div>
+    <div class="aboutTitle">Dans les coulisses de ANDU,
+        <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
+        <div class="histoire">
+            Notre Histoire
+        </div>
+    </div>
+ 
 
     <!-- Autres sections comme Avantages, Études de cas, Tarifs, FAQ, etc. -->
 
