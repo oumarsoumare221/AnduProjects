@@ -1,175 +1,189 @@
-/* CSS de base */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
+        /* CSS de base */
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
+        header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-header nav .logo {
-    height: 50px;
-}
+        header nav .logo {
+            width: 50px;
+            height: 50px;
+        }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
 
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
-header nav .btn-login {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-}
+        header nav .btn-login {
+            background-color: #419488;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    background: linear-gradient(135deg, #6d83f2, #67d1fb);
-    color: white;
-}
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: linear-gradient(135deg, #419488, white);
+            color: white;
+        }
 
-.hero-content {
-    max-width: 50%;
-}
+        .hero-content {
+            max-width: 50%;
+        }
 
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
+        .hero-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
 
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
 
-.cta-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-.cta-buttons .btn {
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    color: white;
-}
+        .cta-buttons .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+        }
 
-.btn-primary {
-    background-color: #007bff;
-}
+        .btn-primary {
+            background-color: #007bff;
+        }
 
-.btn-secondary {
-    background-color: #28a745;
-}
+        .btn-secondary {
+            background-color: #28a745;
+        }
 
-.newsletter-signup {
-    display: flex;
-    align-items: center;
-}
+        .newsletter-signup {
+            display: flex;
+            align-items: center;
+        }
 
-.newsletter-signup input[type="email"] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-    width: 300px;
-}
+        .newsletter-signup input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            width: 300px;
+        }
 
-.newsletter-signup button {
-    padding: 10px;
-    border: none;
-    background-color: #333;
-    color: white;
-    border-radius: 0 5px 5px 0;
-}
+        .newsletter-signup button {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 0 5px 5px 0;
+        }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-}
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
 
-#features {
-    padding: 50px;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: space-around;
-}
+        #features {
+            padding: 50px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-around;
+        }
 
-.feature {
-    text-align: center;
-    max-width: 30%;
-}
+        .feature {
+            text-align: center;
+            max-width: 30%;
+        }
 
-.feature h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+        .feature h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-.feature p {
-    font-size: 1em;
-    margin-bottom: 20px;
-}
+        .feature p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+        #posters {
+            padding: 50px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
 
-footer form {
-    margin-bottom: 20px;
-}
+        .poster img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-footer form input,
-footer form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-footer form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
+        footer form {
+            margin-bottom: 20px;
+        }
 
-footer p,
-footer a {
-    color: white;
-}
+        footer form input,
+        footer form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-footer a {
-    text-decoration: none;
-    margin: 0 10px;
-}
+        footer form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer p,
+        footer a {
+            color: white;
+        }
+
+        footer a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+     */

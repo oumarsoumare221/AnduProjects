@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANDU - Landing Page</title>
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-2Bb8e8lP5q4gAnj/FS9bR3I8tPxupq3cM8lXhO7R49ORyO4p2MnHlZ2j6Qk0kFJ2+ILPmGv6r8XfDbXESlklzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* CSS de base */
         body {
@@ -40,10 +43,20 @@
             padding: 0;
         }
 
+        header nav ul li {
+            position: relative;
+        }
+
         header nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul li a .icon {
+            margin-right: 5px;
         }
 
         header nav .btn-login {
@@ -146,6 +159,100 @@
             margin-bottom: 20px;
         }
 
+        #timeline {
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+
+        #timeline h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .timeline-item {
+            text-align: center;
+            max-width: 20%;
+        }
+
+        .timeline-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #reviews {
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        #reviews h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            text-align: center;
+            max-width: 30%;
+            margin: 0 auto;
+        }
+
+        .review p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .review .rating {
+            color: #ffc107;
+        }
+
+        #pricing {
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+
+        #pricing h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .pricing-plan {
+            text-align: center;
+            max-width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .pricing-plan h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .pricing-plan p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .pricing-plan .price {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -191,32 +298,33 @@
         <nav>
             <img src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" class="logo">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Qui Sommes-Nous</a></li>
-                <li><a href="#products">Nos Produits</a></li>
-                <li><a href="#cases">Études de cas</a></li>
-                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#home"><i class="fas fa-home icon"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle icon"></i> Qui Sommes-Nous</a></li>
+                <li><a href="#products"><i class="fas fa-box icon"></i> Nos Produits</a></li>
+                <li><a href="#cases"><i class="fas fa-folder-open icon"></i> Études de cas</a></li>
+                <li><a href="#pricing"><i class="fas fa-dollar-sign icon"></i> Tarifs</a></li>
             </ul>
             <a href="#login" class="btn btn-login">Se Connecter</a>
         </nav>
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Favoriser l'apprentissage, n'importe quand, n’importe où !</h1>
-                <p>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</p>
-                <div class="cta-buttons">
-                    <a href="#demo" class="btn btn-primary">Voir une démo</a>
-                    <a href="#appointment" class="btn btn-secondary">Prenez rendez-vous</a>
-                </div>
-                <div class="newsletter-signup">
-                    <input type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
-                    <button type="submit">→</button>
-                </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Favoriser l'apprentissage, n'importe quand, n’importe où !</h1>
+            <p>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</p>
+            <div class="cta-buttons">
+                <a href="#demo" class="btn btn-primary">Voir une démo</a>
+                <a href="#appointment" class="btn btn-secondary">Prenez rendez-vous</a>
             </div>
-            <div class="hero-image">
-                <img src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
+            <div class="newsletter-signup">
+                <input type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
+                <button type="submit">→</button>
             </div>
         </div>
-    </header>
+        <div class="hero-image">
+            <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
+        </div>
+    </div>
 
     <section id="features">
         <div class="feature">
@@ -236,7 +344,89 @@
         </div>
     </section>
 
-    <!-- Autres sections comme Avantages, Études de cas, Tarifs, FAQ, etc. -->
+    <section id="timeline">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <img src="{{ asset('../timeline1.jpg') }}" alt="Timeline Image 1">
+                <p>Phase 1: Recherche</p>
+            </div>
+            <div class="timeline-item">
+                <img src="{{ asset('../timeline2.jpg') }}" alt="Timeline Image 2">
+                <p>Phase 2: Développement</p>
+            </div>
+            <div class="timeline-item">
+                <img src="{{ asset('../timeline3.jpg') }}" alt="Timeline Image 3">
+                <p>Phase 3: Test</p>
+            </div>
+            <div class="timeline-item">
+                <img src="{{ asset('../timeline4.jpg') }}" alt="Timeline Image 4">
+                <p>Phase 4: Lancement</p>
+            </div>
+            <div class="timeline-item">
+                <img src="{{ asset('../timeline5.jpg') }}" alt="Timeline Image 5">
+                <p>Phase 5: Support</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>Ce que disent nos utilisateurs</h2>
+        <div class="review">
+            <p>"Une plateforme incroyable qui a révolutionné notre manière d'apprendre!"</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+        <div class="review">
+            <p>"Les outils et les fonctionnalités sont très intuitifs et faciles à utiliser."</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="review">
+            <p>"Un excellent support client, toujours prêt à aider."</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Nos Tarifs</h2>
+        <div class="pricing">
+            <div class="pricing-plan">
+                <h3>Plan Basique</h3>
+                <p>Idéal pour les étudiants individuels.</p>
+                <div class="price">5€/mois</div>
+                <p>Accès à toutes les fonctionnalités de base.</p>
+            </div>
+            <div class="pricing-plan">
+                <h3>Plan Pro</h3>
+                <p>Pour les groupes et les petites équipes.</p>
+                <div class="price">15€/mois</div>
+                <p>Fonctionnalités avancées et support prioritaire.</p>
+            </div>
+            <div class="pricing-plan">
+                <h3>Plan Entreprise</h3>
+                <p>Pour les grandes organisations.</p>
+                <div class="price">100€/mois</div>
+                <p>Solutions personnalisées et support dédié.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <form action="{{ route('contact.store') }}" method="POST">
@@ -254,9 +444,27 @@
             <button type="submit">S'abonner</button>
         </form>
         <p>Contactez-nous : +221 77 497 52 39 | Mady SANKHON</p>
-        <a href="https://www.facebook.com/anduelearning">Facebook</a>
+        <a href="https://www.facebook.com/anduelearning"><i class="fab fa-facebook-f"></i> Facebook</a>
         <!-- Autres liens vers les réseaux sociaux -->
     </footer>
+
+    <script>
+        // JavaScript for changing the image every second
+        const images = [
+            "{{ asset('../apprendImage.jpg') }}",
+            "{{ asset('../image2.jpg') }}",
+        ];
+
+        let currentIndex = 0;
+        const heroImg = document.getElementById('heroImg');
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            heroImg.src = images[currentIndex];
+        }
+
+        setInterval(changeImage, 1000); // Change image every 1000 milliseconds (1 second)
+    </script>
 </body>
 
 </html>
