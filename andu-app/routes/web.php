@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::get('/', [LandingPageController::class, 'index'])->name('landing');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+//
+Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
