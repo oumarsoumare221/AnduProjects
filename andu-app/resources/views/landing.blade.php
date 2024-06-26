@@ -298,7 +298,7 @@
         <nav>
             <img src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" class="logo">
             <ul>
-                <li><a href="#home"><i class="fas fa-home icon"></i> Home</a></li>
+                <li><a href="/"><i class="fas fa-home icon"></i> Accueil</a></li>
                 <li><a href="#about"><i class="fas fa-info-circle icon"></i> Qui Sommes-Nous</a></li>
                 <li><a href="#products"><i class="fas fa-box icon"></i> Nos Produits</a></li>
                 <li><a href="#cases"><i class="fas fa-folder-open icon"></i> Études de cas</a></li>
@@ -318,7 +318,7 @@
             </div>
             <div class="newsletter-signup">
                 <input type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
-                <button type="submit">→</button>
+                <button type="submit">S'abonner</button>
             </div>
         </div>
         <div class="hero-image">
@@ -328,79 +328,54 @@
 
     <section id="features">
         <div class="feature">
-            <i class="icon personalization"></i>
-            <h2>Apprentissage personnalisé</h2>
-            <p>Des exercices et quiz basés sur l'IA pour une acquisition ciblée et une progression efficace.</p>
+            <h2>Personnalisation</h2>
+            <p>Offrez une expérience d'apprentissage personnalisée avec des parcours d'apprentissage adaptés aux besoins individuels.</p>
         </div>
         <div class="feature">
-            <i class="icon evaluation"></i>
-            <h2>Évaluation et feedback</h2>
-            <p>Correction automatique, feedback détaillé, forum de discussion et des contenus de révision pour combler les lacunes.</p>
+            <h2>Évaluation et Feedback</h2>
+            <p>Permettez aux enseignants de suivre les progrès des étudiants et de fournir un feedback instantané pour améliorer l'apprentissage.</p>
         </div>
         <div class="feature">
-            <i class="icon communication"></i>
-            <h2>Suivi et communication</h2>
-            <p>Partage des performances avec les admins, professeurs, l'établissement et les parents pour un suivi transparent.</p>
+            <h2>Communication Facilitée</h2>
+            <p>Facilitez la communication entre étudiants et enseignants grâce à des outils intégrés de messagerie et de discussion en ligne.</p>
         </div>
     </section>
 
     <section id="timeline">
-        <h2>Timeline</h2>
+        <h2>Notre Parcours</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <img src="{{ asset('../timeline1.jpg') }}" alt="Timeline Image 1">
-                <p>Phase 1: Recherche</p>
+                <img src="{{ asset('../timeline1.jpg') }}" alt="Timeline Item">
+                <p>2010 - Fondation d'ANDU</p>
             </div>
             <div class="timeline-item">
-                <img src="{{ asset('../timeline2.jpg') }}" alt="Timeline Image 2">
-                <p>Phase 2: Développement</p>
+                <img src="{{ asset('../timeline2.jpg') }}" alt="Timeline Item">
+                <p>2015 - Lancement de la première version de notre plateforme</p>
             </div>
             <div class="timeline-item">
-                <img src="{{ asset('../timeline3.jpg') }}" alt="Timeline Image 3">
-                <p>Phase 3: Test</p>
+                <img src="{{ asset('../timeline3.jpg') }}" alt="Timeline Item">
+                <p>2020 - Expansion internationale</p>
             </div>
             <div class="timeline-item">
-                <img src="{{ asset('../timeline4.jpg') }}" alt="Timeline Image 4">
-                <p>Phase 4: Lancement</p>
-            </div>
-            <div class="timeline-item">
-                <img src="{{ asset('../timeline5.jpg') }}" alt="Timeline Image 5">
-                <p>Phase 5: Support</p>
+                <img src="{{ asset('../timeline4.jpg') }}" alt="Timeline Item">
+                <p>2023 - Intégration de nouvelles fonctionnalités</p>
             </div>
         </div>
     </section>
 
     <section id="reviews">
-        <h2>Ce que disent nos utilisateurs</h2>
+        <h2>Témoignages</h2>
         <div class="review">
-            <p>"Une plateforme incroyable qui a révolutionné notre manière d'apprendre!"</p>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
+            <p>"ANDU a transformé notre approche de l'éducation. Les fonctionnalités avancées nous permettent de fournir une expérience d'apprentissage enrichissante."</p>
+            <p class="rating">★★★★★</p>
         </div>
         <div class="review">
-            <p>"Les outils et les fonctionnalités sont très intuitifs et faciles à utiliser."</p>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
+            <p>"Nous sommes très satisfaits des résultats obtenus grâce à ANDU. La plateforme est intuitive et facile à utiliser pour nos enseignants et nos étudiants."</p>
+            <p class="rating">★★★★☆</p>
         </div>
         <div class="review">
-            <p>"Un excellent support client, toujours prêt à aider."</p>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
+            <p>"Excellent service client et support technique rapide. Nous recommandons vivement ANDU à toute institution éducative."</p>
+            <p class="rating">★★★★★</p>
         </div>
     </section>
 
@@ -408,46 +383,43 @@
         <h2>Nos Tarifs</h2>
         <div class="pricing">
             <div class="pricing-plan">
-                <h3>Plan Basique</h3>
-                <p>Idéal pour les étudiants individuels.</p>
-                <div class="price">5€/mois</div>
-                <p>Accès à toutes les fonctionnalités de base.</p>
+                <h3>Plan de Base</h3>
+                <p>Accès limité aux fonctionnalités principales</p>
+                <p class="price">19,99€/mois</p>
+                <a href="#signup" class="btn btn-primary">S'inscrire</a>
             </div>
             <div class="pricing-plan">
-                <h3>Plan Pro</h3>
-                <p>Pour les groupes et les petites équipes.</p>
-                <div class="price">15€/mois</div>
-                <p>Fonctionnalités avancées et support prioritaire.</p>
+                <h3>Plan Premium</h3>
+                <p>Accès complet à toutes les fonctionnalités</p>
+                <p class="price">39,99€/mois</p>
+                <a href="#signup" class="btn btn-primary">S'inscrire</a>
             </div>
             <div class="pricing-plan">
                 <h3>Plan Entreprise</h3>
-                <p>Pour les grandes organisations.</p>
-                <div class="price">100€/mois</div>
-                <p>Solutions personnalisées et support dédié.</p>
+                <p>Personnalisation avancée et support dédié</p>
+                <p class="price">Contactez-nous</p>
+                <a href="#contact" class="btn btn-primary">Nous Contacter</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <form action="{{ route('contact.store') }}" method="POST">
-            @csrf
-            <input type="text" name="name" placeholder="Prénom et Nom" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Numéro de téléphone">
-            <input type="text" name="subject" placeholder="Objet de contact" required>
-            <textarea name="message" placeholder="Message" required></textarea>
+        <form action="#">
+            <input type="email" placeholder="Votre adresse e-mail" required>
+            <textarea placeholder="Votre message" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
-        <form action="{{ route('newsletter.subscribe') }}" method="POST">
-            @csrf
-            <input type="email" name="newsletter_email" placeholder="Votre email pour la newsletter" required>
-            <button type="submit">S'abonner</button>
-        </form>
-        <p>Contactez-nous : +221 77 497 52 39 | Mady SANKHON</p>
-        <a href="https://www.facebook.com/anduelearning"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <!-- Autres liens vers les réseaux sociaux -->
+        <p>&copy; 2024 ANDU - Tous droits réservés</p>
+        <div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 
+    <!-- FontAwesome Script -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-SPHpBj+7Lkl4N9BlPq91kXZ9H0rGQHHnH2WrS3Bf2m2GRh2nbz8Sg6GF0YIjXsLe5c/GlGHr1FrR3U6N4z4h6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script>
         // JavaScript for changing the image every second
         const images = [
