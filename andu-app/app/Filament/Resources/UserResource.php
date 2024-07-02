@@ -3,16 +3,14 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
-use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
-use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Password;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -26,20 +24,27 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-            //
-            TextInput::make('name')
-                ->label('Name')
-                ->required(),
+                TextInput::make('name')
+                    ->label('Name')
+                    ->required(),
 
-            TextInput::make('email')
-            ->label('Email')
-            ->email()
-            ->required(),
+                TextInput::make('email')
+                    ->label('Email')
+                    ->email()
+                    ->required(),
 
-            // Password::make('password')
-            // ->label('Password')
-            // ->required(),
+                TextInput::make('password')
+                    ->label('Password')
+                    ->password()
+                    ->required()
+                    ->minLength(8)
+                    ->maxLength(255),
 
+                TextInput::make('password_confirmation')
+                    ->label('Confirm Password')
+                    ->password()
+                    ->required()
+                    ->same('password')
             ]);
     }
 
@@ -47,10 +52,18 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')
+                    ->label('Name')
+                    ->sortable()
+                    ->searchable(),
+
+                TextColumn::make('email')
+                    ->label('Email')
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
-                //
+                // Add filters if needed
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -59,14 +72,14 @@ class UserResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
-            //
+            // Add relations if needed
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -74,5 +87,5 @@ class UserResource extends Resource
             'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
-    }    
+    }
 }
