@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,5 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 //
 Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
+//routes product
+Route::resource('products', ProductController::class);
