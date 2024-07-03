@@ -295,6 +295,9 @@ color: #000000;
     box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 
+
+    /**/
+  
     input {
         /* Veuillez entrer votre adresse e-mail pour vous inscrire... */
 
@@ -315,9 +318,12 @@ color: #000000;
     background-color: transparent;
     border: none;
     text-decoration: none;
+    padding: 10px;
 
 
     }
+
+
 
     input::placeholder{
         color: #D9D9D9;

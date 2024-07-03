@@ -18,7 +18,8 @@ class BufferTimelineResource extends Resource
 {
     protected static ?string $model = BufferTimeline::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    // Changez l'icône ici
+    protected static ?string $navigationIcon = 'heroicon-o-calendar';
 
     public static function form(Form $form): Form
     {
@@ -29,10 +30,10 @@ class BufferTimelineResource extends Resource
                     ->numeric(),
                 // HasManyRepeater::make('histories')
                 //     ->relationship('histories')
-                    // ->columns([
-                    //     TextInput::make('month')->required()->hidden(),
-                    //     TextInput::make('event')->required()->hidden(),
-                    // ]),
+                // ->columns([
+                //     TextInput::make('month')->required()->hidden(),
+                //     TextInput::make('event')->required()->hidden(),
+                // ]),
             ]);
     }
 
