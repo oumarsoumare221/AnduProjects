@@ -987,11 +987,12 @@ svg {
 
         .ProduitContainer {
             display: block;
-            height: 1465px;
+            height: 1100px;
             width: 100%;
             position: relative;
-            top: 50%; 
-            padding-bottom: 800px;
+            top: 30%; 
+            padding-bottom: 30%;
+            background-color: #124366;
 
         }
        
@@ -1001,7 +1002,6 @@ svg {
 
         position: relative;
         text-align: center;
-        top: 50px;
 
         font-family: 'Inter';
         font-style: normal;
@@ -1113,7 +1113,6 @@ svg {
     position: absolute;
     left:2%;
     width: 75%;
-    bottom: 60%;
     height: 50%;
 
 
@@ -1142,10 +1141,10 @@ svg {
     }
 
     .ProduitResContainerTwo {
-        top: 15%;
         position: relative;
         width: 90%;
-        height: 30%;
+        height: 40%;
+        top: 60%;
         display: flex; 
         flex-direction: row-reverse;
         flex-wrap: wrap;
@@ -1240,6 +1239,7 @@ svg {
         position: relative;
         width: 90%;
         margin: auto;
+        padding-top: 20%;
 
     }
 
@@ -1255,13 +1255,12 @@ svg {
         line-height: 77px;
 
         color: #000000;
-        padding-bottom: 8% ;
     }
 
     .ImgCompany {
         /* Screenshot 2024-06-25 at 10.37.17 1 */
 
-    position:absolute;
+    position:relative;
     width: 317px;
     height: 59px;
     bottom: 92%;
@@ -1273,7 +1272,7 @@ svg {
         h4 {
             /* À propos de l'application: */
 
-            position: absolute;
+            position: relative;
             left: 5%;
             top: 7.5%;
 
@@ -1290,7 +1289,7 @@ svg {
 
         p {
 
-        position: absolute;
+        position: relative;
         left:5%;
         top: 11%;
         margin: auto;
@@ -1316,7 +1315,7 @@ svg {
         height: 23%;
         width: 74%;
         position: relative;
-        top: 15%;
+        padding:0;
         column-gap: 30px;
         row-gap: 20px; 
 
@@ -1618,7 +1617,6 @@ svg {
 
     .BakeliSection {
        position: relative;
-       top: 650px;
        height: inherit;
 
         

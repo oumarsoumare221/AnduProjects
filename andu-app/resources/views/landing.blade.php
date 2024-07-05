@@ -41,17 +41,11 @@
     </div>
     <div class="hero">
         <div class="ImagesContainer">
-<<<<<<< HEAD
-            <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
-            <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
-        </div>
-=======
         <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
         <img id="heroImg2" src="{{ asset('../apprendImage copy.jpg') }}" alt="Apprentissage en ligne">
         
         <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
     </div>
->>>>>>> NewCss
 
         <div class="Circle"><svg width="301" height="301" viewBox="0 0 301 301" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M119.821 297.582C118.801 297.367 117.781 297.141 116.763 296.904L24.9823 232.639C24.4117 231.763 23.8508 230.882 23.2997 229.997L119.821 297.582Z" fill="black" />
@@ -91,7 +85,7 @@
                 <h3>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</h3>
                 @endif
             </div>
-        </div>
+       
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const successMessage = "{{ session('success') }}";
@@ -115,6 +109,7 @@
             });
         </script>
         <div class="hero-button-container">
+            
             <form action="{{ route('subscribe') }}" method="POST" class="send-email">
                 @csrf
                 <input id="email-input" name="email" type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
@@ -124,8 +119,10 @@
                     </svg>
                 </button>
             </form>
-        </div>
-        <button class="DemoButton">Voir un Demo</button>
+            <button class="DemoButton">Voir un Demo</button>
+    </div>
+</div>
+       
     </div>
     </div>
     </div>
@@ -145,115 +142,6 @@
     <div class="histoire">
         Notre Histoire
     </div>
-<<<<<<< HEAD
-    <div class="historyContainer">
-        <div class="HistoryLine">
-            <div class=" historyPoints">
-                <h5>201X</h5>
-                <div class="mois">
-                    <div class="moisLayer">
-                        <h5>November</h5>
-                        <p>Buffer was created as part of a Startup Sprint</p>
-                        <a href="">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div style="margin-left: 19.6%;" class=" historyPoints">
-                <h5>2018</h5>
-                <div class="mois">
-                    <div style="background-color: #FFE2D5;" class="moisLayer">
-                        <h5>August</h5>
-                        <p>Buffer was accepted into
-                            AngelPad startup
-                            accelerator, with initial
-                            $120,000 investment <br> </p>
-                        <div class="moisLayer" style="top:175px;
-                            background-color: #E7F3D3;">
-                            <div class="dotted"></div>
-                            <h5>December</h5>
-                            <p>Buffer raised a small
-                                seed round of $330,000,
-                                to bring total funding to
-                                $450,000
-                                <a style="top:105px;" href="">Read more</a>
-                            </p>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div style="margin-left: 39.2%;" class=" historyPoints">
-                <h5>2019</h5>
-                <div class="mois">
-                    <div style="background-color: #CCF4F5;" class="moisLayer">
-                        <h5>January</h5>
-                        <p>Our founders had visa
-                            troubles and started
-                            traveling while growing
-                            Buffer, the team grew to
-                            7 people by August <br> </p>
-                        <a style="top:160px;" href="">Read more</a>
-
-
-                    </div>
-                </div>
-            </div>
-            <div style="margin-left: 57.8%;" class=" historyPoints">
-                <h5>2020</h5>
-                <div class="mois">
-                    <div style="background-color: #FFE2D5;" class="moisLayer">
-                        <h5>August</h5>
-                        <p>Buffer`s first all-company
-                            retreat took place in
-                            Lake Tahoe
-                            <a href="" style="top:80px;">Read more</a>
-                        </p>
-                        <div class="moisLayer" style="top:180px;
-                            background-color: #FEF8D4;">
-                            <div class="dotted"></div>
-                            <h5>Septembre</h5>
-                            <p>We reached 1 Million
-                                users
-                                <a style="top:55px;" href="">Read more</a>
-                            </p>
-                            <div style="top:108px" class="dotted"></div>
-
-                        </div>
-                        <div class="moisLayer" style="top:325px;
-                            background-color: #E7F3D3;">
-                            <h5>Decembre</h5>
-                            <a href="">Read more</a>
-                            <p>We published the whole
-                                companies salaries
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div style="margin-left: 75.4%;" class=" historyPoints">
-                <h5>2022</h5>
-                <div class="mois">
-                    <div class="moisLayer" style="background-color: #E7F3D3;">
-                        <h5>December</h5>
-                        <p>Buffer was created as part of a Startup Sprint</p>
-                        <a href="">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div style="margin-left: 95%;" class=" historyPoints">
-                <h5>2024</h5>
-                <div class="mois">
-                    <div class="moisLayer" style="background-color: #E7F3D3;">
-                        <h5>December</h5>
-                        <p>We acquired Respondly</p>
-                        <a href="">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-=======
     <div class="aboutTitle" id="about">Dans les coulisses de ANDU,
         <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
         <div class="histoire">
@@ -479,7 +367,6 @@
 </div>
 
 
->>>>>>> NewCss
     </div>
     </div>
 
@@ -621,45 +508,6 @@
         <h4>
             Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus
         </h4>
-<<<<<<< HEAD
-        <div class="TarifAdvantagesContainer">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Lorem ipsum dolor
-        </div>
-        <div class="TarifAdvantagesContainer">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Lorem ipsum dolor
-        </div>
-        <div class="TarifAdvantagesContainer">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Lorem ipsum dolor
-        </div>
-
-        <div class="TarifAdvantagesContainerR">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Lorem ipsum dolor
-        </div>
-        <div class="TarifAdvantagesContainerR">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Lorem ipsum dolor
-        </div>
-        <div class="TarifAdvantagesContainerR">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Lorem ipsum dolor
-        </div>
-=======
         <div class="TarifAdvantage">
 
      
@@ -708,7 +556,6 @@
    
     </div>
     </div>
->>>>>>> NewCss
         <div class="prixOption">
             <div class="OptionUn">
                 <h3>
