@@ -106,7 +106,7 @@
                 }
             });
         </script>
-        <div class="send-email-wrapper">
+        <div class="hero-button-container">
             <form action="{{ route('subscribe') }}" method="POST" class="send-email">
                 @csrf
                 <input id="email-input" name="email" type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
