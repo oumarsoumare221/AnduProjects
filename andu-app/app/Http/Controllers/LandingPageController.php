@@ -17,12 +17,14 @@ class LandingPageController extends Controller
             'dynamicContents' => $dynamicContents,
         ]);
     }
-
-    // Nouvelle méthode pour récupérer AboutUs
     public function aboutUs()
     {
         $about = AboutUs::first(); // Récupère le premier enregistrement de la table AboutUs
 
+        // Ajoutez ceci pour déboguer
+        dd($about);
+
         return view('landing', compact('about'));
     }
+
 }

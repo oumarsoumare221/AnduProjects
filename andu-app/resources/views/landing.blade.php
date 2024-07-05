@@ -124,16 +124,19 @@
     </div>
     </div>
 
+    <!-- landing.blade.php -->
     @if(isset($about))
-    <div class="aboutTitle" id="about">
-        <h2>Dans les coulisses de ANDU</h2>
-        <div class="aboutParagraph">
-            {{ $about->content }}
+        <div class="aboutTitle" id="about">
+            <h2>Dans les coulisses de ANDU</h2>
+            <div class="aboutParagraph">
+                {{ $about->content }}
+            </div>
         </div>
-    </div>
     @else
-    <p>Aucun contenu disponible pour le moment.</p>
+        <p>Aucun contenu disponible pour le moment.</p>
     @endif
+
+
     <div class="histoire">
         Notre Histoire
     </div>
