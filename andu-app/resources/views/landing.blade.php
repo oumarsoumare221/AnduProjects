@@ -41,9 +41,17 @@
     </div>
     <div class="hero">
         <div class="ImagesContainer">
+<<<<<<< HEAD
             <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
             <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
         </div>
+=======
+        <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
+        <img id="heroImg2" src="{{ asset('../apprendImage copy.jpg') }}" alt="Apprentissage en ligne">
+        
+        <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
+    </div>
+>>>>>>> NewCss
 
         <div class="Circle"><svg width="301" height="301" viewBox="0 0 301 301" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M119.821 297.582C118.801 297.367 117.781 297.141 116.763 296.904L24.9823 232.639C24.4117 231.763 23.8508 230.882 23.2997 229.997L119.821 297.582Z" fill="black" />
@@ -137,6 +145,7 @@
     <div class="histoire">
         Notre Histoire
     </div>
+<<<<<<< HEAD
     <div class="historyContainer">
         <div class="HistoryLine">
             <div class=" historyPoints">
@@ -244,6 +253,233 @@
                 </div>
             </div>
         </div>
+=======
+    <div class="aboutTitle" id="about">Dans les coulisses de ANDU,
+        <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
+        <div class="histoire">
+            Notre Histoire
+        </div>
+        
+   <div class="historyContainer">
+    <div class="HistoryLine">
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints" style="background-color: transparent;"></div>
+    </div>
+    <div class="spaceBetween"></div>
+    <table class="HistoryTable">
+        <thead>
+            <th class="mois" scope="col"> <p>November</p></th>
+            <th class="mois" scope="col"><p>August</p></th>
+            <th class="mois" scope="col"><p>January</p></th>
+            <th class="mois" scope="col"><p>August</p></th>
+            <th class="mois"  scope="col"><p>December</p></th>
+            <th class="mois" scope="col"><p>December</p></th>
+        </thead>
+        <tbody>
+            <tr class="TableInfo">
+                <th scope="row">
+                    Buffer was created as
+                    part of a Startup Sprint <br>
+
+                <a href="">Read more</a></th>
+
+                <td>
+                    Buffer was accepted into
+                    AngelPad startup
+                    accelerator, with initial
+                    $120,000 investment <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    Our founders had visa
+                    troubles and started
+                    traveling while growing
+                    Buffer, the team grew to
+                    7 people by August  <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    Buffer's first all-company
+                    retreat took place in
+                    Lake Tahoe  <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    We raised $3.5M in
+                    Series A funding  <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    We acquired Respondly  <br>
+                    <a href="">Read more</a>
+                </td>
+              </tr>
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td class="mois"><p>December</p></td>
+                <td></td>
+                <td class="mois"><p>December</p></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td >Buffer raised a small
+                    seed round of $330,000,
+                    to bring total funding to
+                    $450,000 <br>
+                <a href="">Read more</a>
+            </td>
+                <td></td>
+                <td>
+                    We reached 1 Million
+                    users <br>
+                    <a href="">Read more</a>
+                </td>
+              </tr>
+
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td class="mois"><p>December</p></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td>
+                    We published the whole companies salaries
+                    <br> 
+                    <a href="">Read more</a>
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+
+        </tbody>
+    </table>
+
+    <div class="rotatedtable" role="region" tabindex="0">
+        <table>
+            <thead>
+                <tr class="TableInfo">
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableInfo upper">
+                    <td class="mois"><p>November</p></td>
+                </tr>
+                <tr class="TableInfo longer">
+                    <td>  Buffer was created as
+                        part of a Startup Sprint <br>
+                    <a href="">Read more</a></td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo upper">
+                    <td class="mois"><p>August</p></td>
+                </tr>
+                <tr class="TableInfo longer">
+                    <td>
+                        Buffer was accepted into
+                        AngelPad startup
+                        accelerator, with initial
+                        $120,000 investment <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo up">
+                    <td class="mois"><p>January</p></td>
+                </tr>
+                <tr class="TableInfo">
+                    <td>
+                        Our founders had visa troubles
+                         and started traveling while growing 
+                         Buffer, the team grew to 
+                         7 people by August
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo up">
+                    <td class="mois"><p>August</p></td>
+                </tr>
+                <tr class="TableInfo uppers">
+                    <td>
+                        Buffer's first all-company 
+                        retreat took place in Lake Tahoe
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="TableInfo">
+                    <td class="mois"><p>December</p></td>
+                </tr>
+                <tr class="TableInfo">
+                    <td>
+                        We raised $3.5M in Series A funding
+
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo down">
+                    <td class="mois"><p>December</p></td>
+                </tr>
+                <tr class="TableInfo">
+                    <td class="downer" >
+                        <br>
+                        We acquired Respondly
+
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        </div>
+</div>
+
+
+>>>>>>> NewCss
     </div>
     </div>
 
@@ -310,7 +546,7 @@
                     +5
                 </h1>
                 <p>
-                    modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour <br> réussir <br>professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
+                    modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir dprofessionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
                 </p>
             </div>
             <div class="two">
@@ -381,9 +617,11 @@
         <h1>
             Tarifs
         </h1>
+        <div class="TarifContainer">
         <h4>
             Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus
         </h4>
+<<<<<<< HEAD
         <div class="TarifAdvantagesContainer">
             <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
@@ -421,6 +659,56 @@
             </svg>
             Lorem ipsum dolor
         </div>
+=======
+        <div class="TarifAdvantage">
+
+     
+            <div class="tarifcheckpoint">
+            
+            <div class="TarifAdvantagesContainer">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                Lorem ipsum dolor
+            </div>
+            <div class="TarifAdvantagesContainer">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                Lorem ipsum dolor
+            </div>
+            <div class="TarifAdvantagesContainer">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                Lorem ipsum dolor
+            </div>
+            </div>
+            
+            <div class="tarifcheckpoints">
+            <div class="TarifAdvantagesContainerR">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                Lorem ipsum dolor
+            </div>
+            <div class="TarifAdvantagesContainerR">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                Lorem ipsum dolor
+            </div>
+            <div class="TarifAdvantagesContainerR">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                Lorem ipsum dolor
+            </div>
+            </div>
+   
+    </div>
+    </div>
+>>>>>>> NewCss
         <div class="prixOption">
             <div class="OptionUn">
                 <h3>

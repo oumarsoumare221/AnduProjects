@@ -474,7 +474,7 @@ svg {
         position: relative;
         width: 100%;
         height: 60%;
-        background: url("apprendImage copy.jpg") no-repeat center center;
+        background: url('../apprendImage copy.jpg') no-repeat center center;
         background-size: cover; /* Ensures the image covers the entire container */
         border-radius: 5px;
     }
@@ -740,11 +740,15 @@ svg {
             
         }
       
+      
 
         .historyContainer {
             position: relative;
             height: auto;
             width: auto;
+            top: 30%;
+            padding-top: 5%;
+            display: block;
         }
         
         /* “ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l’expérience d’apprentissage pour tous les acteurs impliqués. */
@@ -752,21 +756,23 @@ svg {
     /* Horizontal Divider */
 
         .HistoryLine {
-            position: absolute;
+            position: relative;
             height: 2px;
             left: 0px;
             right: 0px;
-            top: 30%;
             width: 80%;
             margin: auto;
-            top: 700px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
 
             background: #636363;
 
             .historyPoints {
                 /* Background */
 
-            position: absolute;
+            position: relative;
             width: 15px;
             height: 15px;
             left: 0px;
@@ -775,134 +781,134 @@ svg {
             background: #000000;
             border-radius: 10px;
 
-            h5 {
-                /* Heading 3 → 2010 */
-
-            position: absolute;
-            width: 41.24px;
-            height: 27px;
-            left: 0px;
-            bottom: 10px;
-
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 27px;
-            /* identical to box height, or 150% */
-
-            color: #000000;
-
-
-            }
 
             }
 
         }
 
-        /* Background */
-        .mois {
-            position: absolute;
-            width: 180;
-            height: 420px;
-            left: 0px;
-            top: -50px;
-            height: auto;
-    
-            background: #D5EBFF;
-            border-radius: 4px;
-
-            .moisLayer {
-                /* Background */
-            position: absolute;
-            width: 81.06px;
-            height: 24px;
-            left: 0px;
-            top: 75px;
-            display: block;
-
-            background: #D5EBFF;
-            border-radius: 4px;
-
-            /* November */
-
-            h5 {
+        .spaceBetween {
             position: relative;
-            left: 10px;
+            padding-top: 1%;
+        }
 
-            text-align: center;
+        .HistoryTable {
+            position: relative;
+            margin: auto;
+            width: 80%;
+            table-layout: fixed;
+            
+             
+            }
+            .rotatedtable {
+            position: absolute;
+            top: 50%;
+            right: 5%; /* Adjust as needed */
+            transform: translateY(-50%) rotate(-90deg);
+            width: 250px; /* Adjust width as needed */
+            display: none;
+            border-collapse: collapse;
+
+            tr {
+                height: 20px;
+                border: 2px solid black;
+            }
+            }
+
+        .mois   {
+                position: relative;
+                left: 0;
+                text-align: left;
+
+                /* November */
+
+       
+
+
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+                /* identical to box height, or 100% */
+                letter-spacing: 0.1px;
+
+                color: #124366;
+
+                
+                p {
+
+             /* Background */
+
+            position: relative;
+            width: 30%;
+            height: 24px;
+            margin-left: 2%;
+            margin-right: 2%;
             
 
-            font-family: 'Roboto', 'San-serif';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 14px;
-            bottom: 20px;
+            background: #D5EBFF;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px 0;
 
+                }
 
-            color: #124366;
 
             }
 
+            
+            th {
+                position: relative;
+                width: 14%;
             }
 
-            p {
+        
+            .TableInfo {
                 /* Container */
 
-            position: relative;
-            height: 420px;
-            left: 1px;
-            bottom: 40px;
-            width: 200px;
-            text-align: left;
+/* Buffer was created as part of a Startup Sprint */
 
-            /* Buffer was created as part of a Startup Sprint */
+            position: relative;
+            text-align: left;
+            vertical-align: top;
+            
 
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 24px;
+            /* or 150% */
+            letter-spacing: 0.1px;
 
             color: #000000;
 
-            }
 
             a {
                 /* Link → Read more */
-
-            position: absolute;
-            left: 1px;
-            top: 95px;
-
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 16px;
-            color: #2C4BFF;
             text-decoration: none;
-            cursor: pointer;
+            color: #2C4BFF;
 
 
             }
 
-        }
-
-        .lower {
-            position: absolute;
-            margin-top: 10px;
-        }
+            td {
+                padding-right: 2%;
+                margin-right: 10%;
+            }
+            }
+            
+        /* Background */
+      
 
         .dotted {
-            position: absolute;
-            height: 30px;
-            width: 35px;
-            bottom: 28px;
+            position: relative;
+            padding-bottom: 1%;
+            height: 60%;
             border-left-style: dashed;
             border-color: #B8B8B8;
-            margin-bottom: 5px;
+            color: transparent;
+            padding-left: 1%;
 
         }
 
@@ -918,36 +924,62 @@ svg {
                 font-size: 4.275vw;
             }
 
-            .HistoryLine {
-                width: 1200px;
+            .historyContainer {
                 transform: rotate(90deg);
                 position: absolute;
-                top: 40%;
+                top: 45%;      
+                height: 0;     
+                padding-left: 5%; 
+                left: 50%;
             }
 
-            .HistoryLine h5 {
-                transform: rotate(-90deg);
+            .HistoryLine {
+                position: absolute;
+                width: 1000px;
+                margin: auto;
+            }
+            .rotatedtable {
+                display: block;
+                position: absolute;
+                top: -130px;
+                left: 270px; /* Adjust right position */
+                transform: translateY(-50%) rotate(-90deg);
+                width: 300px; /* Adjust width as needed */
+            
+
+    }
+
+
+
+    .up td {
+        bottom: 25px;
+    }
+
+    .upper td {
+        bottom: 10px;
+    }
+
+    .uppers td {
+        bottom: 30px;
+    }
+
+    .down {
+        top: 30px;
+    }
+
+    .downer {
+        position: absolute;
+         vertical-align: bottom;
+
+    }
+       
+
+            .HistoryTable {
+                transform: rotate(90deg);
+                display: none;
             }
 
-            .mois {
-                transform: rotate(-90deg);
-            }
 
-            .historyContainer{
-                top: 70%;
-                width: 100% ;
-                height: auto;
-            }
-
-            .moisLayer  {
-                transform: rotate(0deg);
-                top: 20px;
-
-            }
-
-            .moisLayer h5 {
-                transform: rotate(0deg);
-            }
 
 
 
@@ -959,6 +991,7 @@ svg {
             width: 100%;
             position: relative;
             top: 50%; 
+            padding-bottom: 800px;
 
         }
        
@@ -1170,6 +1203,10 @@ svg {
             margin-bottom: 20%;  
         }
 
+        .ProduitContainer {
+            padding-bottom: 20%;
+        }
+
 
     }
 
@@ -1203,7 +1240,6 @@ svg {
         position: relative;
         width: 90%;
         margin: auto;
-        top: 2500px;
 
     }
 
@@ -1219,16 +1255,17 @@ svg {
         line-height: 77px;
 
         color: #000000;
+        padding-bottom: 8% ;
     }
 
     .ImgCompany {
         /* Screenshot 2024-06-25 at 10.37.17 1 */
 
-    position: absolute;
+    position:absolute;
     width: 317px;
     height: 59px;
-    left: calc(50% - 317px/2 - 614.5px);
-    top: 5%;
+    bottom: 92%;
+    left: 5%;
 
     }
 
@@ -1266,6 +1303,7 @@ svg {
         line-height: 45px;
 
         color: #000000;
+        padding-bottom: 10%;
 
 
         }
@@ -1278,7 +1316,7 @@ svg {
         height: 23%;
         width: 74%;
         position: relative;
-        top: 22%;
+        top: 15%;
         column-gap: 30px;
         row-gap: 20px; 
 
@@ -1442,6 +1480,142 @@ svg {
         }
     }
 
+
+    @media (max-width: 1300px) {
+
+        .Casestudy {
+            top: 1800px;
+        }
+        .infoGrid {
+            display: grid;
+            margin: auto;
+            width: auto;
+            height: fit-content;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            position: relative;
+            top: 15%;
+            column-gap: 30px;
+            row-gap: 20px;
+
+
+            
+        }
+        
+        .one {
+            grid-area: 1 / 1 / 2 / 3; 
+            display: block;
+            height:fit-content;
+            left: 0;
+            margin: 0;
+            width: auto;
+            
+       
+            h1 {
+                position: relative;
+                background-color: purple;
+                left:5%;
+                bottom: 20%;
+                height: auto;
+                width: 10%;
+    
+            }
+
+            p {
+                position: static;
+                margin: auto;
+                width: 90%;
+                background-color: purple;
+                bottom: 30%;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 40px;
+            /* or 286% */
+
+            color: #000000;
+
+
+            }
+        }
+
+        
+
+        .two {
+            grid-area: 2 / 1 / 3 / 2;
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                position: relative;
+                margin: auto;
+    
+                color: #FFFFFF;
+    
+    
+            }
+    
+            p {
+                /* Années d’expériences */
+    
+                position: relative;
+                width: 20%;
+    
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 39px;
+    
+    
+                color: #FFFFFF;
+    
+    
+            }
+        }
+
+        .three {
+            grid-area: 2 / 2 / 3 / 3;
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                position: relative;
+     
+    
+                color: #FFFFFF;
+    
+    
+            }
+    
+            p {
+                /* Années d’expériences */
+    
+                position: relative;
+
+    
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 39px;
+    
+    
+                color: #FFFFFF;
+    
+    
+            }
+        }
+
+        .four {
+            grid-area: 3 / 1 / 4 / 3;
+            display: none;
+        }
+    }
+
     .BakeliSection {
        position: relative;
        top: 650px;
@@ -1478,9 +1652,8 @@ svg {
 
     .Tarifs {
         position: relative;
-        height: 1080px;
+        height: fit-content;
         width: 100%;
-        top: 2500px;
 
         h1 {
             /* Tarifs */
@@ -1503,10 +1676,11 @@ svg {
         h4 {
             /* Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus. */
 
-        position: absolute;
-        top: 10%;
-        left: 5%;
+        position: relative;
         width: 45%;
+        bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
 
 
         font-family: 'Inter';
@@ -1527,10 +1701,10 @@ svg {
         /* Lorem ipsum dolor */
 
     position: relative;
-    left: 50%;
-    width: 20%;
-    top:3.5%;
+    left: 10%;
+    width: 40%;
     height: 5%;
+    bottom: 0;
     margin-top: 20px; 
     color: black;
 
@@ -1557,13 +1731,14 @@ svg {
     .TarifAdvantagesContainerR {
         /* Lorem ipsum dolor */
 
-    position: relative;
-    left: 70%;
-    width: 20%;
-    height: 5%;
-    bottom: 17.05%;
-    margin-top: 20px; 
-    color: black;
+        position: relative;
+        left: 10%;
+        width: 40%;
+        height: 5%;
+        bottom: 0;
+        margin-top: 20px; 
+        color: black;
+
 
     font-family: 'Inter';
     font-style: normal;
@@ -1585,7 +1760,7 @@ svg {
 
     .prixOption {
         position: relative;
-        height: 63%;
+        height: 600px;
         width: 90%;
         bottom: 10%;
         margin: auto;
@@ -1727,3 +1902,70 @@ svg {
         }
     }
 
+
+    .TarifContainer {
+        position: relative;
+        width: 90%;
+        height: 30%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .TarifAdvantage{
+        position: relative;
+        width: 50%;
+    }
+
+
+    .tarifcheckpoint {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .tarifcheckpoints {
+        position: relative;
+        left: 50%;
+        bottom: 49.5%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    @media (max-width: 1300px) {
+        .TarifContainer {
+            position: relative;
+            width: 95%;
+            height: fit-content;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    .TarifAdvantage{
+        position: relative;
+        width: 100%;
+    }
+
+    .Tarifs {
+    top: 3000px ;
+    h4 { 
+        width: 100%;
+        margin: auto;
+    }
+    }
+
+    .prixOption {
+        flex-direction: column;
+    }
+
+    .OptionUn, .OptionDeux, .OptionTrois{
+        width: 90%;
+        height: 1000px;
+        margin-top: 10%;
+    
+    }
+
+}
