@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ProductController;
@@ -31,3 +32,6 @@ Route::resource('products', ProductController::class);
 
 //recuperation de Abou_US
 Route::get('/about-us', [LandingPageController::class, 'aboutUs']);
+
+//recuperation historique
+Route::get('/history', [LandingPageController::class, 'history'])->name('landing.history');
