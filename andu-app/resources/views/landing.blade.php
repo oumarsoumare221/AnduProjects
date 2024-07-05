@@ -7,6 +7,16 @@
     <title>ANDU - Landing Page</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="{{ url('CSS/landingpage.css') }}">
+    <!-- Inclure la bibliothèque Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        /* Ajouter des styles si nécessaire */
+        #animated-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -65,162 +75,176 @@
         </div>
         <div class="hero-text-container">
             <div class="heroText">
+                @if (!empty($dynamicContents->first()))
+                <h1>{{ $dynamicContents->first()->title }}</h1>
+                <h3>{{ $dynamicContents->first()->content }}</h3>
+                @else
                 <h1>Favoriser l'apprentissage, n'importe quand, n`importe où !</h1>
-                <h3> L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</h3>
+                <h3>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</h3>
+                @endif
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const successMessage = "{{ session('success') }}";
-                    const errorMessage = "{{ session('error') }}";
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const successMessage = "{{ session('success') }}";
+                const errorMessage = "{{ session('error') }}";
 
-                    if (successMessage) {
-                        swal({
-                            icon: 'success',
-                            title: 'Succès!',
-                            text: successMessage,
-                        });
-                    }
+                if (successMessage) {
+                    swal({
+                        icon: 'success',
+                        title: 'Succès!',
+                        text: successMessage,
+                    });
+                }
 
-                    if (errorMessage) {
-                        swal({
-                            icon: 'error',
-                            title: 'Erreur!',
-                            text: errorMessage,
-                        });
-                    }
-                });
-            </script>
-            <div class="send-email-wrapper">
-                <form action="{{ route('subscribe') }}" method="POST" class="send-email">
-                    @csrf
-                    <input id="email-input" name="email" type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
-                    <button type="submit" id="send-email-button" class="send-email-button">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 3L22 12L2 21V14L16 12L2 10V3Z" fill="currentColor" />
-                        </svg>
-                    </button>
-                </form>
-            </div>
-            <button class="DemoButton">Voir un Demo</button>
+                if (errorMessage) {
+                    swal({
+                        icon: 'error',
+                        title: 'Erreur!',
+                        text: errorMessage,
+                    });
+                }
+            });
+        </script>
+        <div class="send-email-wrapper">
+            <form action="{{ route('subscribe') }}" method="POST" class="send-email">
+                @csrf
+                <input id="email-input" name="email" type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
+                <button type="submit" id="send-email-button" class="send-email-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 3L22 12L2 21V14L16 12L2 10V3Z" fill="currentColor" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <button class="DemoButton">Voir un Demo</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    @if(isset($about))
+    <div class="aboutTitle" id="about">
+        <h2>Dans les coulisses de ANDU</h2>
+        <div class="aboutParagraph">
+            {{ $about->content }}
         </div>
     </div>
+    @else
+    <p>Aucun contenu disponible pour le moment.</p>
+    @endif
+    <div class="histoire">
+        Notre Histoire
     </div>
-    </div>
-    </div>
-
-    <div class="aboutTitle" id="about">Dans les coulisses de ANDU,
-        <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
-        <div class="histoire">
-            Notre Histoire
-        </div>
-        <div class="historyContainer">
-            <div class="HistoryLine">
-                <div class=" historyPoints">
-                    <h5>201X</h5>
-                    <div class="mois">
-                        <div class="moisLayer">
-                            <h5>November</h5>
-                            <p>Buffer was created as part of a Startup Sprint</p>
-                            <a href="">Read more</a>
-                        </div>
+    <div class="historyContainer">
+        <div class="HistoryLine">
+            <div class=" historyPoints">
+                <h5>201X</h5>
+                <div class="mois">
+                    <div class="moisLayer">
+                        <h5>November</h5>
+                        <p>Buffer was created as part of a Startup Sprint</p>
+                        <a href="">Read more</a>
                     </div>
                 </div>
-                <div style="margin-left: 19.6%;" class=" historyPoints">
-                    <h5>2018</h5>
-                    <div class="mois">
-                        <div style="background-color: #FFE2D5;" class="moisLayer">
-                            <h5>August</h5>
-                            <p>Buffer was accepted into
-                                AngelPad startup
-                                accelerator, with initial
-                                $120,000 investment <br> </p>
-                            <div class="moisLayer" style="top:175px;
+            </div>
+            <div style="margin-left: 19.6%;" class=" historyPoints">
+                <h5>2018</h5>
+                <div class="mois">
+                    <div style="background-color: #FFE2D5;" class="moisLayer">
+                        <h5>August</h5>
+                        <p>Buffer was accepted into
+                            AngelPad startup
+                            accelerator, with initial
+                            $120,000 investment <br> </p>
+                        <div class="moisLayer" style="top:175px;
                             background-color: #E7F3D3;">
-                                <div class="dotted"></div>
-                                <h5>December</h5>
-                                <p>Buffer raised a small
-                                    seed round of $330,000,
-                                    to bring total funding to
-                                    $450,000
-                                    <a style="top:105px;" href="">Read more</a>
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-left: 39.2%;" class=" historyPoints">
-                    <h5>2019</h5>
-                    <div class="mois">
-                        <div style="background-color: #CCF4F5;" class="moisLayer">
-                            <h5>January</h5>
-                            <p>Our founders had visa
-                                troubles and started
-                                traveling while growing
-                                Buffer, the team grew to
-                                7 people by August <br> </p>
-                            <a style="top:160px;" href="">Read more</a>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-left: 57.8%;" class=" historyPoints">
-                    <h5>2020</h5>
-                    <div class="mois">
-                        <div style="background-color: #FFE2D5;" class="moisLayer">
-                            <h5>August</h5>
-                            <p>Buffer`s first all-company
-                                retreat took place in
-                                Lake Tahoe
-                                <a href="" style="top:80px;">Read more</a>
+                            <div class="dotted"></div>
+                            <h5>December</h5>
+                            <p>Buffer raised a small
+                                seed round of $330,000,
+                                to bring total funding to
+                                $450,000
+                                <a style="top:105px;" href="">Read more</a>
                             </p>
-                            <div class="moisLayer" style="top:180px;
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 39.2%;" class=" historyPoints">
+                <h5>2019</h5>
+                <div class="mois">
+                    <div style="background-color: #CCF4F5;" class="moisLayer">
+                        <h5>January</h5>
+                        <p>Our founders had visa
+                            troubles and started
+                            traveling while growing
+                            Buffer, the team grew to
+                            7 people by August <br> </p>
+                        <a style="top:160px;" href="">Read more</a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 57.8%;" class=" historyPoints">
+                <h5>2020</h5>
+                <div class="mois">
+                    <div style="background-color: #FFE2D5;" class="moisLayer">
+                        <h5>August</h5>
+                        <p>Buffer`s first all-company
+                            retreat took place in
+                            Lake Tahoe
+                            <a href="" style="top:80px;">Read more</a>
+                        </p>
+                        <div class="moisLayer" style="top:180px;
                             background-color: #FEF8D4;">
-                                <div class="dotted"></div>
-                                <h5>Septembre</h5>
-                                <p>We reached 1 Million
-                                    users
-                                    <a style="top:55px;" href="">Read more</a>
-                                </p>
-                                <div style="top:108px" class="dotted"></div>
+                            <div class="dotted"></div>
+                            <h5>Septembre</h5>
+                            <p>We reached 1 Million
+                                users
+                                <a style="top:55px;" href="">Read more</a>
+                            </p>
+                            <div style="top:108px" class="dotted"></div>
 
-                            </div>
-                            <div class="moisLayer" style="top:325px;
+                        </div>
+                        <div class="moisLayer" style="top:325px;
                             background-color: #E7F3D3;">
-                                <h5>Decembre</h5>
-                                <a href="">Read more</a>
-                                <p>We published the whole
-                                    companies salaries
-                                </p>
-                            </div>
+                            <h5>Decembre</h5>
+                            <a href="">Read more</a>
+                            <p>We published the whole
+                                companies salaries
+                            </p>
+                        </div>
 
-                        </div>
                     </div>
                 </div>
-                <div style="margin-left: 75.4%;" class=" historyPoints">
-                    <h5>2022</h5>
-                    <div class="mois">
-                        <div class="moisLayer" style="background-color: #E7F3D3;">
-                            <h5>December</h5>
-                            <p>Buffer was created as part of a Startup Sprint</p>
-                            <a href="">Read more</a>
-                        </div>
+            </div>
+            <div style="margin-left: 75.4%;" class=" historyPoints">
+                <h5>2022</h5>
+                <div class="mois">
+                    <div class="moisLayer" style="background-color: #E7F3D3;">
+                        <h5>December</h5>
+                        <p>Buffer was created as part of a Startup Sprint</p>
+                        <a href="">Read more</a>
                     </div>
                 </div>
-                <div style="margin-left: 95%;" class=" historyPoints">
-                    <h5>2024</h5>
-                    <div class="mois">
-                        <div class="moisLayer" style="background-color: #E7F3D3;">
-                            <h5>December</h5>
-                            <p>We acquired Respondly</p>
-                            <a href="">Read more</a>
-                        </div>
+            </div>
+            <div style="margin-left: 95%;" class=" historyPoints">
+                <h5>2024</h5>
+                <div class="mois">
+                    <div class="moisLayer" style="background-color: #E7F3D3;">
+                        <h5>December</h5>
+                        <p>We acquired Respondly</p>
+                        <a href="">Read more</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="ProduitContainer">
@@ -445,7 +469,7 @@
     </div>
 
     <!-- Autres sections comme Avantages, Études de cas, Tarifs, FAQ, etc. -->
-
+    <!-- 
     {{-- <footer>
         <form action="{{ route('contact.store') }}" method="POST">
     @csrf
@@ -463,8 +487,9 @@
     </form>
     <p>Contactez-nous : +221 77 497 52 39 | Mady SANKHON</p>
     <a href="https://www.facebook.com/anduelearning">Facebook</a>
-    <!-- Autres liens vers les réseaux sociaux -->
-    </footer> --}}
+    </footer> --}} -->
+    <script src="/js/script.js"></script>
+
 </body>
 
 

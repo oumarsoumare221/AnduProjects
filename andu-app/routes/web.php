@@ -28,3 +28,6 @@ Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('ne
 Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
 //routes product
 Route::resource('products', ProductController::class);
+
+//recuperation de Abou_US
+Route::get('/about-us', [LandingPageController::class, 'aboutUs']);
