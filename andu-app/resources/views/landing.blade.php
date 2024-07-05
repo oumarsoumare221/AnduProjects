@@ -500,7 +500,7 @@
         </div>
     </div>
 
-    <div class="Tarifs" id="pricing">
+    {{-- <div class="Tarifs" id="pricing">
         <h1>
             Tarifs
         </h1>
@@ -601,7 +601,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Autres sections comme Avantages, Études de cas, Tarifs, FAQ, etc. -->
     <!-- 

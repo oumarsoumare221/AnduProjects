@@ -986,13 +986,14 @@ svg {
         }
 
         .ProduitContainer {
-            display: block;
-            height: 1100px;
+            display: flex;
+            flex-direction: column;
+            max-height: 2000px;
             width: 100%;
             position: relative;
-            top: 30%; 
+            top: 40%; 
             padding-bottom: 30%;
-            background-color: #124366;
+            overflow: visible;
 
         }
        
@@ -1002,6 +1003,7 @@ svg {
 
         position: relative;
         text-align: center;
+        bottom: 100px;
 
         font-family: 'Inter';
         font-style: normal;
@@ -1079,6 +1081,7 @@ svg {
         font-weight: 600;
         font-size: 30px;
         line-height: 58px;
+        margin-top: 100px;
 
         color: #000000;
 
@@ -1144,7 +1147,7 @@ svg {
         position: relative;
         width: 90%;
         height: 40%;
-        top: 60%;
+        top: 300px;
         display: flex; 
         flex-direction: row-reverse;
         flex-wrap: wrap;
@@ -1153,16 +1156,27 @@ svg {
 
     }
 
+    
+    @media (max-width: 1660px) and (min-width:1300px) {
+        .ProduitResContainerTwo {
+            top: 500px;
+        }
+    }
 
 
     @media (max-width: 1300px) {
+
+        .ProduitContainer {
+            top: 60%; 
+        }
         .ProduitResContainer {
             display: block;
+            
         }
 
         .ProduitResContainerTwo {
             display: block;
-            margin-top: 60%; 
+            top: 0;
         }
 
         .ProduitIcon, .ProduitIconTwo {
@@ -1212,7 +1226,6 @@ svg {
     @media (max-width:900px) {
         .ProduitResContainerTwo {
             display: block;
-            margin-top: 70%; 
         }
 
     }
@@ -1220,8 +1233,7 @@ svg {
 
     @media (max-width:600px) {
         .ProduitResContainerTwo {
-            display: block;
-            margin-top: 70%; 
+            display: block; 
         }
         .IconPoints, .IconPointsTwo {
             position: relative;
@@ -1235,11 +1247,15 @@ svg {
     }
 
     .Casestudy {
+        display: block;
         height: 3000px;
+        width: 100%;
         position: relative;
-        width: 90%;
-        margin: auto;
-        padding-top: 20%;
+        padding-top: 5%;
+        margin-top: 5%;
+        top: 50%;
+        background-color: #048ECB;
+
 
     }
 
@@ -1263,7 +1279,6 @@ svg {
     position:relative;
     width: 317px;
     height: 59px;
-    bottom: 92%;
     left: 5%;
 
     }
@@ -1479,6 +1494,12 @@ svg {
         }
     }
 
+    @media (max-width: 1660px) and (min-width:1300px) {
+        .Casestudy {
+            top: 90%;
+        }
+    
+    }
 
     @media (max-width: 1300px) {
 
@@ -1629,7 +1650,7 @@ svg {
     .imgBakeli {
         /* Screenshot 2024-06-25 at 13.05.04 1 */
 
-    position: absolute;
+    position: relative;
     width: 186px;
     height: 96px;
     left: calc(50% - 317px/2 - 614.5px);
