@@ -1535,12 +1535,28 @@ svg {
             grid-area: one;
             display: flex;
             flex-direction: column; 
+            height: 90%;
 
             p {
                 position: relative;
                 margin: auto;
-                width: 80%;
+                width: 90%;
                 background-color: #2C4BFF;
+                top: -25%;
+                
+
+                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 40px;
+                /* or 286% */
+
+                color: #000000;
+
+
 
             }
 
@@ -1548,6 +1564,20 @@ svg {
                 position: relative;
                 bottom: 10%;
                 left: 12%;
+
+                /* +5 */
+
+
+
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+
+                color: #000000;
+
+
     
             }
         }
