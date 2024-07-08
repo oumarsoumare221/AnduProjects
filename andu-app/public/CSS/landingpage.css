@@ -1254,7 +1254,6 @@ svg {
         padding-top: 5%;
         margin-top: 5%;
         top: 50%;
-        background-color: #048ECB;
 
 
     }
@@ -1581,7 +1580,8 @@ svg {
     
             }
         }
-        .two { grid-area: two; }
+        .two { 
+            grid-area: two; }
         .three { grid-area: three; }
         .four { grid-area: four; }
 
