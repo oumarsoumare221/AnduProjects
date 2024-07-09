@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CaseStudyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\LandingPageController;
@@ -39,4 +40,6 @@ Route::get('/history', [HistoryController::class, 'index']);
 Route::get('/historylanding', [LandingPageController::class, 'historys']);
 
 Route::get('/landing', [LandingPageController::class, 'show']);
+//cas d'etude
+Route::get('/case-studies', [CaseStudyController::class, 'index']);
 
