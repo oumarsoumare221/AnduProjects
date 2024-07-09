@@ -1747,7 +1747,7 @@ svg {
     .BakeliSection {
        position: relative;
        height: inherit;
-       top: 0;
+       top: 1;
 
         
     }
