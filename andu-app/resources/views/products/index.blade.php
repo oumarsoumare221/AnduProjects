@@ -112,44 +112,11 @@
                             @method('DELETE')
                         </form>
                     </div>
-                    <div class="product-actions">
-                        <a href="#" data-toggle="modal" data-target="#facebookModal" class="like"><i class="fas fa-thumbs-up"></i> J'aime</a>
-                        <a href="#" data-toggle="modal" data-target="#facebookModal" class="comment"><i class="fas fa-comment"></i> Commenter</a>
-                    </div>
                 </div>
             </div>
             @endforeach
         </div>
         <!-- <a href="{{ route('products.create') }}" class="btn btn-primary mt-4">Ajouter un produit</a> -->
-    </div>
-
-    <!-- Fenêtre modale -->
-    <div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-labelledby="facebookModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="facebookModalLabel">Connectez-vous à Facebook</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Adresse e-mail ou numéro de tél.">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Mot de passe">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
-                        <a href="#" class="d-block text-center mt-2">Mot de passe oublié ?</a>
-                        <hr>
-                        <a href="https://www.facebook.com/" class="btn btn-success btn-block">Créer nouveau compte</a>
-                    </form>
-                    <p class="text-center mt-4">Créer une Page pour une célébrité, une marque ou une entreprise.</p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Inclure jQuery et Bootstrap JS -->

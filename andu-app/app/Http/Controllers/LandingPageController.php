@@ -31,11 +31,13 @@ class LandingPageController extends Controller
     }
 
     // Nouvelle méthode pour gérer l'affichage des données historiques
-    public function history()
+    public function historys()
     {
         $bufferTimelines = BufferTimeline::orderBy('year')->get();
         $histories = History::with('bufferTimeline')->get();
 
         return view('landing', compact('bufferTimelines', 'histories'));
     }
+
+   
 }

@@ -34,4 +34,9 @@ Route::resource('products', ProductController::class);
 Route::get('/about-us', [LandingPageController::class, 'aboutUs']);
 
 //recuperation historique
-Route::get('/history', [LandingPageController::class, 'history'])->name('landing.history');
+Route::get('/history', [HistoryController::class, 'index']);
+//tous les deux sont memes
+Route::get('/historylanding', [LandingPageController::class, 'historys']);
+
+Route::get('/landing', [LandingPageController::class, 'show']);
+
