@@ -166,8 +166,232 @@
                     Buffer was created as
                     part of a Startup Sprint <br>
 
+    <div class="aboutTitle" id="about"> Dans les coulisses de ANDU,
+        <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
+        <div class="histoire">
+            Notre Histoire
+        </div>
+        
+   <div class="historyContainer">
+    <div class="HistoryLine">
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints"></div>
+        <div class="historyPoints" style="background-color: transparent;"></div>
+    </div>
+    <div class="spaceBetween"></div>
+    <table class="HistoryTable">
+        <thead>
+            <th class="mois" scope="col"> <p>November</p></th>
+            <th class="mois" scope="col"><p>August</p></th>
+            <th class="mois" scope="col"><p>January</p></th>
+            <th class="mois" scope="col"><p>August</p></th>
+            <th class="mois"  scope="col"><p>December</p></th>
+            <th class="mois" scope="col"><p>December</p></th>
+        </thead>
+        <tbody>
+            <tr class="TableInfo">
+                <th scope="row">
+                    Buffer was created as
+                    part of a Startup Sprint <br>
+
+                <a href="">Read more</a></th>
+
+                <td>
+                    Buffer was accepted into
+                    AngelPad startup
+                    accelerator, with initial
+                    $120,000 investment <br>
                     <a href="">Read more</a>
-                </th>
+                </td>
+                <td>
+                    Our founders had visa
+                    troubles and started
+                    traveling while growing
+                    Buffer, the team grew to
+                    7 people by August  <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    Buffer's first all-company
+                    retreat took place in
+                    Lake Tahoe  <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    We raised $3.5M in
+                    Series A funding  <br>
+                    <a href="">Read more</a>
+                </td>
+                <td>
+                    We acquired Respondly  <br>
+                    <a href="">Read more</a>
+                </td>
+              </tr>
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td class="mois"><p>December</p></td>
+                <td></td>
+                <td class="mois"><p>December</p></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td >Buffer raised a small
+                    seed round of $330,000,
+                    to bring total funding to
+                    $450,000 <br>
+                <a href="">Read more</a>
+            </td>
+                <td></td>
+                <td>
+                    We reached 1 Million
+                    users <br>
+                    <a href="">Read more</a>
+                </td>
+              </tr>
+
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td class="mois"><p>December</p></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td>
+                    We published the whole companies salaries
+                    <br> 
+                    <a href="">Read more</a>
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+
+        </tbody>
+    </table>
+
+    <div class="rotatedtable" role="region" tabindex="0">
+        <table>
+            <thead>
+                <tr class="TableInfo">
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableInfo upper">
+                    <td class="mois"><p>November</p></td>
+                </tr>
+                <tr class="TableInfo longer">
+                    <td>  Buffer was created as
+                        part of a Startup Sprint <br>
+                    <a href="">Read more</a></td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo upper">
+                    <td class="mois"><p>August</p></td>
+                </tr>
+                <tr class="TableInfo longer">
+                    <td>
+                        Buffer was accepted into
+                        AngelPad startup
+                        accelerator, with initial
+                        $120,000 investment <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo up">
+                    <td class="mois"><p>January</p></td>
+                </tr>
+                <tr class="TableInfo">
+                    <td>
+                        Our founders had visa troubles
+                         and started traveling while growing 
+                         Buffer, the team grew to 
+                         7 people by August
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo up">
+                    <td class="mois"><p>August</p></td>
+                </tr>
+                <tr class="TableInfo uppers">
+                    <td>
+                        Buffer's first all-company 
+                        retreat took place in Lake Tahoe
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="TableInfo">
+                    <td class="mois"><p>December</p></td>
+                </tr>
+                <tr class="TableInfo">
+                    <td>
+                        We raised $3.5M in Series A funding
+
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                <tr class="spacer">
+                    <!-- Spacer row without content -->
+                </tr>
+                <tr class="TableInfo down">
+                    <td class="mois"><p>December</p></td>
+                </tr>
+                <tr class="TableInfo">
+                    <td class="downer" >
+                        <br>
+                        We acquired Respondly
+
+                        <br>
+                        <a href="">Read more</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        </div>
+</div>
+
+
+    </div>
 
                 <td>
                     Buffer was accepted into
@@ -378,8 +602,10 @@
     </div>
     </div>
 
+    {{-- @extends('layouts.app')
 
     </div>
+    @endsection --}}
 
     <div class="ProduitContainer">
         <div class="NosProduits" id="products"> Nos Produits</div>
@@ -441,7 +667,7 @@
         <div class="infoGrid">
             <div class="one">
                 <h1>
-                    +5
+                    + 5
                 </h1>
                 <p>
                     modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir dprofessionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
@@ -449,19 +675,18 @@
             </div>
             <div class="two">
                 <h1>
-                    +5
+                    + 5
                 </h1>
-                <p>
+                <p >
                     Années d`expériences
                 </p>
-
             </div>
             <div class="three">
                 <h1>
                     +100
                 </h1>
                 <p>
-                    de utilisateurs qui <br>ont utiliser LMS
+                    de utilisateurs qui ont utiliser LMS
                 </p>
             </div>
             <div class="four">
@@ -481,7 +706,7 @@
             <div class="infoGrid">
                 <div class="one" style="background-color: black;">
                     <h1 id="text-color-white">
-                        +5
+                        + 5
                     </h1>
                     <p id="text-color-white">
                         modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour <br> réussir <br>professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
@@ -489,10 +714,10 @@
                 </div>
                 <div class="two" style="background: #94C0D4;">
                     <h1 id="text-color-black">
-                        +5
+                        + 5
                     </h1>
                     <p id="text-color-black">
-                        Années d`expériences
+                        Années <br> d`expériences
                     </p>
 
                 </div>
