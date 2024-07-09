@@ -465,7 +465,7 @@
         <div class="infoGrid">
             <div class="one">
                 <h1>
-                    +5
+                    + 5
                 </h1>
                 <p>
                     modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir dprofessionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
@@ -473,19 +473,18 @@
             </div>
             <div class="two">
                 <h1>
-                    +5
+                    + 5
                 </h1>
-                <p>
+                <p >
                     Années d`expériences
                 </p>
-
             </div>
             <div class="three">
                 <h1>
                     +100
                 </h1>
                 <p>
-                    de utilisateurs qui <br>ont utiliser LMS
+                    de utilisateurs qui ont utiliser LMS
                 </p>
             </div>
             <div class="four">
@@ -505,7 +504,7 @@
             <div class="infoGrid">
                 <div class="one" style="background-color: black;">
                     <h1 id="text-color-white">
-                        +5
+                        + 5
                     </h1>
                     <p id="text-color-white">
                         modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour <br> réussir <br>professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
@@ -513,10 +512,10 @@
                 </div>
                 <div class="two" style="background: #94C0D4;">
                     <h1 id="text-color-black">
-                        +5
+                        + 5
                     </h1>
                     <p id="text-color-black">
-                        Années d`expériences
+                        Années <br> d`expériences
                     </p>
 
                 </div>
