@@ -6,6 +6,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TarifController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,4 +43,5 @@ Route::get('/historylanding', [LandingPageController::class, 'historys']);
 Route::get('/landing', [LandingPageController::class, 'show']);
 //cas d'etude
 Route::get('/case-studies', [CaseStudyController::class, 'index']);
-
+//route tarifs
+Route::resource('tarifs', TarifController::class);

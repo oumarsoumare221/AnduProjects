@@ -29,8 +29,8 @@
             <a href="http://127.0.0.1:8000/">Home</a>
             <a href="#about">Qui Sommes-Nous</a>
             <a href="/products">Nos Produits</a>
-            <a href="#cases">Études de cas</a>
-            <a href="#pricing">Tarifs</a>
+            <a href="/case-studies">Études de cas</a>
+            <a href="/tarifs">Tarifs</a>
         </div>
         <div class="button-Rendez">
             <p>Prenez rendez-vous</p>

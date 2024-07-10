@@ -20,7 +20,9 @@ body {
     height: 100vh;
     width: 100vw;
     background-color:#EEEEEE; 
+    /* background-color: #f9f9f9; */
     display: block;
+    
 }
 
 #AnduLogo {
