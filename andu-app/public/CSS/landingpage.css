@@ -750,7 +750,8 @@ svg {
             padding-top: 5%;
             display: block;
         }
-        
+
+   
         /* “ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l’expérience d’apprentissage pour tous les acteurs impliqués. */
         
     /* Horizontal Divider */
@@ -818,10 +819,11 @@ svg {
                 position: relative;
                 left: 0;
                 text-align: left;
+              
 
                 /* November */
 
-       
+
 
 
                 font-family: 'Roboto';
@@ -833,7 +835,7 @@ svg {
                 letter-spacing: 0.1px;
 
                 color: #124366;
-
+        
                 
                 p {
 
@@ -853,7 +855,9 @@ svg {
 
                 }
 
-
+            td {
+                height: 10px;
+            }
             }
 
             
@@ -861,6 +865,10 @@ svg {
                 position: relative;
                 width: 14%;
             }
+
+
+
+        
 
         
             .TableInfo {
@@ -872,7 +880,7 @@ svg {
             text-align: left;
             vertical-align: top;
             
-
+            
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
@@ -893,8 +901,10 @@ svg {
             }
 
             td {
-                padding-right: 2%;
+                padding-right: 4%;
                 margin-right: 10%;
+               
+            
             }
             }
             
@@ -911,6 +921,8 @@ svg {
             padding-left: 1%;
 
         }
+
+
 
         @media (max-width: 1300px) {
             .aboutParagraph {
@@ -1159,7 +1171,9 @@ svg {
     
     @media (max-width: 1660px) and (min-width:1300px) {
         .ProduitResContainerTwo {
-            top: 500px;
+            top: 900px;
+            margin-top: 400px;
+            
         }
     }
 
@@ -1226,6 +1240,24 @@ svg {
     @media (max-width:900px) {
         .ProduitResContainerTwo {
             display: block;
+        }
+
+        .IconPoints, .IconPointsTwo {
+            li {
+                /* Le learning management system ou LMS est un logiciel permettant de gérer une plateforme d'apprentissage en ligne, il remplit donc deux grandes fonctions, l'apprentissage (learning) et la gestion (management). Nous avons créé un LMS interactif, intégrant l'IA, qui supporte plus de 12 formats variés (vidéo, audio, texte, quiz, etc.) et accepte le format SCORM. L'IA permet de générer des QCM à partir de vos leçons sur ANDU. Permet aux apprenants d'acquérir de nouvelles connaissances théoriques et techniques ou de les réviser avec ou sans accès à Internet */
+
+
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #000000;
+
+
+            }
         }
 
     }
@@ -1510,8 +1542,8 @@ svg {
 
     @media (max-width: 1660px) and (min-width:1300px) {
         .Casestudy {
-            top: 90%;
-            height: 500px;
+            top: 1300px;
+         
         }
     
     }
@@ -1730,8 +1762,20 @@ svg {
             }
 
             p {
-                font-size: 20px;
-                font-family: "Inter", "Sans-serif";
+             /* La mise en œuvre de cette plateforme d'apprentissage est soutenue par le programme "Réussir au Sénégal" de la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, financé par le ministère fédéral allemand de la Coopération économique et du Développement (BMZ) et l'État libre de Bavière. DEFARU c’est une application ou nous a ANDU ont a creér LMS pour leur multiples formations. */
+
+
+
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            /* or 162% */
+
+            color: #000000;
+
+
             }
         }
         .Casestudy {
@@ -1754,6 +1798,21 @@ svg {
 
     @media (max-width: 800px) { 
 
+        h4 {
+            /* À propos de l'application: */
+
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #000000;
+
+
+        }
+
         .infoGrid {
             bottom: 15%;
         }
@@ -1766,7 +1825,7 @@ svg {
 
         .one {
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
 
@@ -1779,7 +1838,20 @@ svg {
             }
 
             p {
+                /* La mise en œuvre de cette plateforme d'apprentissage est soutenue par le programme "Réussir au Sénégal" de la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, financé par le ministère fédéral allemand de la Coopération économique et du Développement (BMZ) et l'État libre de Bavière. DEFARU c’est une application ou nous a ANDU ont a creér LMS pour leur multiples formations. */
+
+
+
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
                 font-size: 16px;
+                line-height: 26px;
+                /* or 162% */
+
+                color: #000000;
+
+
                 margin-top: 0;
             }
         }
@@ -1793,7 +1865,7 @@ svg {
             p {
                 margin-top: 0%;
                 margin-bottom: 120px;
-                font-size: 16px;
+                font-size: 14px;
             }
         }
         .BakeliSection {
@@ -1880,6 +1952,7 @@ svg {
         position: relative;
         height: fit-content;
         width: 100%;
+        top: 90%;
 
         h1 {
             /* Tarifs */
@@ -1939,6 +2012,9 @@ svg {
     font-weight: 400;
     font-size: 20px;
     line-height: 45px;
+
+
+
     /* or 125% */
 
     svg {
@@ -1952,6 +2028,32 @@ svg {
 
 
     }
+
+    .t1, .t2, .t3, .t4, .t5, .t6 {
+       /* Lorem ipsum dolor */
+
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 45px;
+        /* or 125% */
+
+        color: #000000;
+
+        svg {
+            /* 5143542 */
+
+            width: 20px;
+            height: 24.45px;
+     
+
+
+        }
+
+
+    }  
 
 
     .TarifAdvantagesContainerR {
@@ -1988,7 +2090,7 @@ svg {
         position: relative;
         height: 600px;
         width: 90%;
-        bottom: 10%;
+        top: 100px;
         margin: auto;
 
         display: flex;
@@ -2136,11 +2238,39 @@ svg {
         margin: auto;
         display: flex;
         flex-direction: row;
+
+        h4 {
+            /* Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus. */
+
+
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 45px;
+            /* or 125% */
+
+            color: #000000;
+
+
+        }
     }
 
     .TarifAdvantage{
         position: relative;
         width: 50%;
+        left: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 35px;
+        grid-template-areas: 
+        "t1 t2"
+        "t3 t4"
+        "t5 t6";
+    
     }
 
 
@@ -2159,20 +2289,51 @@ svg {
         height: fit-content;
     }
 
+    @media (max-width: 1660px) {
+        .Tarifs {
+            top: 1700px;
+        }
+    }
+
+    @media (max-width: 1500px) {
+
+        .TarifAdvantage {
+           top: 50px;
+        }
+        .t1, .t2, .t3, .t4, .t5, .t6 {
+            /* Lorem ipsum dolor */
+     
+     
+             font-family: 'Inter';
+             font-style: normal;
+             font-weight: 400;
+             font-size: 30px;
+             line-height: 45px;
+             /* or 125% */
+     
+             color: #000000;
+        }
+    }
+
     @media (max-width: 1300px) {
+
+        .Tarifs {
+           top: 1000px;
+        }
         .TarifContainer {
             position: relative;
-            width: 95%;
+            width: 90%;
             height: fit-content;
             margin: auto;
-            display: flex;
-            flex-direction: column;
+            display: block;
         }
 
 
     .TarifAdvantage{
+        margin: 0;
+       left: 10%;
         position: relative;
-        width: 100%;
+        width: 80%;
     }
 
     .Tarifs {
@@ -2184,14 +2345,116 @@ svg {
     }
 
     .prixOption {
+        height: 2000px;
         flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        align-items: center;
+        
     }
 
     .OptionUn, .OptionDeux, .OptionTrois{
         width: 90%;
-        height: 1000px;
         margin-top: 10%;
     
     }
 
 }
+
+@media (max-width: 1000px) {
+
+    .Tarifs {
+       top: 2400px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .Tarifs {
+        top: 1600px;
+     }
+ 
+
+    .TarifContainer { 
+        margin: auto;
+
+        h4 {
+        font-size: 16px;
+        width: 90%;
+        margin: 0;
+   
+        }
+    }
+
+    .t1, .t2, .t3, .t4, .t5, .t6 {
+        font-size: 20px;
+    }
+
+    svg {
+        height: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+
+        .TarifAdvantage {
+            width: 99%;
+        }
+
+        .Tarifs {
+            top: 2000px;
+         }
+
+    .t1, .t2, .t3, .t4, .t5, .t6 {
+        font-size: 14px;
+    }
+
+    svg {
+        height: 14px;
+    }
+}
+
+@media (max-width: 415px) {
+
+
+
+    .Tarifs {
+        padding-top: 20%;
+        top: 2400px;
+     }
+
+    }
+
+
+    @media (max-width: 360px) {
+
+
+
+        .Tarifs {
+            top: 2700px;
+         }
+    
+        }
+
+@media (max-width: 335px) {
+
+
+
+            .Tarifs {
+                top: 2900px;
+             }
+        
+            }
+
+
+@media (max-width: 311px) {
+
+
+
+    .Tarifs {
+        top: 3100px;
+     }
+
+    }
