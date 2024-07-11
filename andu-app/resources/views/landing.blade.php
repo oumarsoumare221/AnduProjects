@@ -81,8 +81,7 @@
                 <h1>{{ $dynamicContents->first()->title }}</h1>
                 <h3>{{ $dynamicContents->first()->content }}</h3>
                 @else
-                <h1>Favoriser l'apprentissage, n'importe quand, n`importe où !</h1>
-                <h3>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</h3>
+              
                 @endif
             </div>
 

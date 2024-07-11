@@ -36,7 +36,7 @@ Route::get('/about-us', [LandingPageController::class, 'aboutUs']);
 //recuperation historique
 Route::get('/history', [HistoryController::class, 'index']);
 //tous les deux sont memes
-Route::get('/historylanding', [LandingPageController::class, 'historys']);
+Route::get('/landing', [LandingPageController::class, 'historys']);
 
-Route::get('/landing', [LandingPageController::class, 'show']);
+// Route::get('/landing', [LandingPageController::class, 'show']);
 
