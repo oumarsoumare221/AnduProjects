@@ -11,20 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tarifs', function (Blueprint $table) {
-            $table->id();
-            $table->string('type'); // e.g., Open Source, Établissement Public, Établissement Privé
-            $table->string('price'); // e.g., Free, 50,000 XOF, 100,000 XOF
+        Schema::table('tarifs', function (Blueprint $table) {
+            //
             $table->text('description')->nullable()->after('price');
-            $table->timestamps();
+
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('tarifs');
+        Schema::table('tarifs', function (Blueprint $table) {
+            //
+        });
     }
 };

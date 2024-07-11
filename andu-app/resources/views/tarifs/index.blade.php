@@ -15,30 +15,22 @@
         }
 
         .TarifContainer {
-            margin-bottom: 40px;
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .TarifAdvantage,
-        .tarifcheckpoints {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .TarifAdvantagesContainer,
-        .TarifAdvantagesContainerR {
+        .TarifAdvantagesContainer {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
         }
 
-        .TarifAdvantagesContainer svg,
-        .TarifAdvantagesContainerR svg {
+        .TarifAdvantagesContainer svg {
             margin-right: 10px;
+            fill: #419488;
+            /* Couleur SVG */
         }
 
         .prixOption {
@@ -46,6 +38,7 @@
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 20px;
+            margin-top: 20px;
         }
 
         .prixOption>div {
@@ -61,7 +54,6 @@
         }
 
         .buttonPrix {
-            margin-top: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -87,6 +79,7 @@
             color: #333;
             margin-bottom: 20px;
             font-weight: bold;
+            text-align: center;
         }
 
         h2 {
@@ -101,7 +94,7 @@
 
         h4 {
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .alert-success {
@@ -109,13 +102,14 @@
             color: #3c763d;
             padding: 15px;
             border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="container mt-5">
-        <!-- <a href="{{ route('tarifs.create') }}" class="btn btn-primary mb-3">Ajouter un tarif</a> -->
         @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
@@ -125,29 +119,21 @@
         <div class="Tarifs" id="pricing">
             <h1>Tarifs</h1>
             <div class="TarifContainer">
-                <h4>Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus</h4>
                 <div class="TarifAdvantage">
-                    <div class="tarifcheckpoint">
-                        @foreach($tarifs as $tarif)
-                        <div class="TarifAdvantagesContainer">
-                            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            {{ $tarif->type }}: {{ $tarif->price }}
-                        </div>
-                        @endforeach
+                    @foreach($tarifs as $tarif)
+                    <div class="TarifAdvantagesContainer">
+                        <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h4>{{ $tarif->description }}</h4>
                     </div>
-
-                    <!-- <div class="tarifcheckpoints">
-                        @foreach($tarifs as $tarif)
-                        <div class="TarifAdvantagesContainerR">
-                            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            {{ $tarif->type }}: {{ $tarif->price }}
-                        </div>
-                        @endforeach
-                    </div> -->
+                    <div class="TarifAdvantagesContainer">
+                        <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h4>{{ $tarif->advantage }}</h4>
+                    </div>
+                    @endforeach
                 </div>
             </div>
 
