@@ -811,7 +811,13 @@ svg {
 
             tr {
                 height: 20px;
-                border: 2px solid black;
+             
+            }
+
+            td {
+                border: solid #000000  1px;
+                padding-bottom: 3%;
+                height: fit-content;
             }
             }
 
@@ -819,6 +825,7 @@ svg {
                 position: relative;
                 left: 0;
                 text-align: left;
+                padding-bottom: 2%;
               
 
                 /* November */
@@ -903,6 +910,7 @@ svg {
             td {
                 padding-right: 4%;
                 margin-right: 10%;
+                border: solid #000000  1px;
                
             
             }
@@ -954,12 +962,35 @@ svg {
                 display: block;
                 position: absolute;
                 top: -130px;
-                left: 270px; /* Adjust right position */
+                left: 310px; /* Adjust right position */
                 transform: translateY(-50%) rotate(-90deg);
                 width: 300px; /* Adjust width as needed */
             
 
     }
+        .mois {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            p {
+
+                /* Background */
+   
+               position: relative;
+               width: 30%;
+               height: 24px;
+                margin: 0;
+            }
+           
+        }
+
+        .TableInfo {
+            height: 100px;
+            td {
+                padding: 0;
+            margin: 0;
+            }
+        }
 
 
 
@@ -1923,6 +1954,13 @@ svg {
     }
    
     .space {
+        height: 200px;
+
+        td {
+            height: 50px;
+        }
+    }
+    .spacing {
         height: 100px;
     }
 
