@@ -7,6 +7,7 @@
     <title>ANDU - Landing Page</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="{{ url('CSS/landingpage.css') }}">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <!-- Inclure la bibliothèque Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
@@ -19,7 +20,7 @@
     </style>
 </head>
 
-<body>
+<body class="bg-gray-600">
 
     <div class="NavBarContainer">
         <img id="AnduLogo" src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" sizes="(max-width: 600px) 480px,
@@ -139,114 +140,44 @@
     @else
     <p>Aucun contenu disponible pour le moment.</p>
     @endif
-    <div class="rotatedtable" role="region" tabindex="0">
-        <table>
-            <thead>
-                <tr class="TableInfo">
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="TableInfo upper">
-                    <td class="mois">
-                        <p>November</p>
-                    </td>
-                </tr>
-                <tr class="TableInfo longer">
-                    <td> Buffer was created as
-                        part of a Startup Sprint <br>
-                        <a href="">Read more</a>
-                    </td>
-                </tr>
-                <tr class="spacer">
-                    <!-- Spacer row without content -->
-                </tr>
-                <tr class="TableInfo upper">
-                    <td class="mois">
-                        <p>August</p>
-                    </td>
-                </tr>
-                <tr class="TableInfo longer">
-                    <td>
-                        Buffer was accepted into
-                        AngelPad startup
-                        accelerator, with initial
-                        $120,000 investment <br>
-                        <a href="">Read more</a>
-                    </td>
-                </tr>
-                <tr class="spacer">
-                    <!-- Spacer row without content -->
-                </tr>
-                <tr class="TableInfo up">
-                    <td class="mois">
-                        <p>January</p>
-                    </td>
-                </tr>
-                <tr class="TableInfo">
-                    <td>
-                        Our founders had visa troubles
-                        and started traveling while growing
-                        Buffer, the team grew to
-                        7 people by August
-                        <br>
-                        <a href="">Read more</a>
-                    </td>
-                </tr>
-                <tr class="spacer">
-                    <!-- Spacer row without content -->
-                </tr>
-                <tr class="TableInfo up">
-                    <td class="mois">
-                        <p>August</p>
-                    </td>
-                </tr>
-                <tr class="TableInfo uppers">
-                    <td>
-                        Buffer's first all-company
-                        retreat took place in Lake Tahoe
-                        <br>
-                        <a href="">Read more</a>
-                    </td>
-                </tr>
-                <tr class="TableInfo">
-                    <td class="mois">
-                        <p>December</p>
-                    </td>
-                </tr>
-                <tr class="TableInfo">
-                    <td>
-                        We raised $3.5M in Series A funding
 
-                        <br>
-                        <a href="">Read more</a>
-                    </td>
-                </tr>
-                <tr class="spacer">
-                    <!-- Spacer row without content -->
-                </tr>
-                <tr class="TableInfo down">
-                    <td class="mois">
-                        <p>December</p>
-                    </td>
-                </tr>
-                <tr class="TableInfo">
-                    <td class="downer">
-                        <br>
-                        We acquired Respondly
 
-                        <br>
-                        <a href="">Read more</a>
-                    </td>
-                </tr>
+    <!-- resources/views/case-studies/index.blade.php -->
 
-            </tbody>
-        </table>
+    @extends('layouts.app')
+
+    @section('content')
+    <div class="Casestudy" id="cases">
+        <div class="CasTitle">Études de cas</div>
+        @foreach($caseStudies as $caseStudy)
+        <div class="case-study-item">
+            <img class="ImgCompany" src="{{ asset('storage/' . $caseStudy->image) }}" alt="Image de l'étude de cas">
+            <div class="CasTextContainer">
+                <h4>{{ $caseStudy->title }}</h4>
+                <p>{{ $caseStudy->description }}</p>
+            </div>
+            <div class="infoGrid">
+                <!-- Utiliser les détails de l'étude de cas pour remplir ces sections -->
+                <div class="one">
+                    <h1>+5</h1>
+                    <p>modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.</p>
+                </div>
+                <div class="two">
+                    <h1>+5</h1>
+                    <p>Années d`expériences</p>
+                </div>
+                <div class="three">
+                    <h1>+100</h1>
+                    <p>de utilisateurs qui ont utilisé LMS</p>
+                </div>
+                <div class="four">
+                    <p>Avec Defaru, l'un des défis rencontrés a été la standardisation du SCORM. Cela a impliqué de s'assurer que le contenu éducatif était compatible avec divers systèmes de gestion de l'apprentissage (LMS), permettant une interopérabilité et un suivi cohérent des progrès des apprenants.</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
-    </div>
-
-
-    </div>
+    @endsection
 
     <div class="ProduitContainer">
         <div class="NosProduits" id="products"> Nos Produits</div>
