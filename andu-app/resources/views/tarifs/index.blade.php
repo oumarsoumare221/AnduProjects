@@ -19,9 +19,18 @@
             {{ session('success') }}
         </div>
         @endif
- 
+        <!-- <div class="tarifcheckpoints">
+            @foreach($tarifs as $tarif)
+            <div class="TarifAdvantagesContainerR">
+                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                {{ $tarif->type }}: {{ $tarif->price }}
+            </div>
+            @endforeach
+        </div> -->
         
-       
+        @foreach($tarifs as $tarif)
             <div class="Tarifs" id="pricing">
                 <h1>
                     Tarifs
@@ -77,10 +86,10 @@
             <div class="prixOption">
                 <div class="OptionUn">
                     <h3>
-                  
+                        {{ $tarif->type }}: 
                     </h3>
                     <h2>
-                 
+                        {{ $tarif->price }}
                     </h2>
         
                     <button class="buttonPrix">
@@ -92,10 +101,10 @@
                 </div>
                 <div class="OptionDeux">
                     <h3>
-                 
+                        {{ $tarif->type }}: 
                     </h3>
                     <h2>
-                     
+                        {{ $tarif->price }}
                     </h2>
         
                     <button class="buttonPrix">
@@ -122,7 +131,7 @@
 
         
             </div>
-       
+             @endforeach
             </div>
     
 </body>
