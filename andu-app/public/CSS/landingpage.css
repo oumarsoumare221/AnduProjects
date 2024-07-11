@@ -20,9 +20,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color:#EEEEEE; 
-    /* background-color: #f9f9f9; */
     display: block;
-    
 }
 
 #AnduLogo {
@@ -441,9 +439,9 @@ color: #000000;
 
 position: absolute;
 bottom: 30%;
-right: 33%;
-width: 15.625vw;
-height: 1.447vh;
+right: 28%;
+width: 300px;
+height: 290px;
 resize: both;
 
 background: #EEEEEE;
@@ -752,7 +750,8 @@ svg {
             padding-top: 5%;
             display: block;
         }
-        
+
+   
         /* “ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l’expérience d’apprentissage pour tous les acteurs impliqués. */
         
     /* Horizontal Divider */
@@ -812,7 +811,13 @@ svg {
 
             tr {
                 height: 20px;
-                border: 2px solid black;
+             
+            }
+
+            td {
+                border: solid #000000  1px;
+                padding-bottom: 3%;
+                height: fit-content;
             }
             }
 
@@ -820,10 +825,12 @@ svg {
                 position: relative;
                 left: 0;
                 text-align: left;
+                padding-bottom: 2%;
+              
 
                 /* November */
 
-       
+
 
 
                 font-family: 'Roboto';
@@ -835,7 +842,7 @@ svg {
                 letter-spacing: 0.1px;
 
                 color: #124366;
-
+        
                 
                 p {
 
@@ -855,7 +862,9 @@ svg {
 
                 }
 
-
+            td {
+                height: 10px;
+            }
             }
 
             
@@ -863,6 +872,10 @@ svg {
                 position: relative;
                 width: 14%;
             }
+
+
+
+        
 
         
             .TableInfo {
@@ -874,7 +887,7 @@ svg {
             text-align: left;
             vertical-align: top;
             
-
+            
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
@@ -895,8 +908,11 @@ svg {
             }
 
             td {
-                padding-right: 2%;
+                padding-right: 4%;
                 margin-right: 10%;
+                border: solid #000000  1px;
+               
+            
             }
             }
             
@@ -913,6 +929,8 @@ svg {
             padding-left: 1%;
 
         }
+
+
 
         @media (max-width: 1300px) {
             .aboutParagraph {
@@ -944,12 +962,35 @@ svg {
                 display: block;
                 position: absolute;
                 top: -130px;
-                left: 270px; /* Adjust right position */
+                left: 310px; /* Adjust right position */
                 transform: translateY(-50%) rotate(-90deg);
                 width: 300px; /* Adjust width as needed */
             
 
     }
+        .mois {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            p {
+
+                /* Background */
+   
+               position: relative;
+               width: 30%;
+               height: 24px;
+                margin: 0;
+            }
+           
+        }
+
+        .TableInfo {
+            height: 100px;
+            td {
+                padding: 0;
+            margin: 0;
+            }
+        }
 
 
 
@@ -1161,7 +1202,9 @@ svg {
     
     @media (max-width: 1660px) and (min-width:1300px) {
         .ProduitResContainerTwo {
-            top: 500px;
+            top: 900px;
+            margin-top: 400px;
+            
         }
     }
 
@@ -1230,6 +1273,24 @@ svg {
             display: block;
         }
 
+        .IconPoints, .IconPointsTwo {
+            li {
+                /* Le learning management system ou LMS est un logiciel permettant de gérer une plateforme d'apprentissage en ligne, il remplit donc deux grandes fonctions, l'apprentissage (learning) et la gestion (management). Nous avons créé un LMS interactif, intégrant l'IA, qui supporte plus de 12 formats variés (vidéo, audio, texte, quiz, etc.) et accepte le format SCORM. L'IA permet de générer des QCM à partir de vos leçons sur ANDU. Permet aux apprenants d'acquérir de nouvelles connaissances théoriques et techniques ou de les réviser avec ou sans accès à Internet */
+
+
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #000000;
+
+
+            }
+        }
+
     }
 
 
@@ -1256,7 +1317,6 @@ svg {
         padding-top: 5%;
         margin-top: 5%;
         top: 50%;
-        background-color: #048ECB;
 
 
     }
@@ -1282,6 +1342,7 @@ svg {
     width: 317px;
     height: 59px;
     left: 5%;
+    margin-top: 8%;
 
     }
 
@@ -1496,9 +1557,24 @@ svg {
         }
     }
 
+    .invisible {
+        color: transparent;
+    }
+
+    .make-inline {
+        display: inline;
+    }
+
+             .BakeliSection {
+            position: absolute;
+
+         }
+
+
     @media (max-width: 1660px) and (min-width:1300px) {
         .Casestudy {
-            top: 90%;
+            top: 1300px;
+         
         }
     
     }
@@ -1506,28 +1582,52 @@ svg {
     @media (max-width: 1300px) {
 
         .Casestudy {
-            top: 1800px;
+            top: 1000px;
             background-color: transparent;
         }
+
+        .CasTextContainer {
+            p {
+            margin: auto;
+            width: 85%;
+            left: 0;
+            }
+            h4 {
+                left: 8%;
+            }
+        }
+
+        .ImgCompany {
+            left: 7%;
+        }
+
+
+
         .infoGrid {
             display: grid;
             margin: auto;
             width: 90%;
             position: relative;
+            column-gap: 0;
+            row-gap: 0;
+
+            bottom: 20%;
+            margin-top: 20%;
          
             height: fit-content;
 
             display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 1fr 1fr; 
-            gap: 0px 0px; 
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
             grid-template-areas:
-            "one one one"
-            "two two three"
-            "four four four";
+            ". . . ."
+            "one one one one"
+            "two two three three"
+            "four four four four"
+            ". . . .";
             
-            column-gap: 30px;
-            row-gap: 20px;
+            column-gap: 15px;
+            row-gap: 15px;
 
 
             
@@ -1537,12 +1637,30 @@ svg {
             grid-area: one;
             display: flex;
             flex-direction: column; 
+            height: fit-content;
 
             p {
                 position: relative;
                 margin: auto;
-                width: 80%;
+                width: 90%;
                 background-color: #2C4BFF;
+                bottom: 0;
+                height: fit-content;
+                margin-bottom: 5%;
+                
+
+                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 40px;
+                /* or 286% */
+
+                color: #000000;
+
+
 
             }
 
@@ -1550,25 +1668,299 @@ svg {
                 position: relative;
                 bottom: 10%;
                 left: 12%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+
+                /* +5 */
+
+
+
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+
+                color: #000000;
+
+
     
             }
         }
-        .two { grid-area: two; }
-        .three { grid-area: three; }
-        .four { grid-area: four; }
+        .two { 
+            grid-area: two;
+            display: flex;
+            flex-direction: column; 
+            margin: 0;
+
+            h1 {
+                top: 0;
+                margin-top: 10%;
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+            }
+
+            p {
+                position: relative;
+                top: 10%;
+                left: 10%;
+                font-family: "Inter", sans-serif;
+                width: 90%;
+                margin-top: 20%;
+                margin-bottom: 10%;
+            }
+}
+        .three { grid-area: three;
+
+            display: flex;
+            flex-direction: column; 
+  
+
+            h1 {
+                top: 0;
+                margin-top: 10%;
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+            }
+
+            p {
+                position: relative;
+                top: 10%;
+                left: 10%;
+                font-family: "Inter", sans-serif;
+                width: 90%;
+                margin-top: 20%;
+                margin-bottom: 10%;
+            }
+        
+}
+        .four { 
+            grid-area: four;
+            position:relative;
+
+            display: flex;
+            flex-direction: column; 
+            height: fit-content;
+            border-radius: 20px;
+            /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
+            p {
+
+                position: relative;
+                margin: auto;
+                width: 90%;
+                background-color: #2C4BFF;
+                bottom: 0;
+                height: fit-content;
+                margin-bottom: 5%;
+                margin-top: 5%;
+                left: 0;
+                
+
+                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 40px;
+                /* or 286% */
+
+                color: #000000;
+            }
+
+         }
+
+         .BakeliSection {
+            top: -1000px;
+         }
 
 
 
+    }
+
+    @media (max-width: 1000px) {
+
+
+        .CasTextContainer {
+            h4 {
+                font-size: 30px;
+            }
+
+            p {
+             /* La mise en œuvre de cette plateforme d'apprentissage est soutenue par le programme "Réussir au Sénégal" de la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, financé par le ministère fédéral allemand de la Coopération économique et du Développement (BMZ) et l'État libre de Bavière. DEFARU c’est une application ou nous a ANDU ont a creér LMS pour leur multiples formations. */
+
+
+
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            /* or 162% */
+
+            color: #000000;
+
+
+            }
+        }
+        .Casestudy {
+            top: 1000px;
+            margin-top: 40%;
+        }
+        .four { 
+            bottom: 50px;
+            margin-top: 5%;
+        }
     }
 
     .BakeliSection {
        position: relative;
        height: inherit;
+       top: 1;
 
         
     }
+
+    @media (max-width: 800px) { 
+
+        h4 {
+            /* À propos de l'application: */
+
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #000000;
+
+
+        }
+
+        .infoGrid {
+            bottom: 15%;
+        }
+        .four {
+            bottom: 100px;
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .one {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .two {
+
+            height: 70%;
+            h1 {
+                font-size: 64px;
+
+            }
+
+            p {
+                /* La mise en œuvre de cette plateforme d'apprentissage est soutenue par le programme "Réussir au Sénégal" de la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, financé par le ministère fédéral allemand de la Coopération économique et du Développement (BMZ) et l'État libre de Bavière. DEFARU c’est une application ou nous a ANDU ont a creér LMS pour leur multiples formations. */
+
+
+
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                /* or 162% */
+
+                color: #000000;
+
+
+                margin-top: 0;
+            }
+        }
+
+        .three {
+            height: 70%;
+            h1 {
+                font-size: 64px;
+            }
+
+            p {
+                margin-top: 0%;
+                margin-bottom: 120px;
+                font-size: 14px;
+            }
+        }
+        .BakeliSection {
+            bottom:40%;
+        }
+    }
+
+    @media (max-width: 500px) {  
+        .two {
+            height: 60%;
+
+            p {
+                line-height: 20px;
+            }
+        }
+
+        .three {
+            height: 60%;
+            margin-top: 0;
+            p {
+                line-height: 20px;
+            }
+        }
+
+        .four {
+            bottom: 170px;
+        }
+
+        .infoGrid {
+            width: 95%;
+        }
+           .BakeliSection {
+            bottom:95%;
+        }
+    }
+
+    @media (max-width: 400px) {  
+
+        .four {
+            bottom: 200px;
+        }
+
+        .two {
+            border-radius: 30px;
+            height: 50%;
+        }
+        .three {
+            border-radius: 30px;
+            height: 50%;
+        }
+
+                .BakeliSection {
+            bottom:90%;
+        }
+    }
    
     .space {
+        height: 200px;
+
+        td {
+            height: 50px;
+        }
+    }
+    .spacing {
         height: 100px;
     }
 
@@ -1578,8 +1970,8 @@ svg {
     position: relative;
     width: 186px;
     height: 96px;
-    left: calc(50% - 317px/2 - 614.5px);
-    top: 5%;
+    left: 5%;
+    margin-top: 8%;
   
 
     }
@@ -1598,6 +1990,7 @@ svg {
         position: relative;
         height: fit-content;
         width: 100%;
+        top: 90%;
 
         h1 {
             /* Tarifs */
@@ -1657,6 +2050,9 @@ svg {
     font-weight: 400;
     font-size: 20px;
     line-height: 45px;
+
+
+
     /* or 125% */
 
     svg {
@@ -1670,6 +2066,32 @@ svg {
 
 
     }
+
+    .t1, .t2, .t3, .t4, .t5, .t6 {
+       /* Lorem ipsum dolor */
+
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 45px;
+        /* or 125% */
+
+        color: #000000;
+
+        svg {
+            /* 5143542 */
+
+            width: 20px;
+            height: 24.45px;
+     
+
+
+        }
+
+
+    }  
 
 
     .TarifAdvantagesContainerR {
@@ -1706,7 +2128,7 @@ svg {
         position: relative;
         height: 600px;
         width: 90%;
-        bottom: 10%;
+        top: 100px;
         margin: auto;
 
         display: flex;
@@ -1854,11 +2276,39 @@ svg {
         margin: auto;
         display: flex;
         flex-direction: row;
+
+        h4 {
+            /* Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus. */
+
+
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 45px;
+            /* or 125% */
+
+            color: #000000;
+
+
+        }
     }
 
     .TarifAdvantage{
         position: relative;
         width: 50%;
+        left: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 35px;
+        grid-template-areas: 
+        "t1 t2"
+        "t3 t4"
+        "t5 t6";
+    
     }
 
 
@@ -1877,20 +2327,51 @@ svg {
         height: fit-content;
     }
 
+    @media (max-width: 1660px) {
+        .Tarifs {
+            top: 1700px;
+        }
+    }
+
+    @media (max-width: 1500px) {
+
+        .TarifAdvantage {
+           top: 50px;
+        }
+        .t1, .t2, .t3, .t4, .t5, .t6 {
+            /* Lorem ipsum dolor */
+     
+     
+             font-family: 'Inter';
+             font-style: normal;
+             font-weight: 400;
+             font-size: 30px;
+             line-height: 45px;
+             /* or 125% */
+     
+             color: #000000;
+        }
+    }
+
     @media (max-width: 1300px) {
+
+        .Tarifs {
+           top: 1000px;
+        }
         .TarifContainer {
             position: relative;
-            width: 95%;
+            width: 90%;
             height: fit-content;
             margin: auto;
-            display: flex;
-            flex-direction: column;
+            display: block;
         }
 
 
     .TarifAdvantage{
+        margin: 0;
+       left: 10%;
         position: relative;
-        width: 100%;
+        width: 80%;
     }
 
     .Tarifs {
@@ -1902,14 +2383,116 @@ svg {
     }
 
     .prixOption {
+        height: 2000px;
         flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        align-items: center;
+        
     }
 
     .OptionUn, .OptionDeux, .OptionTrois{
         width: 90%;
-        height: 1000px;
         margin-top: 10%;
     
     }
 
 }
+
+@media (max-width: 1000px) {
+
+    .Tarifs {
+       top: 2400px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .Tarifs {
+        top: 1600px;
+     }
+ 
+
+    .TarifContainer { 
+        margin: auto;
+
+        h4 {
+        font-size: 16px;
+        width: 90%;
+        margin: 0;
+   
+        }
+    }
+
+    .t1, .t2, .t3, .t4, .t5, .t6 {
+        font-size: 20px;
+    }
+
+    svg {
+        height: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+
+        .TarifAdvantage {
+            width: 99%;
+        }
+
+        .Tarifs {
+            top: 2000px;
+         }
+
+    .t1, .t2, .t3, .t4, .t5, .t6 {
+        font-size: 14px;
+    }
+
+    svg {
+        height: 14px;
+    }
+}
+
+@media (max-width: 415px) {
+
+
+
+    .Tarifs {
+        padding-top: 20%;
+        top: 2400px;
+     }
+
+    }
+
+
+    @media (max-width: 360px) {
+
+
+
+        .Tarifs {
+            top: 2700px;
+         }
+    
+        }
+
+@media (max-width: 335px) {
+
+
+
+            .Tarifs {
+                top: 2900px;
+             }
+        
+            }
+
+
+@media (max-width: 311px) {
+
+
+
+    .Tarifs {
+        top: 3100px;
+     }
+
+    }

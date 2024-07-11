@@ -14,9 +14,13 @@ class LandingPageController extends Controller
     public function index()
     {
         $dynamicContents = DynamicContent::all();
-
+        $bufferTimelines = BufferTimeline::orderBy('year')->get();
+        $histories = History::with('bufferTimeline')->get();
+        
         return view('landing', [
             'dynamicContents' => $dynamicContents,
+            'histories' => $histories,
+            'bufferTimelines' => $bufferTimelines
         ]);
     }
 
