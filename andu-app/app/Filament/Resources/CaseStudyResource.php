@@ -12,6 +12,10 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Number; // Import de Number
 
 class CaseStudyResource extends Resource
 {
@@ -23,19 +27,32 @@ class CaseStudyResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
+                TextInput::make('title')
                     ->required()
                     ->label('Titre'),
-                Forms\Components\Textarea::make('description')
+                Textarea::make('description')
                     ->required()
                     ->label('Description'),
-                Forms\Components\FileUpload::make('image')
+                FileUpload::make('image')
                     ->label('Image')
                     ->image()
                     ->directory('case-studies'),
-                Forms\Components\Textarea::make('details')
+                Textarea::make('details')
                     ->required()
                     ->label('Détails'),
+                Forms\Components\TextInput::make('years_of_experience')
+                ->label('Années d\'expérience')
+                ->numeric()
+                    ->minValue(1)
+                    ->maxValue(100)
+                    ->required(),
+
+                Forms\Components\TextInput::make('users_using_lms')
+                ->label('Utilisateurs qui ont utilisé LMS')
+                ->numeric()
+                    ->minValue(1)
+                    ->maxValue(100)
+                    ->required(),
             ]);
     }
 
@@ -55,6 +72,10 @@ class CaseStudyResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Créé le')
                     ->dateTime(),
+            Tables\Columns\TextColumn::make('years_of_experience')
+            ->label('Années d\'expérience'),
+            Tables\Columns\TextColumn::make('users_using_lms')
+                ->label('Utilisateurs LMS'),
             ])
             ->filters([
                 //

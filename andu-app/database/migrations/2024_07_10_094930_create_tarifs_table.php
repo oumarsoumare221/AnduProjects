@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('case_studies', function (Blueprint $table) {
+        Schema::create('tarifs', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->string('image')->nullable();
-            $table->text('details');
-             $table->integer('years_of_experience')->nullable();
-            $table->integer('users_using_lms')->nullable();
+            $table->string('type'); // e.g., Open Source, Établissement Public, Établissement Privé
+            $table->string('price'); // e.g., Free, 50,000 XOF, 100,000 XOF
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('case_studies');
+        Schema::dropIfExists('tarifs');
     }
 };

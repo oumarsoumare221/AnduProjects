@@ -14,5 +14,7 @@ class CaseStudy extends Model
         'description',
         'image',
         'details',
+        'years_of_experience',
+        'users_using_lms',
     ];
 }
