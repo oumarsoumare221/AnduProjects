@@ -115,7 +115,7 @@
 
 <body>
     <div class="container mt-5">
-        <a href="{{ route('tarifs.create') }}" class="btn btn-primary mb-3">Ajouter un tarif</a>
+        <!-- <a href="{{ route('tarifs.create') }}" class="btn btn-primary mb-3">Ajouter un tarif</a> -->
         @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
