@@ -149,7 +149,9 @@
                 </div>
 
                 <div class="four">
-                    <p>Avec {{ $caseStudy->client }}, l'un des défis rencontrés a été {{ $caseStudy->challenge }}. Cela a impliqué {{ $caseStudy->solution }}.</p>
+                    <!-- <p>Avec {{ $caseStudy->client }}, l'un des défis rencontrés a été {{ $caseStudy->challenge }}. Cela a impliqué {{ $caseStudy->solution }}.</p> -->
+                    <p>{{ $caseStudy->challenge }}</p>
+
                 </div>
             </div>
         </div>
