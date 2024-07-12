@@ -746,7 +746,7 @@ svg {
             position: relative;
             height: auto;
             width: auto;
-            top: 30%;
+            bottom: 70%;
             padding-top: 5%;
             display: block;
         }
@@ -929,6 +929,7 @@ svg {
             padding-left: 1%;
 
         }
+        
 
 
 
@@ -957,14 +958,17 @@ svg {
                 position: absolute;
                 width: 1000px;
                 margin: auto;
+                left: 1335px;
             }
             .rotatedtable {
                 display: block;
                 position: absolute;
                 top: -130px;
-                left: 310px; /* Adjust right position */
+                left: 1650px; /* Adjust right position */
                 transform: translateY(-50%) rotate(-90deg);
                 width: 300px; /* Adjust width as needed */
+
+        
             
 
     }
@@ -1026,6 +1030,26 @@ svg {
 
 
 
+        }
+        @media (max-width: 800px) {
+            .HistoryLine {
+                position: relative;
+                width: 1000px;
+                left: 1335px;
+                top: 20%;
+            }
+            .rotatedtable {
+                display: block;
+                position: absolute;
+                margin-top: 40px;
+                left: 1650px; /* Adjust right position */
+                transform: translateY(-50%) rotate(-90deg);
+                width: 300px; /* Adjust width as needed */
+
+        
+            
+
+    }
         }
 
         .ProduitContainer {
@@ -1957,7 +1981,7 @@ svg {
         height: 200px;
 
         td {
-            height: 50px;
+            height: 60px;
         }
     }
     .spacing {

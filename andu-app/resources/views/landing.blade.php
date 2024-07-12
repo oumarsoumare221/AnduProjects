@@ -129,68 +129,62 @@
     </div>
 
     <!-- landing.blade.php -->
-    @if(isset($about))
     <div class="aboutTitle" id="about">
-        <h2>Dans les coulisses de ANDU</h2>
+    @if(isset($about))
+        <h2>  {{ $about->title }}</h2>
         <div class="aboutParagraph">
             {{ $about->content }}
         </div>
+        @else
+        <p>Aucun contenu disponible pour le moment.</p>
+        @endif
     </div>
-    @else
-    <p>Aucun contenu disponible pour le moment.</p>
-    @endif
-
-    <div class="aboutTitle" id="about"> Dans les coulisses de ANDU,
-        <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
-        <div class="histoire">
-            Notre Histoire
-        </div>
         
-        @if(isset($histories) && isset($bufferTimelines))
-        {{-- <div class="historyContainer">
-            <div class="HistoryLine">
-                @foreach($histories as $history)
-                <div class="historyPoints" data-year="{{ $history->year }}"></div>
-                @endforeach
-            </div>
-            <table class="HistoryTable">
-                <thead>
-                    <tr>
-                        @foreach($bufferTimelines as $timeline)
-                        <th class="mois">
-                            <p>{{ $timeline->year }}</p>
-                        </th>
-                        @endforeach
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="TableInfo">
-                        @foreach($histories as $history)
-                        <td>
-                            <strong>{{ $history->month }}</strong><br>
-                            {{ $history->event }}<br>
-                            <a href="#">Read more</a>
-                        </td>
-                        @endforeach
-                    </tr>
-                </tbody>
-            </table>
-        </div> --}}
-        <div class="historyContainer">
-            <div class="HistoryLine">
-                <div class="historyPoints"></div>
-                <div class="historyPoints"></div>
-                <div class="historyPoints"></div>
-                <div class="historyPoints"></div>
-                <div class="historyPoints"></div>
-                <div class="historyPoints"></div>
-                <div class="historyPoints" style="background-color: transparent;"></div>
-            </div>
-            <div class="spaceBetween"></div>
-            <table class="HistoryTable">
-                <thead>
+    {{-- <div class="historyContainer">
+        <div class="HistoryLine">
+            @foreach($histories as $history)
+            <div class="historyPoints" data-year="{{ $history->year }}"></div>
+            @endforeach
+        </div>
+        <table class="HistoryTable">
+            <thead>
+                <tr>
+                    @foreach($bufferTimelines as $timeline)
+                    <th class="mois">
+                        <p>{{ $timeline->year }}</p>
+                    </th>
+                    @endforeach
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableInfo">
                     @foreach($histories as $history)
-                    <th class="mois" scope="col"> <p>{{ $history->month }}</p></th>
+                    <td>
+                        <strong>{{ $history->month }}</strong><br>
+                        {{ $history->event }}<br>
+                        <a href="#">Read more</a>
+                    </td>
+                    @endforeach
+                </tr>
+            </tbody>
+        </table>
+    </div> --}}
+    <div class="historyContainer">
+        <div class="HistoryLine">
+            <div class="historyPoints"></div>
+            <div class="historyPoints"></div>
+            <div class="historyPoints"></div>
+            <div class="historyPoints"></div>
+            <div class="historyPoints"></div>
+            <div class="historyPoints"></div>
+            <div class="historyPoints" style="background-color: transparent;"></div>
+        </div>
+        <div class="spaceBetween"></div>
+        <table class="HistoryTable">
+            <thead>
+                @if(isset($histories) && isset($bufferTimelines))
+                @foreach($histories as $history)
+                <th class="mois" scope="col"> <p>{{ $history->month }}</p></th>
                     @endforeach
             
                
@@ -215,11 +209,35 @@
                     <td></td>
                     <td></td>
                   </tr>
+
+                  @if(isset($histories2) && isset($bufferTimelines))
+                  @foreach($histories2 as $history2s)
+                  <th class="mois" scope="col"> <p>{{ $history2s->month }}</p></th>
+                  @endforeach
+                  <tr class="TableInfo">
+             
+                    @foreach($histories2 as $history2s)
+                    <td>
+                        {{ $history2s->event }}<br>
+                        <a href="#">Read more</a>
+                    </td>
+                    @endforeach
+                </tr>
+                @endif
                  
               
             </table>
         
             <div class="rotatedtable" role="region" tabindex="0">
+                <div class="HistoryLinetwo">
+                    <div class="historyPoints"></div>
+                    <div class="historyPoints"></div>
+                    <div class="historyPoints"></div>
+                    <div class="historyPoints"></div>
+                    <div class="historyPoints"></div>
+                    <div class="historyPoints"></div>
+                    <div class="historyPoints" style="background-color: transparent;"></div>
+                </div>
                 <table>
                     <thead>
                         <tr class="TableInfo">
@@ -229,11 +247,11 @@
                     <tbody>
 
                         @foreach($histories as $history)
-                        <tr class="TableInfo upper">
+                        <tr class="TableInfo month">
                             <td class="mois"> <p>{{ $history->month }}</p></td>
                            
                         </tr>
-                        <tr class="TableInfo">
+                        <tr class="TableInfo placing">
                             <td>
                             {{ $history->event }}<br>
                             <a href="#">Read more</a>
@@ -243,14 +261,14 @@
                             <td class="spacing"></td>
                         </tr>
                         @endforeach
+                        @else
+                        <p>Aucune donnée d'historique disponible pour le moment.</p>
+                        @endif
                         
                     </tbody>
                 </table>
                 </div>
         </div>        
-        @else
-        <p>Aucune donnée d'historique disponible pour le moment.</p>
-        @endif
 
 
     </div>
@@ -421,131 +439,142 @@
         </div>
     </div>
 
-   <div class="Tarifs" id="pricing">
-        <h1>
-            Tarifs
-        </h1>
-        <div class="TarifContainer">
-        <h4>
-            Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus
-        </h4>
-        <div class="TarifAdvantage">
-
-            
-            <div class="t1">
-                <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                
-                Lorem ipsum dolor
-            </div>
-            <div class="t2">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
-                Lorem ipsum dolor
-            </div>
-            <div class="t3">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
-                Lorem ipsum dolor
-            </div>
-  
-            
-            <div class="t4">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
-                Lorem ipsum dolor
-            </div>
-            <div class="t5">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
-                Lorem ipsum dolor
-            </div>
-            <div class="t6">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
-                Lorem ipsum dolor
-            </div>
-            </div>
-   
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
     </div>
-    <div class="prixOption">
-        <div class="OptionUn">
-            <h3>
-                Open Source
-            </h3>
-            <h2>
-                Free
-            </h2>
+    @endif
 
-            <button class="buttonPrix">
-                <h5>Voir les courses</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-                </svg>
-            </button>
+    @php
+    $tarif1 = null;
+    $tarif2 = null;
+    $tarif3 = null;
 
+    foreach ($tarifs as $tarif) {
+        if ($tarif->id == 1) {
+            $tarif1 = $tarif;
+        } elseif ($tarif->id == 2) {
+            $tarif2 = $tarif;
+        } elseif ($tarif->id == 3) {
+            $tarif3 = $tarif;
+        }
+    }
+    @endphp
+
+
+<div class="Tarifs" id="pricing">
+<h1>
+    Tarifs
+</h1>
+<div class="TarifContainer">
+    <h4>
+        Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus
+    </h4>
+    <div class="TarifAdvantage">
+        
+        
+        <div class="t1">
+            <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                
+            Lorem ipsum dolor
         </div>
-        <div class="OptionDeux">
-            <h3>
-                Établissement Public
-            </h3>
-            <h2>
-                50,000 XOF
-            </h2>
-
-            <button class="buttonPrix">
-                <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-                </svg>
-            </button>
+        <div class="t2">
+            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>    
+            Lorem ipsum dolor
         </div>
-        <div class="OptionTrois">
-            <h3>
-                Établissement Privés
-            </h3>
-            <h2>
-                100,000 XOF
-            </h2>
-
-            <button class="buttonPrix">
-                <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-                </svg>
-            </button>
+        <div class="t3">
+            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>    
+            Lorem ipsum dolor
+        </div>
+        
+        
+        <div class="t4">
+            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>    
+            Lorem ipsum dolor
+        </div>
+        <div class="t5">
+            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>    
+            Lorem ipsum dolor
+        </div>
+        <div class="t6">
+            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>    
+            Lorem ipsum dolor
         </div>
     </div>
+    
+</div>
+<div class="prixOption">
+    <div class="OptionUn">
+        <h3>
+            @if ($tarif1)
+            {{ $tarif1->type }}
+            @endif
+        </h3>
+        <h2>
+            @if ($tarif1)
+            {{ $tarif1->price }}
+            @endif
+        </h2>
+        
+    <button class="buttonPrix">
+        <h5>Voir les courses</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+        </svg>
+    </button>
 
-    </div>
-     
-    </div>
+</div>
+<div class="OptionDeux">
+    <h3>
+        @if ($tarif2)
+        {{ $tarif2->type }}
+        @endif
+    </h3>
+    <h2>
+        @if ($tarif2)
+        {{ $tarif2-> price }}
+        @endif
+    </h2>
 
-    <!-- Autres sections comme Avantages, Études de cas, Tarifs, FAQ, etc. -->
-    <!-- 
-    {{-- <footer>
-        <form action="{{ route('contact.store') }}" method="POST">
-    @csrf
-    <input type="text" name="name" placeholder="Prénom et Nom" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="phone" placeholder="Numéro de téléphone">
-    <input type="text" name="subject" placeholder="Objet de contact" required>
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button type="submit">Envoyer</button>
-    </form>
-    <form action="{{ route('newsletter.subscribe') }}" method="POST">
-        @csrf
-        <input type="email" name="newsletter_email" placeholder="Votre email pour la newsletter" required>
-        <button type="submit">S'abonner</button>
-    </form>
-    <p>Contactez-nous : +221 77 497 52 39 | Mady SANKHON</p>
-    <a href="https://www.facebook.com/anduelearning">Facebook</a>
-    </footer> --}} -->
-    <script src="/js/script.js"></script>
+    <button class="buttonPrix">
+        <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+        </svg>
+    </button>
+</div>
+<div class="OptionTrois">
+    <h3>
+        @if ($tarif3)
+        {{ $tarif3->type }}
+        @endif
+    </h3>
+    <h2>
+        @if ($tarif3)
+        {{ $tarif3-> price }}
+        @endif
+    </h2>
 
+    <button class="buttonPrix">
+        <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+        </svg>
+    </button>
+</div>
+</div>
+
+</div>
+
+</div>
 </body>
-
 
 </html>

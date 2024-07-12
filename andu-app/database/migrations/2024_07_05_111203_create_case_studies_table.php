@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image')->nullable();
-            $table->text('details');
+             $table->text('details');
              $table->integer('years_of_experience')->nullable();
-            $table->integer('users_using_lms')->nullable();
+             $table->integer('users_using_lms')->nullable();
             $table->timestamps();
         });
     }
