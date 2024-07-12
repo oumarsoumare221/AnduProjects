@@ -376,6 +376,10 @@
             } elseif ($caseStudy->id == 2) {
                 $caseStudy2 = $caseStudy;
             }
+
+            $imagePath = $caseStudy1 ? 'storage/' . $caseStudy1->image : '';
+            $imagePath2 = $caseStudy2 ? 'storage/' . $caseStudy2->image : '';
+
         @endphp
     @endforeach
 @endisset
@@ -384,7 +388,10 @@
 
     <div class="Casestudy" id="cases">
         <div class="CasTitle">Études de cas</div>
+        <img class="ImgCompany" src="{{ asset($imagePath) }}" alt="Image de l'étude de cas">
         <div class="CasTextContainer">
+
+
             <h4>
                 @if ($caseStudy1)
                 {{ $caseStudy1->title }}
@@ -437,42 +444,57 @@
             </div>
         </div>
         <div class="BakeliSection">
+            <img class="imgBakeli" src="{{ asset($imagePath2) }}" alt="Image de l'étude de cas">
             <div class="CasTextContainer">
-                <h4>À propos de l'ecole:</h4>
-                <p> <br> La Bakeli School, située à Dakar, au Sénégal, est une institution axée sur la formation et l'éducation dans divers domaines, notamment les compétences numériques et technologiques. Son objectif est de doter les étudiants des connaissances et compétences pratiques nécessaires pour réussir dans l'économie numérique. L'école propose des programmes et des cours adaptés pour répondre aux exigences de l'industrie et préparer les diplômés à des carrières dans le domaine de la technologie et des secteurs connecter.</p>
+                <h4>     @if ($caseStudy2)
+                    {{ $caseStudy2->title }}
+                    @endif
+                </h4>
+                <p> <br>      @if ($caseStudy2)
+                    {{ $caseStudy2->description }}
+                    @endif
+                </p>
             </div>
 
-            <div class="space">
-
-            </div>
+          
             <div class="infoGrid">
                 <div class="one" style="background-color: black;">
                     <h1 id="text-color-white">
                         + 5
                     </h1>
                     <p id="text-color-white">
-                        modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour <br> réussir <br>professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
+                        @if ($caseStudy2)
+                    {{ $caseStudy2->details }}
+                    @endif
                     </p>
                 </div>
                 <div class="two" style="background: #94C0D4;">
                     <h1 id="text-color-black">
-                        + 5
+                        @if ($caseStudy2)
+                    + {{ $caseStudy2->years_of_experience }}
+                    @endif
                     </h1>
                     <p id="text-color-black">
-                        Années <br> d`expériences
+                        Années d`expériences
                     </p>
 
                 </div>
                 <div class="three" style="background: #048ECB;">
                     <h1>
-                        +1XX
+                        @if ($caseStudy2)
+                    + {{ $caseStudy2->years_of_experience }}
+                    @endif
                     </h1>
                     <p>
-                        de utilisateurs qui <br>ont utiliser LMS
+                        de utilisateurs qui ont utiliser LMS
                     </p>
                 </div>
                 <div class="four">
-                    <p>Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale.</p>
+                    <p>
+                        @if ($caseStudy2)
+                        {{ $caseStudy2->challenge }}
+                        @endif
+                    </p>
                 </div>
             </div>
         </div>
