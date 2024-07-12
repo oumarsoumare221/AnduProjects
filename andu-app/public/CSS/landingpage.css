@@ -7,10 +7,22 @@ html {
 * {
     box-sizing: border-box;
     padding: 0;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+
 }
 
 /* CSS de base */
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+body {
+    background-color:#EEEEEE; 
+}
+
+.bg {
+    background-color:#EEEEEE; 
+}
 body {
     
     font-family: "Inter", sans-serif;
@@ -19,6 +31,7 @@ body {
     color: #333;
     height: 100vh;
     width: 100vw;
+    background-color:#EEEEEE; 
     background-color:#EEEEEE; 
     display: block;
 }
@@ -797,6 +810,10 @@ svg {
             margin: auto;
             width: 80%;
             table-layout: fixed;
+
+            tr th {
+                height: 20px;
+            }
             
              
             }
@@ -822,10 +839,16 @@ svg {
             }
 
         .mois   {
+                padding-top: 0.5%;
+                padding-left: 0.5%;
+                padding-bottom: 0.5%;
+
+
                 position: relative;
                 left: 0;
                 text-align: left;
-                padding-bottom: 2%;
+                height: 20px;
+                top: 10px;
               
 
                 /* November */
@@ -841,7 +864,7 @@ svg {
                 /* identical to box height, or 100% */
                 letter-spacing: 0.1px;
 
-                color: #124366;
+                color: black;
         
                 
                 p {
@@ -849,13 +872,13 @@ svg {
              /* Background */
 
             position: relative;
-            width: 30%;
+            width: 45%;
             height: 24px;
             margin-left: 2%;
             margin-right: 2%;
             
 
-            background: #D5EBFF;
+            background-color: #A2D4CD;
             border-radius: 4px;
             text-align: center;
             padding: 5px 0;
@@ -871,6 +894,7 @@ svg {
             th {
                 position: relative;
                 width: 14%;
+
             }
 
 
@@ -910,7 +934,6 @@ svg {
             td {
                 padding-right: 4%;
                 margin-right: 10%;
-                border: solid #000000  1px;
                
             
             }
@@ -929,8 +952,139 @@ svg {
             padding-left: 1%;
 
         }
-        
+        .content {
+            border: none;
+            
+        }
 
+        .card {
+            border: none;
+        }
+        
+        .timeline {
+            bottom: 600px;
+            border-left: 3px solid black;
+            border-bottom-right-radius: 4px black;
+            border-top-right-radius: 4px;
+            background-color:#EEEEEE; 
+            margin: 0 auto;
+            letter-spacing: 0.2px;
+            position: relative;
+            line-height: 1.4em;
+            font-size: 1.03em;
+            padding: 50px;
+            list-style: none;
+            text-align: left;
+            max-width: 50%;
+            display: none;
+            visibility: hidden;
+        }
+
+        @media (max-width: 1300px) { 
+            .timeline {
+                visibility: visible ;
+                display: block;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .timeline {
+                max-width: 98%;
+                padding: 25px;
+            }
+        }
+        
+        .timeline h1 {
+            font-weight: 300;
+            font-size: 1.4em;
+        }
+        
+        .timeline h2,
+        .timeline h3 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline .event {
+            border-bottom: 1px dashed #e8ebf1;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        @media (max-width: 767px) {
+            .timeline .event {
+                padding-top: 30px;
+            }
+        }
+        
+        .timeline .event:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+        
+        .timeline .event:before,
+        .timeline .event:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+        
+        .timeline .event:before {
+            left: -207px;
+            content: attr(data-date);
+            text-align: right;
+            font-weight: 100;
+            font-size: 0.9em;
+            min-width: 120px;
+        }
+        
+        @media (max-width: 767px) {
+            .timeline .event:before {
+                left: 0px;
+                text-align: left;
+            }
+        }
+        
+        .timeline .event:after {
+            -webkit-box-shadow: 0 0 0 3px black;
+            box-shadow: 0 0 0 3px black;
+            left: -55.8px;
+            background-color:#EEEEEE; 
+            border-radius: 50%;
+            height: 9px;
+            width: 9px;
+            content: "";
+            top: 5px;
+        }
+        
+        @media (max-width: 767px) {
+            .timeline .event:after {
+                left: -31.8px;
+            }
+        }
+        
+        .rtl .timeline {
+            border-left: 0;
+            text-align: right;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            border-right: 3px solid #727cf5;
+        }
+        
+        .rtl .timeline .event::before {
+            left: 0;
+            right: -170px;
+        }
+        
+        .rtl .timeline .event::after {
+            left: 0;
+            right: -55.8px;
+        }
 
 
         @media (max-width: 1300px) {
@@ -959,6 +1113,7 @@ svg {
                 width: 1000px;
                 margin: auto;
                 left: 1335px;
+                display: none;
             }
             .rotatedtable {
                 display: block;
@@ -973,6 +1128,7 @@ svg {
 
     }
         .mois {
+         
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -1031,34 +1187,15 @@ svg {
 
 
         }
-        @media (max-width: 800px) {
-            .HistoryLine {
-                position: relative;
-                width: 1000px;
-                left: 1335px;
-                top: 20%;
-            }
-            .rotatedtable {
-                display: block;
-                position: absolute;
-                margin-top: 40px;
-                left: 1650px; /* Adjust right position */
-                transform: translateY(-50%) rotate(-90deg);
-                width: 300px; /* Adjust width as needed */
-
-        
-            
-
-    }
-        }
+     
 
         .ProduitContainer {
             display: flex;
             flex-direction: column;
             max-height: 2000px;
             width: 100%;
+            bottom: 40%;
             position: relative;
-            top: 40%; 
             padding-bottom: 30%;
             overflow: visible;
 
@@ -1392,10 +1529,9 @@ svg {
         p {
 
         position: relative;
-        left:5%;
-        top: 11%;
-        margin: auto;
-        width: 90%;
+        left:10%;
+        top: 5%;
+        width: 86%;
 
         font-family: 'Inter';
         font-style: normal;
@@ -1410,19 +1546,25 @@ svg {
         }
     }
 
-    .infoGrid {
+ .infoGrid {
         display: grid;
         margin: auto;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
         height: 23%;
-        width: 74%;
+        width: 70%;
         position: relative;
         padding:0;
         column-gap: 30px;
         row-gap: 20px; 
 
+        grid-template-areas:
+    "one two three"
+    "one  four four";
+
         h1{
             /* +5 */
+        
 
         left: 10%;
         font-family: 'Inter';
@@ -1439,10 +1581,10 @@ svg {
     }
 
     .one {
-        grid-column: 1 ;
-        grid-row: 1 / 5;
+        grid-area: one;
         background: #94C0D4;
         border-radius: 50px;
+        height: 100%;
         
 
         p {
@@ -1467,7 +1609,6 @@ svg {
 
         h1 {
             position: relative;
-            bottom: 10%;
             left: 12%;
 
         }
@@ -1477,15 +1618,13 @@ svg {
 
 
     .two {
-    grid-column: 2 ;
-    grid-row: 1 ;
+    grid-area: two;
     background: #048ECB;
     border-radius: 50px;
 
         h1{
             position: relative;
             left: 10%;
-            bottom: 20%;
             margin-bottom: 5%;
 
             color: #FFFFFF;
@@ -1517,15 +1656,13 @@ svg {
 
     }
     .three {
-    grid-column: 3;
-    grid-row: 1 ;
+    grid-area: three;
     background: black;
     border-radius: 50px;
 
     h1{
             position: relative;
             left: 8%;
-            bottom: 20%;
             margin-bottom: 5%;
 
             color: white;
@@ -1555,8 +1692,8 @@ svg {
         }
     }
     .four {
-    grid-column: 2 / 4;
-    grid-row: 2 / 5;
+        grid-area: four;
+    position: relative;
     background: #419488;
     border-radius: 50px;
             p {
@@ -1807,6 +1944,221 @@ svg {
 
 
     }
+
+    
+    @media (max-width: 1660px) and (min-width:1300px) {
+        .Casestudy {
+            top: 1300px;
+         
+        }
+    
+    }
+
+    @media (max-width: 1300px) {
+
+        .Casestudy {
+            top: 1000px;
+            background-color: transparent;
+        }
+
+        .CasTextContainer {
+            p {
+            margin: auto;
+            width: 85%;
+            left: 0;
+            }
+            h4 {
+                left: 8%;
+            }
+        }
+
+        .ImgCompany {
+            left: 7%;
+        }
+
+
+
+        .infoGrid {
+            display: grid;
+            margin: auto;
+            width: 90%;
+            position: relative;
+            column-gap: 0;
+            row-gap: 0;
+
+            bottom: 20%;
+            margin-top: 20%;
+         
+            height: fit-content;
+
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-areas:
+            ". . . ."
+            "one one one one"
+            "two two three three"
+            "four four four four"
+            ". . . .";
+            
+            column-gap: 15px;
+            row-gap: 15px;
+
+
+            
+        }
+
+        .one { 
+            grid-area: one;
+            display: flex;
+            flex-direction: column; 
+            height: fit-content;
+
+            p {
+                position: relative;
+                margin: auto;
+                width: 90%;
+                background-color: #2C4BFF;
+                bottom: 0;
+                height: fit-content;
+                margin-bottom: 5%;
+                
+
+                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 40px;
+                /* or 286% */
+
+                color: #000000;
+
+
+
+            }
+
+            h1 {
+                position: relative;
+                bottom: 10%;
+                left: 12%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+
+                /* +5 */
+
+
+
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+
+                color: #000000;
+
+
+    
+            }
+        }
+        .two { 
+            grid-area: two;
+            display: flex;
+            flex-direction: column; 
+            margin: 0;
+
+            h1 {
+                top: 0;
+                margin-top: 10%;
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+            }
+
+            p {
+                position: relative;
+                top: 10%;
+                left: 10%;
+                font-family: "Inter", sans-serif;
+                width: 90%;
+                margin-top: 20%;
+                margin-bottom: 10%;
+            }
+}
+        .three { grid-area: three;
+
+            display: flex;
+            flex-direction: column; 
+  
+
+            h1 {
+                top: 0;
+                margin-top: 10%;
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 77px;
+            }
+
+            p {
+                position: relative;
+                top: 10%;
+                left: 10%;
+                font-family: "Inter", sans-serif;
+                width: 90%;
+                margin-top: 20%;
+                margin-bottom: 10%;
+            }
+        
+}
+        .four { 
+            grid-area: four;
+            position:relative;
+
+            display: flex;
+            flex-direction: column; 
+            height: fit-content;
+            border-radius: 20px;
+            /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
+            p {
+
+                position: relative;
+                margin: auto;
+                width: 90%;
+                background-color: #2C4BFF;
+                bottom: 0;
+                height: fit-content;
+                margin-bottom: 5%;
+                margin-top: 5%;
+                left: 0;
+                
+
+                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 40px;
+                /* or 286% */
+
+                color: #000000;
+            }
+
+         }
+
+         .BakeliSection {
+            top: -1000px;
+         }
+
+
+
+    }
+
 
     @media (max-width: 1000px) {
 

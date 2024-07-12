@@ -9,7 +9,11 @@ use App\Models\History2;
 use App\Models\History3;
 use App\Models\Tarif;
 use App\Models\BufferTimeline;
+use App\Models\CaseStudy;
+
 use Illuminate\Http\Request;
+use App\Models\Product;
+
 
 class LandingPageController extends Controller
 {
@@ -24,6 +28,8 @@ class LandingPageController extends Controller
         $about = AboutUs::first();
         $histories2 = History2::with('bufferTimeline')->get();
         $histories3 = History3::with('bufferTimeline')->get();
+        $products = Product::all();
+        $caseStudies = CaseStudy::all();
         
         return view('landing', [
             'dynamicContents' => $dynamicContents,
@@ -32,7 +38,10 @@ class LandingPageController extends Controller
             'histories3' => $histories3,
             'bufferTimelines' => $bufferTimelines,
             'tarifs' => $tarifs,
-            'about' => $about
+            'about' => $about,
+            'products' => $products,
+            'caseStudies' => $caseStudies
+            
             
         ]);
     }

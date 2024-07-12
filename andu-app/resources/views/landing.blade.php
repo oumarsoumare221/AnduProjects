@@ -7,6 +7,7 @@
     <title>ANDU - Landing Page</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="{{ url('CSS/landingpage.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Inclure la bibliothèque Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
@@ -19,7 +20,7 @@
     </style>
 </head>
 
-<body>
+<body class="bg">
 
     <div class="NavBarContainer">
         <img id="AnduLogo" src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" sizes="(max-width: 600px) 480px,
@@ -30,7 +31,7 @@
             <a href="#about">Qui Sommes-Nous</a>
             <a href="/products">Nos Produits</a>
             <a href="#cases">Études de cas</a>
-            <a href="#pricing">Tarifss</a>
+            <a href="#pricing">Tarifs</a>
         </div>
         <div class="button-Rendez">
             <p>Prenez rendez-vous</p>
@@ -132,7 +133,7 @@
     <!-- landing.blade.php -->
     <div class="aboutTitle" id="about">
     @if(isset($about))
-        <h2>  {{ $about->title }}</h2>
+      {{ $about->title }}
         <div class="aboutParagraph">
             {{ $about->content }}
         </div>
@@ -180,7 +181,6 @@
             <div class="historyPoints"></div>
             <div class="historyPoints" style="background-color: transparent;"></div>
         </div>
-        <div class="spaceBetween"></div>
         <table class="HistoryTable">
             <thead>
                 @if(isset($histories) && isset($bufferTimelines))
@@ -199,6 +199,9 @@
                         <a href="#">Read more</a>
                     </td>
                     @endforeach
+                    @else
+                    <p>Aucune donnée d'historique disponible pour le moment.</p>
+                    @endif
                 </tr>
 
                 
@@ -228,51 +231,51 @@
                  
               
             </table>
+              
         
-            <div class="rotatedtable" role="region" tabindex="0">
-                <div class="HistoryLinetwo">
-                    <div class="historyPoints"></div>
-                    <div class="historyPoints"></div>
-                    <div class="historyPoints"></div>
-                    <div class="historyPoints"></div>
-                    <div class="historyPoints"></div>
-                    <div class="historyPoints"></div>
-                    <div class="historyPoints" style="background-color: transparent;"></div>
-                </div>
-                <table>
-                    <thead>
-                        <tr class="TableInfo">
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach($histories as $history)
-                        <tr class="TableInfo month">
-                            <td class="mois"> <p>{{ $history->month }}</p></td>
-                           
-                        </tr>
-                        <tr class="TableInfo placing">
-                            <td>
-                            {{ $history->event }}<br>
-                            <a href="#">Read more</a>
-                        </td>
-                        </tr>
-                        <tr class="space">
-                            <td class="spacing"></td>
-                        </tr>
-                        @endforeach
-                        @else
-                        <p>Aucune donnée d'historique disponible pour le moment.</p>
-                        @endif
-                        
-                    </tbody>
-                </table>
-                </div>
-        </div>        
-
-
+        
     </div>
+
+    <div class="container border-0">
+        <div class="row border-0">
+        <div class="col-md-12 border-0">
+        <div class="card border-0 bg">
+        <div class="card-body border-0 bg">
+        <div id="content">
+
+
+            @if(isset($histories) && isset($bufferTimelines))
+            <ul class="timeline">
+                @foreach($bufferTimelines as $timeline)
+                    {{-- Assuming $histories and $bufferTimelines are of equal length --}}
+                    @if(isset($histories[$loop->index])) {{-- Check if $histories[$loop->index] exists --}}
+                        @php
+                            $history = $histories[$loop->index];
+                        @endphp
+                        <li class="event" data-date="{{ $timeline->year }}">
+                            <h3><div class="mois" scope="col"><p>{{ $history->month }}</p></div></h3>
+                            <br>
+                                {{ $history->event }}<br>
+                                <a href="#">Read more</a>
+                            
+                        </li>
+                    @endif
+                @endforeach
+            </ul>
+        @endif
+        
+     
+            
+        </li>
+    
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+</div>  
+    
 
     <!-- resources/views/case-studies/index.blade.php -->
 
@@ -360,26 +363,56 @@
 
     </div>
 
+    @php
+    $caseStudy1 = null;
+    $caseStudy2 = null;
+@endphp
+
+@isset($caseStudies)
+    @foreach ($caseStudies as $caseStudy)
+        @php
+            if ($caseStudy->id == 1) {
+                $caseStudy1 = $caseStudy;
+            } elseif ($caseStudy->id == 2) {
+                $caseStudy2 = $caseStudy;
+            }
+        @endphp
+    @endforeach
+@endisset
+
+
+
     <div class="Casestudy" id="cases">
         <div class="CasTitle">Études de cas</div>
-        <img class="ImgCompany" src="{{ asset('../Screenshot 2024-06-25 at 10.37.17 1.png') }}" alt="Apprentissage en ligne">
         <div class="CasTextContainer">
-            <h4>À propos de l'application:</h4>
-            <p>La mise en œuvre de cette plateforme d'apprentissage est soutenue par le programme "Réussir au Sénégal" de la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, financé par le ministère fédéral allemand de la Coopération économique et du Développement (BMZ) et l'État libre de Bavière. <br> <br>DEFARU c`est une application ou nous a ANDU ont a creér LMS pour leur multiples formations</p>
+            <h4>
+                @if ($caseStudy1)
+                {{ $caseStudy1->title }}
+                @endif
+            </h4>
+            <p>
+                @if ($caseStudy1)
+                {{ $caseStudy1->description }}
+                @endif
+                </p>
         </div>
 
         <div class="infoGrid">
             <div class="one">
                 <h1>
-                    + 5
+                    +5
                 </h1>
                 <p>
-                    modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir dprofessionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
+                    @if ($caseStudy1)
+                    {{ $caseStudy1->details }}
+                    @endif
                 </p>
             </div>
             <div class="two">
                 <h1>
-                    + 5
+                    @if ($caseStudy1)
+                    + {{ $caseStudy1->years_of_experience }}
+                    @endif
                 </h1>
                 <p >
                     Années d`expériences
@@ -387,18 +420,23 @@
             </div>
             <div class="three">
                 <h1>
-                    +100
+                    @if ($caseStudy1)
+                    + {{ $caseStudy1->users_using_lms }}
+                    @endif
                 </h1>
                 <p>
                     de utilisateurs qui ont utiliser LMS
                 </p>
             </div>
             <div class="four">
-                <p>Avec Defaru, l'un des défis rencontrés a été la standardisation du SCORM. Cela a impliqué de s'assurer que le contenu éducatif était compatible avec divers systèmes de gestion de l'apprentissage (LMS), permettant une interopérabilité et un suivi cohérent des progrès des apprenants.</p>
+                <p>
+                    @if ($caseStudy1)
+                    {{ $caseStudy1->challenge }}
+                    @endif
+                </p>
             </div>
         </div>
         <div class="BakeliSection">
-            <img class="imgBakeli" src="{{ asset('../Screenshot 2024-06-25 at 13.05.04 1.png') }}" alt="Apprentissage en ligne">
             <div class="CasTextContainer">
                 <h4>À propos de l'ecole:</h4>
                 <p> <br> La Bakeli School, située à Dakar, au Sénégal, est une institution axée sur la formation et l'éducation dans divers domaines, notamment les compétences numériques et technologiques. Son objectif est de doter les étudiants des connaissances et compétences pratiques nécessaires pour réussir dans l'économie numérique. L'école propose des programmes et des cours adaptés pour répondre aux exigences de l'industrie et préparer les diplômés à des carrières dans le domaine de la technologie et des secteurs connecter.</p>
