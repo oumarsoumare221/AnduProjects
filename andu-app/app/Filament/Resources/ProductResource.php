@@ -19,7 +19,6 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    // Changez l'icône ici
     protected static ?string $navigationIcon = 'heroicon-o-cube';
 
     public static function form(Form $form): Form
@@ -35,6 +34,10 @@ class ProductResource extends Resource
                     ->nullable(),
                 Textarea::make('description')
                     ->nullable(),
+                Textarea::make('description2') // Nouveau champ description2
+                    ->nullable(),
+                Textarea::make('description3') // Nouveau champ description3
+                    ->nullable(),
             ]);
     }
 
@@ -47,11 +50,13 @@ class ProductResource extends Resource
                     ->disk('public')
                     ->label('Image'),
                 TextColumn::make('description')->limit(50),
+                TextColumn::make('description2')->limit(50), // Nouveau champ description2 dans la table
+                TextColumn::make('description3')->limit(50), // Nouveau champ description3 dans la table
                 TextColumn::make('created_at')->dateTime(),
                 TextColumn::make('updated_at')->dateTime(),
             ])
             ->filters([
-                // Add filters if needed
+                // Ajoutez des filtres si nécessaire
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
