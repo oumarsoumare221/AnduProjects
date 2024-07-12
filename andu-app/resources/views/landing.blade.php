@@ -30,7 +30,7 @@
             <a href="#about">Qui Sommes-Nous</a>
             <a href="/products">Nos Produits</a>
             <a href="#cases">Études de cas</a>
-            <a href="#pricing">Tarifs</a>
+            <a href="#pricing">Tarifss</a>
         </div>
         <div class="button-Rendez">
             <p>Prenez rendez-vous</p>
