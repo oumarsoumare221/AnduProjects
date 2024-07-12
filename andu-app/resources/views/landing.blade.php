@@ -30,8 +30,8 @@
             <a href="http://127.0.0.1:8000/">Home</a>
             <a href="#about">Qui Sommes-Nous</a>
             <a href="/products">Nos Produits</a>
-            <a href="/case-studies">Études de cas</a>
-            <a href="/tarifs">Tarifs</a>
+            <a href="#cases">Études de cas</a>
+            <a href="#pricing">Tarifs</a>
         </div>
         <div class="button-Rendez">
             <p>Prenez rendez-vous</p>
@@ -82,8 +82,7 @@
                 <h1>{{ $dynamicContents->first()->title }}</h1>
                 <h3>{{ $dynamicContents->first()->content }}</h3>
                 @else
-                <h1>Favoriser l'apprentissage, n'importe quand, n`importe où !</h1>
-                <h3>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</h3>
+              
                 @endif
             </div>
 
@@ -130,6 +129,7 @@
     </div>
     </div>
 
+    <!-- landing.blade.php -->
     @if(isset($about))
     <div class="aboutTitle" id="about">
         <h2>Dans les coulisses de ANDU</h2>
@@ -140,10 +140,165 @@
     @else
     <p>Aucun contenu disponible pour le moment.</p>
     @endif
+<<<<<<< HEAD
+=======
+
+    <div class="aboutTitle" id="about"> Dans les coulisses de ANDU,
+        <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
+        <div class="histoire">
+            Notre Histoire
+        </div>
+        
+        @if(isset($histories) && isset($bufferTimelines))
+        {{-- <div class="historyContainer">
+            <div class="HistoryLine">
+                @foreach($histories as $history)
+                <div class="historyPoints" data-year="{{ $history->year }}"></div>
+                @endforeach
+            </div>
+            <table class="HistoryTable">
+                <thead>
+                    <tr>
+                        @foreach($bufferTimelines as $timeline)
+                        <th class="mois">
+                            <p>{{ $timeline->year }}</p>
+                        </th>
+                        @endforeach
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableInfo">
+                        @foreach($histories as $history)
+                        <td>
+                            <strong>{{ $history->month }}</strong><br>
+                            {{ $history->event }}<br>
+                            <a href="#">Read more</a>
+                        </td>
+                        @endforeach
+                    </tr>
+                </tbody>
+            </table>
+        </div> --}}
+        <div class="historyContainer">
+            <div class="HistoryLine">
+                <div class="historyPoints"></div>
+                <div class="historyPoints"></div>
+                <div class="historyPoints"></div>
+                <div class="historyPoints"></div>
+                <div class="historyPoints"></div>
+                <div class="historyPoints"></div>
+                <div class="historyPoints" style="background-color: transparent;"></div>
+            </div>
+            <div class="spaceBetween"></div>
+            <table class="HistoryTable">
+                <thead>
+                    @foreach($histories as $history)
+                    <th class="mois" scope="col"> <p>{{ $history->month }}</p></th>
+                    @endforeach
+            
+               
+                 
+                </thead>
+                <tr class="TableInfo">
+             
+                    @foreach($histories as $history)
+                    <td>
+                        {{ $history->event }}<br>
+                        <a href="#">Read more</a>
+                    </td>
+                    @endforeach
+                </tr>
+
+                
+                <tr class="TableInfo">
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td class="dotted">dsfn</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                 
+              
+            </table>
+        
+            <div class="rotatedtable" role="region" tabindex="0">
+                <table>
+                    <thead>
+                        <tr class="TableInfo">
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach($histories as $history)
+                        <tr class="TableInfo upper">
+                            <td class="mois"> <p>{{ $history->month }}</p></td>
+                           
+                        </tr>
+                        <tr class="TableInfo">
+                            <td>
+                            {{ $history->event }}<br>
+                            <a href="#">Read more</a>
+                        </td>
+                        </tr>
+                        <tr class="space">
+                            <td class="spacing"></td>
+                        </tr>
+                        @endforeach
+                        
+                    </tbody>
+                </table>
+                </div>
+        </div>        
+        @else
+        <p>Aucune donnée d'historique disponible pour le moment.</p>
+        @endif
+>>>>>>> 9087b89912ee72a8f8ef55778e9feafb94a0796b
 
 
 
+<<<<<<< HEAD
   
+=======
+    <!-- resources/views/case-studies/index.blade.php -->
+
+    {{-- @extends('layouts.app')
+
+    @section('content')
+    <div class="Casestudy" id="cases">
+        <div class="CasTitle">Études de cas</div>
+        @foreach($caseStudies as $caseStudy)
+        <div class="case-study-item">
+            <img class="ImgCompany" src="{{ asset('storage/' . $caseStudy->image) }}" alt="Image de l'étude de cas">
+            <div class="CasTextContainer">
+                <h4>{{ $caseStudy->title }}</h4>
+                <p>{{ $caseStudy->description }}</p>
+            </div>
+            <div class="infoGrid">
+                <!-- Utiliser les détails de l'étude de cas pour remplir ces sections -->
+                <div class="one">
+                    <h1>+5</h1>
+                    <p>modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.</p>
+                </div>
+                <div class="two">
+                    <h1>+5</h1>
+                    <p>Années d`expériences</p>
+                </div>
+                <div class="three">
+                    <h1>+100</h1>
+                    <p>de utilisateurs qui ont utilisé LMS</p>
+                </div>
+                <div class="four">
+                    <p>Avec Defaru, l'un des défis rencontrés a été la standardisation du SCORM. Cela a impliqué de s'assurer que le contenu éducatif était compatible avec divers systèmes de gestion de l'apprentissage (LMS), permettant une interopérabilité et un suivi cohérent des progrès des apprenants.</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    @endsection --}}
+
+>>>>>>> 9087b89912ee72a8f8ef55778e9feafb94a0796b
     <div class="ProduitContainer">
         <div class="NosProduits" id="products"> Nos Produits</div>
         <div class="ProduitResContainer">
@@ -204,7 +359,7 @@
         <div class="infoGrid">
             <div class="one">
                 <h1>
-                    +5
+                    + 5
                 </h1>
                 <p>
                     modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir dprofessionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
@@ -212,19 +367,18 @@
             </div>
             <div class="two">
                 <h1>
-                    +5
+                    + 5
                 </h1>
-                <p>
+                <p >
                     Années d`expériences
                 </p>
-
             </div>
             <div class="three">
                 <h1>
                     +100
                 </h1>
                 <p>
-                    de utilisateurs qui <br>ont utiliser LMS
+                    de utilisateurs qui ont utiliser LMS
                 </p>
             </div>
             <div class="four">
@@ -244,18 +398,18 @@
             <div class="infoGrid">
                 <div class="one" style="background-color: black;">
                     <h1 id="text-color-white">
-                        +5
+                        + 5
                     </h1>
                     <p id="text-color-white">
-                        modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour <br> réussir <br>professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
+                        modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
                     </p>
                 </div>
                 <div class="two" style="background: #94C0D4;">
                     <h1 id="text-color-black">
-                        +5
+                        + 5
                     </h1>
                     <p id="text-color-black">
-                        Années d`expériences
+                        Années <br> d`expériences
                     </p>
 
                 </div>
@@ -274,7 +428,7 @@
         </div>
     </div>
 
-    {{-- <div class="Tarifs" id="pricing">
+   <div class="Tarifs" id="pricing">
         <h1>
             Tarifs
         </h1>
@@ -284,43 +438,40 @@
         </h4>
         <div class="TarifAdvantage">
 
-     
-            <div class="tarifcheckpoint">
             
-            <div class="TarifAdvantagesContainer">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="t1">
+                <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>                
                 Lorem ipsum dolor
             </div>
-            <div class="TarifAdvantagesContainer">
+            <div class="t2">
                 <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
                 Lorem ipsum dolor
             </div>
-            <div class="TarifAdvantagesContainer">
+            <div class="t3">
                 <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
                 Lorem ipsum dolor
             </div>
-            </div>
+  
             
-            <div class="tarifcheckpoints">
-            <div class="TarifAdvantagesContainerR">
+            <div class="t4">
                 <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
                 Lorem ipsum dolor
             </div>
-            <div class="TarifAdvantagesContainerR">
+            <div class="t5">
                 <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
                 Lorem ipsum dolor
             </div>
-            <div class="TarifAdvantagesContainerR">
+            <div class="t6">
                 <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
@@ -329,53 +480,55 @@
             </div>
    
     </div>
-    </div>
-        <div class="prixOption">
-            <div class="OptionUn">
-                <h3>
-                    Open Source
-                </h3>
-                <h2>
-                    Free
-                </h2>
+    <div class="prixOption">
+        <div class="OptionUn">
+            <h3>
+                Open Source
+            </h3>
+            <h2>
+                Free
+            </h2>
 
-                <button class="buttonPrix">
-                    <h5>Voir les courses</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-                    </svg>
-                </button>
+            <button class="buttonPrix">
+                <h5>Voir les courses</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+                </svg>
+            </button>
 
-            </div>
-            <div class="OptionDeux">
-                <h3>
-                    Établissement Public
-                </h3>
-                <h2>
-                    50,000 XOF
-                </h2>
-
-                <button class="buttonPrix">
-                    <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-                    </svg>
-                </button>
-            </div>
-            <div class="OptionTrois">
-                <h3>
-                    Établissement Privés
-                </h3>
-                <h2>
-                    100,000 XOF
-                </h2>
-
-                <button class="buttonPrix">
-                    <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-                    </svg>
-                </button>
-            </div>
         </div>
-    </div> --}}
+        <div class="OptionDeux">
+            <h3>
+                Établissement Public
+            </h3>
+            <h2>
+                50,000 XOF
+            </h2>
+
+            <button class="buttonPrix">
+                <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+        <div class="OptionTrois">
+            <h3>
+                Établissement Privés
+            </h3>
+            <h2>
+                100,000 XOF
+            </h2>
+
+            <button class="buttonPrix">
+                <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    </div>
+     
+    </div>
 
     <!-- Autres sections comme Avantages, Études de cas, Tarifs, FAQ, etc. -->
     <!-- 
