@@ -140,8 +140,6 @@
     @else
     <p>Aucun contenu disponible pour le moment.</p>
     @endif
-<<<<<<< HEAD
-=======
 
     <div class="aboutTitle" id="about"> Dans les coulisses de ANDU,
         <div class="aboutParagraph">“ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l`expérience d`apprentissage pour tous les acteurs impliqués.</div>
@@ -254,13 +252,9 @@
         @else
         <p>Aucune donnée d'historique disponible pour le moment.</p>
         @endif
->>>>>>> 9087b89912ee72a8f8ef55778e9feafb94a0796b
 
 
 
-<<<<<<< HEAD
-  
-=======
     <!-- resources/views/case-studies/index.blade.php -->
 
     {{-- @extends('layouts.app')
@@ -298,7 +292,6 @@
     </div>
     @endsection --}}
 
->>>>>>> 9087b89912ee72a8f8ef55778e9feafb94a0796b
     <div class="ProduitContainer">
         <div class="NosProduits" id="products"> Nos Produits</div>
         <div class="ProduitResContainer">
