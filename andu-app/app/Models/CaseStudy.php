@@ -16,5 +16,6 @@ class CaseStudy extends Model
         'details',
         'years_of_experience',
         'users_using_lms',
+        'challenge', // Ajouté
     ];
 }

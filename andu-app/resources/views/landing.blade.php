@@ -81,7 +81,8 @@
                 <h1>{{ $dynamicContents->first()->title }}</h1>
                 <h3>{{ $dynamicContents->first()->content }}</h3>
                 @else
-              
+                <h1>Favoriser l'apprentissage, n'importe quand, n`importe où !</h1>
+                <h3>L'un des systèmes de gestion de l'apprentissage les plus innovants, un outil facile qui enrichira et facilitera la vie des éducateurs et des étudiants, améliorant ainsi leur expérience et apportant des changements positifs.</h3>
                 @endif
             </div>
 
@@ -412,7 +413,7 @@
                         + 5
                     </h1>
                     <p id="text-color-white">
-                        modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
+                        modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour <br> réussir <br>professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.
                     </p>
                 </div>
                 <div class="two" style="background: #94C0D4;">

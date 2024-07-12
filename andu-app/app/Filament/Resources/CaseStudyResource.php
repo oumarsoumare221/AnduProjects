@@ -40,19 +40,21 @@ class CaseStudyResource extends Resource
                 Textarea::make('details')
                     ->required()
                     ->label('Détails'),
-                Forms\Components\TextInput::make('years_of_experience')
-                ->label('Années d\'expérience')
-                ->numeric()
+                TextInput::make('years_of_experience')
+                    ->label('Années d\'expérience')
+                    ->numeric()
                     ->minValue(1)
                     ->maxValue(100)
                     ->required(),
-
-                Forms\Components\TextInput::make('users_using_lms')
-                ->label('Utilisateurs qui ont utilisé LMS')
-                ->numeric()
+                TextInput::make('users_using_lms')
+                    ->label('Utilisateurs qui ont utilisé LMS')
+                    ->numeric()
                     ->minValue(1)
                     ->maxValue(100)
                     ->required(),
+                Textarea::make('challenge') // Ajouté
+                    ->required()
+                    ->label('Défi'),
             ]);
     }
 
@@ -72,10 +74,13 @@ class CaseStudyResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Créé le')
                     ->dateTime(),
-            Tables\Columns\TextColumn::make('years_of_experience')
-            ->label('Années d\'expérience'),
-            Tables\Columns\TextColumn::make('users_using_lms')
-                ->label('Utilisateurs LMS'),
+                Tables\Columns\TextColumn::make('years_of_experience')
+                    ->label('Années d\'expérience'),
+                Tables\Columns\TextColumn::make('users_using_lms')
+                    ->label('Utilisateurs LMS'),
+                Tables\Columns\TextColumn::make('challenge') // Ajouté
+                    ->label('Défi')
+                    ->limit(50),
             ])
             ->filters([
                 //

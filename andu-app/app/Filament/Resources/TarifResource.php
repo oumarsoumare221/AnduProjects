@@ -11,6 +11,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 
 class TarifResource extends Resource
 {
@@ -28,6 +29,10 @@ class TarifResource extends Resource
                 TextInput::make('price')
                     ->required()
                     ->label('Prix'),
+                Textarea::make('description')
+                    ->label('Description'),
+                Textarea::make('advantage')
+                    ->label('Avantage'),
             ]);
     }
 
@@ -37,6 +42,8 @@ class TarifResource extends Resource
             ->columns([
                 TextColumn::make('type')->label('Type'),
                 TextColumn::make('price')->label('Prix'),
+                TextColumn::make('description')->label('Description'),
+                TextColumn::make('advantage')->label('Avantage'),
                 TextColumn::make('created_at')->label('Créé le')
                     ->dateTime(),
                 TextColumn::make('updated_at')->label('Mis à jour le')

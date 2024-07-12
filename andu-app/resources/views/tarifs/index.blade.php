@@ -8,80 +8,136 @@
     <link rel="stylesheet" href="{{ url('CSS/landingpage.css') }}">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .Tarifs {
+            margin: 40px 0;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .TarifContainer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .TarifAdvantagesContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .TarifAdvantagesContainer svg {
+            margin-right: 10px;
+            fill: #419488;
+            /* Couleur SVG */
+        }
+
+        .prixOption {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .prixOption>div {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .buttonPrix {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #419488;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buttonPrix:hover {
+            background-color: #367e72;
+        }
+
+        .buttonPrix h5 {
+            margin: 0;
+            margin-right: 10px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            color: #419488;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .alert-success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
         <a href="{{ route('tarifs.create') }}" class="btn btn-primary mb-3">Ajouter un tarif</a>
     <div class="container mt-5">
-        <!-- <a href="{{ route('tarifs.create') }}" class="btn btn-primary mb-3">Ajouter un tarif</a> -->
         @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
         @endif
-        <!-- <div class="tarifcheckpoints">
-            @foreach($tarifs as $tarif)
-            <div class="TarifAdvantagesContainerR">
-                <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                {{ $tarif->type }}: {{ $tarif->price }}
-            </div>
-            @endforeach
-        </div> -->
-        
-        @foreach($tarifs as $tarif)
-            <div class="Tarifs" id="pricing">
-                <h1>
-                    Tarifs
-                </h1>
-                <div class="TarifContainer">
-                <h4>
-                    Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus
-                </h4>
+
+        <div class="Tarifs" id="pricing">
+            <h1>Tarifs</h1>
+            <div class="TarifContainer">
                 <div class="TarifAdvantage">
-        
-                    
-                    <div class="t1">
-                        <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                
-                        Lorem ipsum dolor
-                    </div>
-                    <div class="t2">
+                    @foreach($tarifs as $tarif)
+                    <div class="TarifAdvantagesContainer">
                         <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        Lorem ipsum dolor
+                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h4>{{ $tarif->description }}</h4>
                     </div>
-                    <div class="t3">
+                    <div class="TarifAdvantagesContainer">
                         <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        Lorem ipsum dolor
+                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h4>{{ $tarif->advantage }}</h4>
                     </div>
-          
-                    
-                    <div class="t4">
-                        <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        Lorem ipsum dolor
-                    </div>
-                    <div class="t5">
-                        <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        Lorem ipsum dolor
-                    </div>
-                    <div class="t6">
-                        <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        Lorem ipsum dolor
-                    </div>
-                    </div>
-           
+                    @endforeach
+                </div>
             </div>
             <div class="prixOption">
                 <div class="OptionUn">
