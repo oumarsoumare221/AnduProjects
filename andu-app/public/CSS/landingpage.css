@@ -2528,8 +2528,9 @@ svg {
     
             position: relative;
             left: 8%;
+            top:5%;
     
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 36px;
@@ -2547,7 +2548,7 @@ svg {
        top: 15%;
 
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 64px;
@@ -2648,7 +2649,7 @@ svg {
     .TarifContainer {
         position: relative;
         width: 90%;
-        height: 30%;
+        height: fit-content;
         margin: auto;
         display: flex;
         flex-direction: row;
@@ -2658,7 +2659,7 @@ svg {
 
 
 
-            font-family: 'Inter';
+            font-family: "Inter", "sans-serif";
             font-style: normal;
             font-weight: 400;
             font-size: 36px;
@@ -2718,7 +2719,7 @@ svg {
             /* Lorem ipsum dolor */
      
      
-             font-family: 'Inter';
+             font-family: "Inter", sans-serif;
              font-style: normal;
              font-weight: 400;
              font-size: 30px;
@@ -2830,45 +2831,117 @@ svg {
     }
 }
 
-@media (max-width: 415px) {
-
-
-
+@media (max-width: 500px) {
     .Tarifs {
-        padding-top: 20%;
-        top: 2400px;
-     }
 
-    }
+        h1 {
+            /* Tarifs */
+
+        position: relative;
+        top: 0;
+        text-align: center;
+
+       /* Tarifs */
+
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        color: #000000;
 
 
-    @media (max-width: 360px) {
 
-
-
-        .Tarifs {
-            top: 2700px;
-         }
-    
         }
 
-@media (max-width: 335px) {
+    }
+
+    .TarifContainer {
+
+        width: 90%;
+        margin: auto;
+        h4 {
+            /* Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus. */
+
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            /* or 156% */
+
+            color: #000000;
+
+        }
+    }
+
+    .prixOption { 
+        width: 100%;
+        height: 1500px;
+    }
+
+    .OptionUn, .OptionDeux, .OptionTrois{
+        width: 85%;
+        margin-top: 10%;
+
+        h3 {
+            /* Open Source */
 
 
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
 
-            .Tarifs {
-                top: 2900px;
-             }
-        
+        color: #FFFFFF;
+
+
+        }
+
+        h2 {
+            /* Free */
+
+        top: 35%;
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+
+        color: #FFFFFF;
+
+        opacity: 0.7;
+
+        }
+
+        .buttonPrix {
+
+            height: 15.35%;
+            top: 40%;
+
+            svg {
+                display: none;
             }
 
+            h5 {
+                /* Voir les courses */
 
-@media (max-width: 311px) {
+            text-indent: 10%;
+            width: 100%;
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+
+            color: #000000;
 
 
-
-    .Tarifs {
-        top: 3100px;
-     }
-
+            }
+        }
+    
     }
+}

@@ -314,27 +314,55 @@
     </div>
     @endsection --}}
 
+    @php
+    $product1 = null;
+    $product2 = null;
+@endphp
+
+@isset($products)
+    @foreach($products as $product)
+        @php
+            if ($product->id == 3) {
+                $product1 = $product;
+            } elseif ($product->id == 2) {
+                $product2 = $product;
+            }
+
+            $imagePath3 = $product1 ? 'storage/' . $product1->image : '';
+            $imagePath4 = $product2 ? 'storage/' . $product2->image : '';
+
+        @endphp
+    @endforeach
+@endisset
+
     <div class="ProduitContainer">
         <div class="NosProduits" id="products"> Nos Produits</div>
         <div class="ProduitResContainer">
             <div class="ProduitIcon">
-                <img id="svgIconProduit" src="{{ asset('../image 2.png') }}" alt="Rocket">
+                <img id="svgIconProduit" src="{{ asset($imagePath3) }}" alt="Rocket">
 
-                <div class="ProduitIconTitle">ANDU School</div>
+                <div class="ProduitIconTitle">@if ($product1)
+                    {{ $product1->name }}
+                    @endif
+                </div>
             </div>
 
             <div class="IconPoints">
                 <ul>
-                    <li>Amélioration des résultats des élèves:
-                        ANDU permet aux élèves d'apprendre à leur rythme et de manière plus efficace,
-                        ce qui se traduit par de meilleurs résultats scolaires.</li>
+                    <li>  @if ($product1)
+                        {{ $product1->description }}
+                        @endif
+                    </li>
                     <br>
-                    <li>Gain de temps pour les enseignants: L'évaluation automatique et la communication
-                        transparente libèrent aux enseignants du temps précieux pour un soutien individualisé
-                        et la création de nouvelles ressources pédagogiques.</li>
+                    <li>  @if ($product1)
+                        {{ $product1->description2 }}
+                        @endif
+                    </li>
                     <br>
-                    <li>Implication accrue des parents: Les parents sont informés des progrès de leurs enfants
-                        et peuvent s'impliquer davantage dans leur parcours d'apprentissage.</li>
+                    <li>  @if ($product1)
+                        {{ $product1->description3 }}
+                        @endif
+                    </li>
                 </ul>
             </div>
         </div>
@@ -343,18 +371,29 @@
 
         <div class="ProduitResContainerTwo">
             <div class="ProduitIconTwo">
-                <img id="svgIconProduit" src="{{ asset('../image 6.png') }}" alt="Rocket">
+                <img id="svgIconProduit" src="{{ asset($imagePath4) }}" alt="Rocket">
 
-                <div class="ProduitIconTitle">ANDU LMS</div>
+                <div class="ProduitIconTitle">@if ($product2)
+                    {{ $product2->name }}
+                    @endif</div>
             </div>
 
             <div class="IconPointsTwo">
                 <ul>
-                    <li>Le learning management system ou LMS est un logiciel permettant de gérer une plateforme d'apprentissage en ligne, il remplit donc deux grandes fonctions, l'apprentissage (learning) et la gestion (management).</li>
+                    <li>  @if ($product2)
+                        {{ $product2->description }}
+                        @endif
+                    </li>
                     <br>
-                    <li>Nous avons créé un LMS interactif, intégrant l'IA, qui supporte plus de 12 formats variés (vidéo, audio, texte, quiz, etc.) et accepte le format SCORM. L'IA permet de générer des QCM à partir de vos leçons sur ANDU.</li>
+                    <li>  @if ($product2)
+                        {{ $product2->description2 }}
+                        @endif
+                    </li>
                     <br>
-                    <li>Permet aux apprenants d'acquérir de nouvelles connaissances théoriques et techniques ou de les réviser avec ou sans accès à Internet.</li>
+                    <li>  @if ($product2)
+                        {{ $product2->description3 }}
+                        @endif
+                    </li>
                 </ul>
             </div>
         </div>
@@ -510,6 +549,12 @@
     $tarif1 = null;
     $tarif2 = null;
     $tarif3 = null;
+    $tarif4 = null;
+    $tarif5 = null;
+    $tarif6 = null;
+    $tarif7 = null;
+    $tarif8 = null;
+    $tarif9 = null;
 
     foreach ($tarifs as $tarif) {
         if ($tarif->id == 1) {
@@ -518,7 +563,19 @@
             $tarif2 = $tarif;
         } elseif ($tarif->id == 3) {
             $tarif3 = $tarif;
-        }
+        } elseif ($tarif->id == 4) {
+            $tarif4 = $tarif;
+        } elseif ($tarif->id == 5) {
+            $tarif5 = $tarif;
+        } elseif ($tarif->id == 6) {
+            $tarif6 = $tarif;
+        } elseif ($tarif->id == 7) {
+            $tarif7 = $tarif;
+        } elseif ($tarif->id == 8) {
+            $tarif8 = $tarif;
+        } elseif ($tarif->id == 9) {
+            $tarif9 = $tarif;
+        } 
     }
     @endphp
 
@@ -529,7 +586,9 @@
 </h1>
 <div class="TarifContainer">
     <h4>
-        Lorem ipsum dolor sit amet consectetur. Ultrices quisque magna sit orci porttitor turpis. Dignissim sagittis bibendum turpis urna non enim tempor bibendum phasellus
+        @if ($tarif1)
+        {{ $tarif1->description }}
+        @endif
     </h4>
     <div class="TarifAdvantage">
         
@@ -538,19 +597,25 @@
             <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>                
-            Lorem ipsum dolor
+            @if ($tarif1)
+            {{ $tarif1->advantage }}
+            @endif
         </div>
         <div class="t2">
             <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>    
-            Lorem ipsum dolor
+            @if ($tarif2)
+            {{ $tarif2->advantage }}
+            @endif
         </div>
         <div class="t3">
             <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>    
-            Lorem ipsum dolor
+            @if ($tarif3)
+            {{ $tarif3->advantage }}
+            @endif
         </div>
         
         
@@ -558,19 +623,25 @@
             <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>    
-            Lorem ipsum dolor
+            @if ($tarif4)
+            {{ $tarif4->advantage }}
+            @endif
         </div>
         <div class="t5">
             <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>    
-            Lorem ipsum dolor
+            @if ($tarif5)
+            {{ $tarif5->advantage }}
+            @endif
         </div>
         <div class="t6">
             <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>    
-            Lorem ipsum dolor
+            @if ($tarif6)
+            {{ $tarif6->advantage }}
+            @endif
         </div>
     </div>
     
@@ -636,6 +707,9 @@
 </div>
 
 </div>
+    <footer>
+        
+    </footer>
 </body>
 
 </html>
