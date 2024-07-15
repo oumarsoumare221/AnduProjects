@@ -23,13 +23,13 @@
 <body class="bg">
 
     <div class="NavBarContainer">
-        <img id="AnduLogo" src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" sizes="(max-width: 600px) 480px,
+        <img id="AnduLogo" class = "img-responsive" src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" sizes="(max-width: 600px) 480px,
             800px">
 
         <div class="NavLinks">
             <a href="http://127.0.0.1:8000/">Home</a>
             <a href="#about">Qui Sommes-Nous</a>
-            <a href="/products">Nos Produits</a>
+            <a href="#products">Nos Produits</a>
             <a href="#cases">Études de cas</a>
             <a href="#pricing">Tarifs</a>
         </div>
@@ -40,10 +40,11 @@
             <path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="#353840" />
         </svg>
     </div>
+
+    <main>
     <div class="hero">
         <div class="ImagesContainer">
             <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
-            <img id="heroImg2" src="{{ asset('../apprendImage copy.jpg') }}" alt="Apprentissage en ligne">
 
             <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
         </div>
@@ -125,12 +126,10 @@
         </div>
 
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
+
 
     <!-- landing.blade.php -->
+    <div class="aboutus">
     <div class="aboutTitle" id="about">
     @if(isset($about))
       {{ $about->title }}
@@ -141,6 +140,7 @@
         <p>Aucun contenu disponible pour le moment.</p>
         @endif
     </div>
+</div>
         
     {{-- <div class="historyContainer">
         <div class="HistoryLine">
@@ -236,7 +236,7 @@
         
     </div>
 
-    <div class="container border-0">
+    <div class="container h-75 border-0">
         <div class="row border-0">
         <div class="col-md-12 border-0">
         <div class="card border-0 bg">
@@ -274,8 +274,8 @@
         </div>
         </div>
         </div>
-</div>  
-    
+</div> 
+<div class="gap-between"></div>
 
     <!-- resources/views/case-studies/index.blade.php -->
 
@@ -322,85 +322,58 @@
 @isset($products)
     @foreach($products as $product)
         @php
-            if ($product->id == 3) {
+            if (!$product1) {
                 $product1 = $product;
-            } elseif ($product->id == 2) {
+            } elseif (!$product2) {
                 $product2 = $product;
             }
-
-            $imagePath3 = $product1 ? 'storage/' . $product1->image : '';
-            $imagePath4 = $product2 ? 'storage/' . $product2->image : '';
-
         @endphp
     @endforeach
+
+    @php
+        $imagePath3 = $product1 ? 'storage/' . $product1->image : '';
+        $imagePath4 = $product2 ? 'storage/' . $product2->image : '';
+    @endphp
 @endisset
 
-    <div class="ProduitContainer">
-        <div class="NosProduits" id="products"> Nos Produits</div>
+<div class="ProduitContainer">
+    <div class="NosProduits" id="products"> Nos Produits</div>
+    @if ($product1)
         <div class="ProduitResContainer">
             <div class="ProduitIcon">
                 <img id="svgIconProduit" src="{{ asset($imagePath3) }}" alt="Rocket">
-
-                <div class="ProduitIconTitle">@if ($product1)
-                    {{ $product1->name }}
-                    @endif
-                </div>
+                <div class="ProduitIconTitle">{{ $product1->name }}</div>
             </div>
-
             <div class="IconPoints">
                 <ul>
-                    <li>  @if ($product1)
-                        {{ $product1->description }}
-                        @endif
-                    </li>
+                    <li>{{ $product1->description }}</li>
                     <br>
-                    <li>  @if ($product1)
-                        {{ $product1->description2 }}
-                        @endif
-                    </li>
+                    <li>{{ $product1->description2 }}</li>
                     <br>
-                    <li>  @if ($product1)
-                        {{ $product1->description3 }}
-                        @endif
-                    </li>
+                    <li>{{ $product1->description3 }}</li>
                 </ul>
             </div>
         </div>
+    @endif
 
-
-
+    @if ($product2)
         <div class="ProduitResContainerTwo">
             <div class="ProduitIconTwo">
                 <img id="svgIconProduit" src="{{ asset($imagePath4) }}" alt="Rocket">
-
-                <div class="ProduitIconTitle">@if ($product2)
-                    {{ $product2->name }}
-                    @endif</div>
+                <div class="ProduitIconTitle">{{ $product2->name }}</div>
             </div>
-
             <div class="IconPointsTwo">
                 <ul>
-                    <li>  @if ($product2)
-                        {{ $product2->description }}
-                        @endif
-                    </li>
+                    <li>{{ $product2->description }}</li>
                     <br>
-                    <li>  @if ($product2)
-                        {{ $product2->description2 }}
-                        @endif
-                    </li>
+                    <li>{{ $product2->description2 }}</li>
                     <br>
-                    <li>  @if ($product2)
-                        {{ $product2->description3 }}
-                        @endif
-                    </li>
+                    <li>{{ $product2->description3 }}</li>
                 </ul>
             </div>
         </div>
-
-
-
-    </div>
+    @endif
+</div>
 
     @php
     $caseStudy1 = null;
@@ -428,6 +401,7 @@
     <div class="Casestudy" id="cases">
         <div class="CasTitle">Études de cas</div>
         <img class="ImgCompany" src="{{ asset($imagePath) }}" alt="Image de l'étude de cas">
+        <br>
         <div class="CasTextContainer">
 
 
@@ -467,7 +441,7 @@
             <div class="three">
                 <h1>
                     @if ($caseStudy1)
-                    + {{ $caseStudy1->users_using_lms }}
+                    +{{ $caseStudy1->users_using_lms }}
                     @endif
                 </h1>
                 <p>
@@ -484,6 +458,7 @@
         </div>
         <div class="BakeliSection">
             <img class="imgBakeli" src="{{ asset($imagePath2) }}" alt="Image de l'étude de cas">
+            <br>
             <div class="CasTextContainer">
                 <h4>     @if ($caseStudy2)
                     {{ $caseStudy2->title }}
@@ -578,7 +553,6 @@
         } 
     }
     @endphp
-
 
 <div class="Tarifs" id="pricing">
 <h1>
@@ -708,9 +682,7 @@
 </div>
 
 </div>
-    <footer>
-        
-    </footer>
+</main>
 </body>
 
 </html>
