@@ -2921,6 +2921,7 @@ svg {
 
             height: 15.35%;
             top: 40%;
+            width: 73.42%;
 
             svg {
                 display: none;
@@ -2929,7 +2930,7 @@ svg {
             h5 {
                 /* Voir les courses */
 
-            text-indent: 10%;
+            text-indent: 5%;
             width: 100%;
             font-family: "Inter", sans-serif;
             font-style: normal;
