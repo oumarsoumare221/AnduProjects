@@ -7,6 +7,7 @@
     <title>ANDU - Landing Page</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="{{ url('CSS/landingpage.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Inclure la bibliothèque Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -43,7 +44,13 @@
 
     <main class="w-100 d-flex flex-column ">
     <div class="hero">
-        <div class="ImagesContainer">
+        <div 
+        data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="1500"
+     
+     class="ImagesContainer">
             <img id="heroImg" src="{{ asset('../apprendImage.jpg') }}" alt="Apprentissage en ligne">
 
             <img id="Rocket" src="{{ asset('../5143537-removebg-preview 1.png') }}" alt="Rocket">
@@ -77,7 +84,11 @@
                 <path d="M220.324 18.0786C225.895 21.0131 231.344 24.3304 236.636 28.0365C241.929 31.7426 246.91 35.728 251.573 39.959L220.324 18.0786Z" fill="black" />
             </svg>
         </div>
-        <div class="hero-text-container">
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in"
+        data-aos-duration="1500"
+        data-aos-offset="0"
+         class="hero-text-container">
             <div class="heroText">
                 @if (!empty($dynamicContents->first()))
                 <h1>{{ $dynamicContents->first()->title }}</h1>
@@ -133,7 +144,10 @@
     <div class="aboutTitle" id="about">
     @if(isset($about))
       {{ $about->title }}
-        <div class="aboutParagraph">
+        <div 
+        data-aos="fade-up"
+    data-aos-duration="3000"
+    class="aboutParagraph">
             {{ $about->content }}
         </div>
         @else
@@ -171,7 +185,10 @@
             </tbody>
         </table>
     </div> --}}
-    <div class="historyContainer">
+    <div 
+    data-aos="fade-up"
+    data-aos-duration="3000"
+    class="historyContainer">
         <div class="HistoryLine">
             <div class="historyPoints"></div>
             <div class="historyPoints"></div>
@@ -337,14 +354,24 @@
 @endisset
 
 <div class="ProduitContainer">
-    <div class="NosProduits" id="products"> Nos Produits</div>
+    <div 
+    data-aos="fade-down"
+    data-aos-duration="3000"
+     class="NosProduits" id="products"> Nos Produits</div>
     @if ($product1)
         <div class="ProduitResContainer">
-            <div class="ProduitIcon">
+            <div
+            data-aos="fade-right"
+            data-aos-duration="3000" 
+            class="ProduitIcon">
                 <img id="svgIconProduit" src="{{ asset($imagePath3) }}" alt="Rocket">
-                <div class="ProduitIconTitle">{{ $product1->name }}</div>
+                <div 
+                class="ProduitIconTitle">{{ $product1->name }}</div>
             </div>
-            <div class="IconPoints">
+            <div 
+            data-aos="fade-left"
+            data-aos-duration="3000" 
+            class="IconPoints">
                 <ul>
                     <li>{{ $product1->description }}</li>
                     <br>
@@ -358,11 +385,18 @@
 
     @if ($product2)
         <div class="ProduitResContainerTwo">
-            <div class="ProduitIconTwo">
+            <div
+            
+            data-aos="fade-left"
+            data-aos-duration="3000" 
+            class="ProduitIconTwo">
                 <img id="svgIconProduit" src="{{ asset($imagePath4) }}" alt="Rocket">
                 <div class="ProduitIconTitle">{{ $product2->name }}</div>
             </div>
-            <div class="IconPointsTwo">
+            <div 
+            data-aos="fade-right"
+            data-aos-duration="3000" 
+            class="IconPointsTwo">
                 <ul>
                     <li>{{ $product2->description }}</li>
                     <br>
@@ -554,6 +588,8 @@
     }
     @endphp
 
+
+
     <div class="Tarifs" id="pricing">
     <h1>
         Tarifs
@@ -686,6 +722,10 @@
     <footer class="footer">
             
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
