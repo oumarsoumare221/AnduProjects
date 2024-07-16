@@ -110,7 +110,6 @@
                 });
             </script>
             <div class="hero-button-container">
-
                 <form action="{{ route('subscribe') }}" method="POST" class="send-email">
                     @csrf
                     <input id="email-input" name="email" type="email" placeholder="Veuillez entrer votre adresse e-mail pour vous inscrire..." required>
@@ -122,6 +121,7 @@
                 </form>
                 <button class="DemoButton">Voir un Demo</button>
             </div>
+
         </div>
 
     </div>
@@ -132,8 +132,8 @@
 
     <!-- landing.blade.php -->
     <div class="aboutTitle" id="about">
-    @if(isset($about))
-      {{ $about->title }}
+        @if(isset($about))
+        {{ $about->title }}
         <div class="aboutParagraph">
             {{ $about->content }}
         </div>
@@ -141,35 +141,35 @@
         <p>Aucun contenu disponible pour le moment.</p>
         @endif
     </div>
-        
+
     {{-- <div class="historyContainer">
         <div class="HistoryLine">
             @foreach($histories as $history)
             <div class="historyPoints" data-year="{{ $history->year }}"></div>
-            @endforeach
-        </div>
-        <table class="HistoryTable">
-            <thead>
-                <tr>
-                    @foreach($bufferTimelines as $timeline)
-                    <th class="mois">
-                        <p>{{ $timeline->year }}</p>
-                    </th>
-                    @endforeach
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="TableInfo">
-                    @foreach($histories as $history)
-                    <td>
-                        <strong>{{ $history->month }}</strong><br>
-                        {{ $history->event }}<br>
-                        <a href="#">Read more</a>
-                    </td>
-                    @endforeach
-                </tr>
-            </tbody>
-        </table>
+    @endforeach
+    </div>
+    <table class="HistoryTable">
+        <thead>
+            <tr>
+                @foreach($bufferTimelines as $timeline)
+                <th class="mois">
+                    <p>{{ $timeline->year }}</p>
+                </th>
+                @endforeach
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="TableInfo">
+                @foreach($histories as $history)
+                <td>
+                    <strong>{{ $history->month }}</strong><br>
+                    {{ $history->event }}<br>
+                    <a href="#">Read more</a>
+                </td>
+                @endforeach
+            </tr>
+        </tbody>
+    </table>
     </div> --}}
     <div class="historyContainer">
         <div class="HistoryLine">
@@ -185,97 +185,105 @@
             <thead>
                 @if(isset($histories) && isset($bufferTimelines))
                 @foreach($histories as $history)
-                <th class="mois" scope="col"> <p>{{ $history->month }}</p></th>
-                    @endforeach
-            
-               
-                 
-                </thead>
-                <tr class="TableInfo">
-             
-                    @foreach($histories as $history)
-                    <td>
-                        {{ $history->event }}<br>
-                        <a href="#">Read more</a>
-                    </td>
-                    @endforeach
-                    @else
-                    <p>Aucune donnée d'historique disponible pour le moment.</p>
-                    @endif
-                </tr>
+                <th class="mois" scope="col">
+                    <p>{{ $history->month }}</p>
+                </th>
+                @endforeach
 
-                
-                <tr class="TableInfo">
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td class="dotted">dsfn</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
 
-                  @if(isset($histories2) && isset($bufferTimelines))
-                  @foreach($histories2 as $history2s)
-                  <th class="mois" scope="col"> <p>{{ $history2s->month }}</p></th>
-                  @endforeach
-                  <tr class="TableInfo">
-             
-                    @foreach($histories2 as $history2s)
-                    <td>
-                        {{ $history2s->event }}<br>
-                        <a href="#">Read more</a>
-                    </td>
-                    @endforeach
-                </tr>
+
+            </thead>
+            <tr class="TableInfo">
+
+                @foreach($histories as $history)
+                <td>
+                    {{ $history->event }}<br>
+                    <a href="#">Read more</a>
+                </td>
+                @endforeach
+                @else
+                <p>Aucune donnée d'historique disponible pour le moment.</p>
                 @endif
-                 
-              
-            </table>
-              
-        
-        
+            </tr>
+
+
+            <tr class="TableInfo">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td class="dotted">dsfn</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            @if(isset($histories2) && isset($bufferTimelines))
+            @foreach($histories2 as $history2s)
+            <th class="mois" scope="col">
+                <p>{{ $history2s->month }}</p>
+            </th>
+            @endforeach
+            <tr class="TableInfo">
+
+                @foreach($histories2 as $history2s)
+                <td>
+                    {{ $history2s->event }}<br>
+                    <a href="#">Read more</a>
+                </td>
+                @endforeach
+            </tr>
+            @endif
+
+
+        </table>
+
+
+
     </div>
 
     <div class="container border-0">
         <div class="row border-0">
-        <div class="col-md-12 border-0">
-        <div class="card border-0 bg">
-        <div class="card-body border-0 bg">
-        <div id="content">
+            <div class="col-md-12 border-0">
+                <div class="card border-0 bg">
+                    <div class="card-body border-0 bg">
+                        <div id="content">
 
 
-            @if(isset($histories) && isset($bufferTimelines))
-            <ul class="timeline">
-                @foreach($bufferTimelines as $timeline)
-                    {{-- Assuming $histories and $bufferTimelines are of equal length --}}
-                    @if(isset($histories[$loop->index])) {{-- Check if $histories[$loop->index] exists --}}
-                        @php
-                            $history = $histories[$loop->index];
-                        @endphp
-                        <li class="event" data-date="{{ $timeline->year }}">
-                            <h3><div class="mois" scope="col"><p>{{ $history->month }}</p></div></h3>
-                            <br>
-                                {{ $history->event }}<br>
-                                <a href="#">Read more</a>
-                            
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-        @endif
-        
-     
-            
-        </li>
-    
+                            @if(isset($histories) && isset($bufferTimelines))
+                            <ul class="timeline">
+                                @foreach($bufferTimelines as $timeline)
+                                {{-- Assuming $histories and $bufferTimelines are of equal length --}}
+                                @if(isset($histories[$loop->index])) {{-- Check if $histories[$loop->index] exists --}}
+                                @php
+                                $history = $histories[$loop->index];
+                                @endphp
+                                <li class="event" data-date="{{ $timeline->year }}">
+                                    <h3>
+                                        <div class="mois" scope="col">
+                                            <p>{{ $history->month }}</p>
+                                        </div>
+                                    </h3>
+                                    <br>
+                                    {{ $history->event }}<br>
+                                    <a href="#">Read more</a>
+
+                                </li>
+                                @endif
+                                @endforeach
+                            </ul>
+                            @endif
+
+
+
+                            </li>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-</div>  
-    
+    </div>
+    </div>
+
 
     <!-- resources/views/case-studies/index.blade.php -->
 
@@ -287,58 +295,58 @@
         @foreach($caseStudies as $caseStudy)
         <div class="case-study-item">
             <img class="ImgCompany" src="{{ asset('storage/' . $caseStudy->image) }}" alt="Image de l'étude de cas">
-            <div class="CasTextContainer">
-                <h4>{{ $caseStudy->title }}</h4>
-                <p>{{ $caseStudy->description }}</p>
-            </div>
-            <div class="infoGrid">
-                <!-- Utiliser les détails de l'étude de cas pour remplir ces sections -->
-                <div class="one">
-                    <h1>+5</h1>
-                    <p>modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.</p>
-                </div>
-                <div class="two">
-                    <h1>+5</h1>
-                    <p>Années d`expériences</p>
-                </div>
-                <div class="three">
-                    <h1>+100</h1>
-                    <p>de utilisateurs qui ont utilisé LMS</p>
-                </div>
-                <div class="four">
-                    <p>Avec Defaru, l'un des défis rencontrés a été la standardisation du SCORM. Cela a impliqué de s'assurer que le contenu éducatif était compatible avec divers systèmes de gestion de l'apprentissage (LMS), permettant une interopérabilité et un suivi cohérent des progrès des apprenants.</p>
-                </div>
-            </div>
+    <div class="CasTextContainer">
+        <h4>{{ $caseStudy->title }}</h4>
+        <p>{{ $caseStudy->description }}</p>
+    </div>
+    <div class="infoGrid">
+        <!-- Utiliser les détails de l'étude de cas pour remplir ces sections -->
+        <div class="one">
+            <h1>+5</h1>
+            <p>modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail.</p>
         </div>
-        @endforeach
+        <div class="two">
+            <h1>+5</h1>
+            <p>Années d`expériences</p>
+        </div>
+        <div class="three">
+            <h1>+100</h1>
+            <p>de utilisateurs qui ont utilisé LMS</p>
+        </div>
+        <div class="four">
+            <p>Avec Defaru, l'un des défis rencontrés a été la standardisation du SCORM. Cela a impliqué de s'assurer que le contenu éducatif était compatible avec divers systèmes de gestion de l'apprentissage (LMS), permettant une interopérabilité et un suivi cohérent des progrès des apprenants.</p>
+        </div>
+    </div>
+    </div>
+    @endforeach
     </div>
     @endsection --}}
 
-   @php
+    @php
     $product1 = null;
     $product2 = null;
-@endphp
+    @endphp
 
-@isset($products)
+    @isset($products)
     @foreach($products as $product)
-        @php
-            if (!$product1) {
-                $product1 = $product;
-            } elseif (!$product2) {
-                $product2 = $product;
-            }
-        @endphp
+    @php
+    if (!$product1) {
+    $product1 = $product;
+    } elseif (!$product2) {
+    $product2 = $product;
+    }
+    @endphp
     @endforeach
 
     @php
-        $imagePath3 = $product1 ? 'storage/' . $product1->image : '';
-        $imagePath4 = $product2 ? 'storage/' . $product2->image : '';
+    $imagePath3 = $product1 ? 'storage/' . $product1->image : '';
+    $imagePath4 = $product2 ? 'storage/' . $product2->image : '';
     @endphp
-@endisset
+    @endisset
 
-<div class="ProduitContainer">
-    <div class="NosProduits" id="products"> Nos Produits</div>
-    @if ($product1)
+    <div class="ProduitContainer">
+        <div class="NosProduits" id="products"> Nos Produits</div>
+        @if ($product1)
         <div class="ProduitResContainer">
             <div class="ProduitIcon">
                 <img id="svgIconProduit" src="{{ asset($imagePath3) }}" alt="Rocket">
@@ -354,9 +362,9 @@
                 </ul>
             </div>
         </div>
-    @endif
+        @endif
 
-    @if ($product2)
+        @if ($product2)
         <div class="ProduitResContainerTwo">
             <div class="ProduitIconTwo">
                 <img id="svgIconProduit" src="{{ asset($imagePath4) }}" alt="Rocket">
@@ -372,29 +380,29 @@
                 </ul>
             </div>
         </div>
-    @endif
-</div>
+        @endif
+    </div>
 
     @php
     $caseStudy1 = null;
     $caseStudy2 = null;
-@endphp
+    @endphp
 
-@isset($caseStudies)
+    @isset($caseStudies)
     @foreach ($caseStudies as $caseStudy)
-        @php
-            if ($caseStudy->id == 1) {
-                $caseStudy1 = $caseStudy;
-            } elseif ($caseStudy->id == 2) {
-                $caseStudy2 = $caseStudy;
-            }
+    @php
+    if ($caseStudy->id == 1) {
+    $caseStudy1 = $caseStudy;
+    } elseif ($caseStudy->id == 2) {
+    $caseStudy2 = $caseStudy;
+    }
 
-            $imagePath = $caseStudy1 ? 'storage/' . $caseStudy1->image : '';
-            $imagePath2 = $caseStudy2 ? 'storage/' . $caseStudy2->image : '';
+    $imagePath = $caseStudy1 ? 'storage/' . $caseStudy1->image : '';
+    $imagePath2 = $caseStudy2 ? 'storage/' . $caseStudy2->image : '';
 
-        @endphp
+    @endphp
     @endforeach
-@endisset
+    @endisset
 
 
 
@@ -413,7 +421,7 @@
                 @if ($caseStudy1)
                 {{ $caseStudy1->description }}
                 @endif
-                </p>
+            </p>
         </div>
 
         <div class="infoGrid">
@@ -433,7 +441,7 @@
                     + {{ $caseStudy1->years_of_experience }}
                     @endif
                 </h1>
-                <p >
+                <p>
                     Années d`expériences
                 </p>
             </div>
@@ -458,17 +466,17 @@
         <div class="BakeliSection">
             <img class="imgBakeli" src="{{ asset($imagePath2) }}" alt="Image de l'étude de cas">
             <div class="CasTextContainer">
-                <h4>     @if ($caseStudy2)
+                <h4> @if ($caseStudy2)
                     {{ $caseStudy2->title }}
                     @endif
                 </h4>
-                <p> <br>      @if ($caseStudy2)
+                <p> <br> @if ($caseStudy2)
                     {{ $caseStudy2->description }}
                     @endif
                 </p>
             </div>
 
-          
+
             <div class="infoGrid">
                 <div class="one" style="background-color: black;">
                     <h1 id="text-color-white">
@@ -476,15 +484,15 @@
                     </h1>
                     <p id="text-color-white">
                         @if ($caseStudy2)
-                    {{ $caseStudy2->details }}
-                    @endif
+                        {{ $caseStudy2->details }}
+                        @endif
                     </p>
                 </div>
                 <div class="two" style="background: #94C0D4;">
                     <h1 id="text-color-black">
                         @if ($caseStudy2)
-                    + {{ $caseStudy2->years_of_experience }}
-                    @endif
+                        + {{ $caseStudy2->years_of_experience }}
+                        @endif
                     </h1>
                     <p id="text-color-black">
                         Années d`expériences
@@ -494,8 +502,8 @@
                 <div class="three" style="background: #048ECB;">
                     <h1>
                         @if ($caseStudy2)
-                    + {{ $caseStudy2->years_of_experience }}
-                    @endif
+                        + {{ $caseStudy2->years_of_experience }}
+                        @endif
                     </h1>
                     <p>
                         de utilisateurs qui ont utiliser LMS
@@ -530,158 +538,158 @@
     $tarif9 = null;
 
     foreach ($tarifs as $tarif) {
-        if ($tarif->id == 1) {
-            $tarif1 = $tarif;
-        } elseif ($tarif->id == 2) {
-            $tarif2 = $tarif;
-        } elseif ($tarif->id == 3) {
-            $tarif3 = $tarif;
-        } elseif ($tarif->id == 4) {
-            $tarif4 = $tarif;
-        } elseif ($tarif->id == 5) {
-            $tarif5 = $tarif;
-        } elseif ($tarif->id == 6) {
-            $tarif6 = $tarif;
-        } elseif ($tarif->id == 7) {
-            $tarif7 = $tarif;
-        } elseif ($tarif->id == 8) {
-            $tarif8 = $tarif;
-        } elseif ($tarif->id == 9) {
-            $tarif9 = $tarif;
-        } 
+    if ($tarif->id == 1) {
+    $tarif1 = $tarif;
+    } elseif ($tarif->id == 2) {
+    $tarif2 = $tarif;
+    } elseif ($tarif->id == 3) {
+    $tarif3 = $tarif;
+    } elseif ($tarif->id == 4) {
+    $tarif4 = $tarif;
+    } elseif ($tarif->id == 5) {
+    $tarif5 = $tarif;
+    } elseif ($tarif->id == 6) {
+    $tarif6 = $tarif;
+    } elseif ($tarif->id == 7) {
+    $tarif7 = $tarif;
+    } elseif ($tarif->id == 8) {
+    $tarif8 = $tarif;
+    } elseif ($tarif->id == 9) {
+    $tarif9 = $tarif;
+    }
     }
     @endphp
 
 
-<div class="Tarifs" id="pricing">
-<h1>
-    Tarifs
-</h1>
-<div class="TarifContainer">
-    <h4>
-        @if ($tarif1)
-        {{ $tarif1->description }}
-        @endif
-    </h4>
-    <div class="TarifAdvantage">
-        
-        
-        <div class="t1">
-            <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
-            @if ($tarif1)
-            {{ $tarif1->advantage }}
-            @endif
+    <div class="Tarifs" id="pricing">
+        <h1>
+            Tarifs
+        </h1>
+        <div class="TarifContainer">
+            <h4>
+                @if ($tarif1)
+                {{ $tarif1->description }}
+                @endif
+            </h4>
+            <div class="TarifAdvantage">
+
+
+                <div class="t1">
+                    <svg width="24" height="28.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    @if ($tarif1)
+                    {{ $tarif1->advantage }}
+                    @endif
+                </div>
+                <div class="t2">
+                    <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    @if ($tarif2)
+                    {{ $tarif2->advantage }}
+                    @endif
+                </div>
+                <div class="t3">
+                    <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    @if ($tarif3)
+                    {{ $tarif3->advantage }}
+                    @endif
+                </div>
+
+
+                <div class="t4">
+                    <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    @if ($tarif4)
+                    {{ $tarif4->advantage }}
+                    @endif
+                </div>
+                <div class="t5">
+                    <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    @if ($tarif5)
+                    {{ $tarif5->advantage }}
+                    @endif
+                </div>
+                <div class="t6">
+                    <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    @if ($tarif6)
+                    {{ $tarif6->advantage }}
+                    @endif
+                </div>
+            </div>
+
         </div>
-        <div class="t2">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>    
-            @if ($tarif2)
-            {{ $tarif2->advantage }}
-            @endif
+        <div class="prixOption">
+            <div class="OptionUn">
+                <h3>
+                    @if ($tarif1)
+                    {{ $tarif1->type }}
+                    @endif
+                </h3>
+                <h2>
+                    @if ($tarif1)
+                    {{ $tarif1->price }}
+                    @endif
+                </h2>
+
+                <button class="buttonPrix">
+                    <h5>Voir les courses</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+                    </svg>
+                </button>
+
+            </div>
+            <div class="OptionDeux">
+                <h3>
+                    @if ($tarif2)
+                    {{ $tarif2->type }}
+                    @endif
+                </h3>
+                <h2>
+                    @if ($tarif2)
+                    {{ $tarif2-> price }}
+                    @endif
+                </h2>
+
+                <button class="buttonPrix">
+                    <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+                    </svg>
+                </button>
+            </div>
+            <div class="OptionTrois">
+                <h3>
+                    @if ($tarif3)
+                    {{ $tarif3->type }}
+                    @endif
+                </h3>
+                <h2>
+                    @if ($tarif3)
+                    {{ $tarif3-> price }}
+                    @endif
+                </h2>
+
+                <button class="buttonPrix">
+                    <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="t3">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>    
-            @if ($tarif3)
-            {{ $tarif3->advantage }}
-            @endif
-        </div>
-        
-        
-        <div class="t4">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>    
-            @if ($tarif4)
-            {{ $tarif4->advantage }}
-            @endif
-        </div>
-        <div class="t5">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>    
-            @if ($tarif5)
-            {{ $tarif5->advantage }}
-            @endif
-        </div>
-        <div class="t6">
-            <svg width="20" height="24.4" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 15.2254L10.5 27.4508L23 3" stroke="#419488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>    
-            @if ($tarif6)
-            {{ $tarif6->advantage }}
-            @endif
-        </div>
+
     </div>
-    
-</div>
-<div class="prixOption">
-    <div class="OptionUn">
-        <h3>
-            @if ($tarif1)
-            {{ $tarif1->type }}
-            @endif
-        </h3>
-        <h2>
-            @if ($tarif1)
-            {{ $tarif1->price }}
-            @endif
-        </h2>
-        
-    <button class="buttonPrix">
-        <h5>Voir les courses</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-        </svg>
-    </button>
 
-</div>
-<div class="OptionDeux">
-    <h3>
-        @if ($tarif2)
-        {{ $tarif2->type }}
-        @endif
-    </h3>
-    <h2>
-        @if ($tarif2)
-        {{ $tarif2-> price }}
-        @endif
-    </h2>
-
-    <button class="buttonPrix">
-        <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-        </svg>
-    </button>
-</div>
-<div class="OptionTrois">
-    <h3>
-        @if ($tarif3)
-        {{ $tarif3->type }}
-        @endif
-    </h3>
-    <h2>
-        @if ($tarif3)
-        {{ $tarif3-> price }}
-        @endif
-    </h2>
-
-    <button class="buttonPrix">
-        <h5>Prenez rendez-vous</h5> <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7992 9.92417C27.5314 9.19194 28.7186 9.19194 29.4508 9.92417L40.7008 21.1742C41.4331 21.9064 41.4331 23.0936 40.7008 23.8258L29.4508 35.0758C28.7186 35.8081 27.5314 35.8081 26.7992 35.0758C26.0669 34.3436 26.0669 33.1564 26.7992 32.4242L34.8483 24.375H5.625C4.58947 24.375 3.75 23.5355 3.75 22.5C3.75 21.4645 4.58947 20.625 5.625 20.625H34.8483L26.7992 12.5758C26.0669 11.8436 26.0669 10.6564 26.7992 9.92417Z" fill="black" />
-        </svg>
-    </button>
-</div>
-</div>
-
-</div>
-
-</div>
+    </div>
     <footer>
-        
+
     </footer>
 </body>
 
