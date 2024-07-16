@@ -11,6 +11,8 @@ html {
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
+    font-family: "Inter", sans-serif;
+
 
 }
 
@@ -23,6 +25,7 @@ body {
 .bg {
     background-color:#EEEEEE; 
 }
+
 body {
     
     font-family: "Inter", sans-serif;
@@ -31,9 +34,10 @@ body {
     color: #333;
     height: 100vh;
     width: 100vw;
-    background-color:#EEEEEE; 
-    background-color:#EEEEEE; 
     display: block;
+    overflow-x: hidden;
+    min-height: 100vh;
+
 }
 
 #AnduLogo {
@@ -70,7 +74,7 @@ align-items: center;
 left: 34.17%;
 
 
-font-family: 'Inter';
+font-family: "Inter", sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 1.5em;
@@ -80,9 +84,41 @@ color: #000000;
 
 }
 
+.gap-between {
+    height: 250px;
+}
+
+main {
+    height: max-content;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+
+@media (max-width:1300px) {
+    main {
+        height: fit-content;
+        width: 100%;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "hero"
+        "aboutus"
+        "historyContainer"
+        "container"
+        "container-fluid"
+        "ProduitContainer"
+        "Casestudy"
+        "Tarifs"
+        "footer" ;
+    }
+    
+}
 .toggleSidebar {
 position: sticky;
-left: 95%;
+left: 82.5%;
 /* Screenshot 2024-06-24 at 16.25.21 1 */
 display: none;
 top: 22px;
@@ -105,6 +141,8 @@ right: 25%;
 #AnduLogo {
     left: 2%;
     opacity: 1;
+    width: 137px;
+    height: 42px;
 }
 
 }
@@ -146,7 +184,7 @@ align-items: center;
 p {
 position: relative;
 margin: auto;
-font-family: 'Inter';
+font-family: "Inter", sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 1.5em;
@@ -168,7 +206,7 @@ color: #000000;
 
 .button-text-nav {
      /*text*/
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 1.5em;
@@ -207,6 +245,7 @@ color: #000000;
     margin: auto;
     border-radius: 5px;
     z-index: 1;
+    overflow: hidden;
 
 }
 
@@ -288,11 +327,14 @@ color: #000000;
 
 }
 
+
+
 @media (max-width:390px) {
     #heroImg {
         width: 92.56%;
         height: 290px;
         margin: auto;
+      
     }
 
     .toggleSidebar {
@@ -319,9 +361,9 @@ color: #000000;
         /* Veuillez entrer votre adresse e-mail pour vous inscrire... */
 
     position: relative;
-    height: 60%;
+    height: 78%;
     width: 80%;
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -335,7 +377,7 @@ color: #000000;
     background-color: transparent;
     border: none;
     text-decoration: none;
-    padding: 10px;
+    vertical-align: center;
 
 
     }
@@ -347,7 +389,8 @@ color: #000000;
         height: 100%;
         white-space: normal;
         position: relative;
-        bottom: 30%;
+        bottom: 20%;
+  
 
     }
 
@@ -408,7 +451,7 @@ color: #000000;
 
 
     margin-left: 1%;
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 1.5em;
@@ -428,12 +471,11 @@ color: #000000;
     background: #419488;
     width: 30%;
     top: 5%;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
 
 
     margin-left: 1%;
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25em;
@@ -478,9 +520,13 @@ svg {
     .hero {
         display: block;
         width: 92.8%;
-        height: calc(100vh - 10px);
+        height: calc(80vh - 10px);
         overflow: visible;
         gap: 0;
+        align-self: center;
+        margin: auto;
+        right: 0;
+        left: 0;
     }
 
     .ImagesContainer {
@@ -502,13 +548,7 @@ svg {
 
 
     
-        .hero {
-            width: 95%;
-            align-self: center;
-            margin: auto;
-            right: 0;
-            left: 0;
-        }
+    
 
     #heroImg {
         display: none;
@@ -565,11 +605,11 @@ svg {
     }
 
     .DemoButton {
-        width: 60%;
+        width: 40%;
         border-radius: 5px ;
         height: 30%;
         align-self: center;
-        margin-top: 5% ;
+        margin-top: 6% ;
         margin-left: 10%;
         font-size: 16px;
     }
@@ -578,32 +618,38 @@ svg {
         display: none;
     }
 
+    .heroText h3 {
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+
+        color: #000000;
+
+
+        }
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .ImagesContainer {
         height: 50%; /* Adjust the height for smaller screens */
     }
     #AnduLogo {
         position: absolute;
         left: 3%;
-        top: 35px;
+        top: 15px;
         /* Screenshot 2024-06-24 at 16.25.21 1 */
      
        
         }
-
-    .hero {
-        width: 95%;
-        margin: auto;
-        left: 0;
-        top: 0;
-    }
     .toggleSidebar {
         width: 40px;
         height: 40px;
         max-width: 100%;
-        left: 92%;
+        left: 82.5%;
         }
         .heroText {
             width: 100%;
@@ -615,7 +661,16 @@ svg {
         }
     
         .heroText h3 {
-            font-size: 16px;
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #000000;
+
+
         }
 
         .hero-button-container {
@@ -653,12 +708,12 @@ svg {
         }
 
         .DemoButton {
-            width: 40%;
+            width: 60%;
             border-radius: 5px ;
-            height: 30%;
+            height: 40%;
             align-self: center;
             margin-top: 5% ;
-            margin-left: 10%;
+            margin-left: 25%;
             font-size: 16px;
         }
         
@@ -678,8 +733,7 @@ svg {
     .toggleSidebar {
         width: 30px;
         height: 30px;
-        max-width: 100%;
-        left: 95%;
+        left: 82.5%;
         }
 
     .heroText {
@@ -696,6 +750,29 @@ svg {
     }
 }
 
+@media (max-width: 350px) {
+    .hero {
+        display: block;
+        width: 92.8%;
+        height: calc(100vh - 1px);
+        overflow: visible;
+        gap: 0;
+        align-self: center;
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .aboutus {
+        padding-top: 14%;
+    }
+
+    .timeline {
+        margin-top: 15%;
+    }
+
+}
+
 
 
 
@@ -703,14 +780,14 @@ svg {
             /* Dans les coulisees de ANDU */
         top: 5%;
         position: relative;
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 48px;
         line-height: 58px;
         text-align: center;
         color: #000000;
-        height: 1200px;
+        height: fit-content;
         
         .histoire {
             /* Notre Histoire */
@@ -718,7 +795,7 @@ svg {
             left: 5%;
             top:40%;
 
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 40px;
@@ -741,7 +818,7 @@ svg {
             width: 80%;
             text-align: center;
             
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 36px;
@@ -761,6 +838,7 @@ svg {
             width: auto;
             bottom: 70%;
             padding-top: 5%;
+            padding-bottom: 10%;
             display: block;
         }
 
@@ -962,7 +1040,6 @@ svg {
         }
         
         .timeline {
-            bottom: 600px;
             border-left: 3px solid black;
             border-bottom-right-radius: 4px black;
             border-top-right-radius: 4px;
@@ -978,6 +1055,7 @@ svg {
             max-width: 50%;
             display: none;
             visibility: hidden;
+            padding-bottom: 10%;
         }
 
         @media (max-width: 1300px) { 
@@ -1086,17 +1164,22 @@ svg {
             right: -55.8px;
         }
 
+        .aboutus {
+            position: relative;
+            height: fit-content;
+            padding-bottom: 10%;
+        }
 
         @media (max-width: 1300px) {
             .aboutParagraph {
                 text-align: left;
-                font-size: 2.875vw;
+                
                 line-height: auto;
 
             }
 
-            .aboutTitle {
-                font-size: 4.275vw;
+            .aboutus {
+                margin-top: 12%;
             }
 
             .historyContainer {
@@ -1126,6 +1209,18 @@ svg {
         
             
 
+    }
+
+    @media (max-width: 600px) {
+        .timeline {
+           
+        }
+    }
+
+    @media (max-width: 320px) {
+        .timeline {
+         
+        }
     }
         .mois {
          
@@ -1207,9 +1302,9 @@ svg {
 
         position: relative;
         text-align: center;
-        bottom: 100px;
+        bottom: 50px;
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 64px;
@@ -1302,7 +1397,7 @@ svg {
         margin-left: 10%; 
 
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
@@ -1323,7 +1418,7 @@ svg {
     height: 50%;
 
 
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -1351,20 +1446,107 @@ svg {
         position: relative;
         width: 90%;
         height: 40%;
-        top: 300px;
+        top: 500px;
         display: flex; 
         flex-direction: row-reverse;
         flex-wrap: wrap;
         margin: auto;
-        background: purple;
 
+    }
+
+    .aboutus {
+        position: relative;
+        height: fit-content;
+        padding-bottom: 10%;
+    }
+
+    @media (max-width: 1200px) {
+
+    }
+
+    @media (max-width: 800px) {
+        .aboutus {
+            margin-top: 0;
+            position: relative;
+        }
+        .aboutTitle {
+            /* Qui Sommes-Nous */
+
+
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        color: #000000;
+
+
+        }
+
+        .aboutParagraph {
+            /* “ANDU” vise à motiver les élèves, étudiants, educators et employés en rendant la révision plus interactive et en fournissant des retours immédiats, tout en intégrant des formats de leçons variés, des QCM générés automatiquement et un suivi de la progression, Elle cherche à résoudre ces problèmes et à améliorer l’expérience d’apprentissage pour tous les acteurs impliqués. */
+        width: 90%;
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+
+
+        }
+
+  
+
+    }
+
+    @media (max-width: 375px) {
+        .aboutus {
+            position: relative;
+            bottom: 0%;
+        }
+
+        .send-email {
+            input {
+                height: 70%;
+            }
+        }
+
+        
+    }
+
+    @media (max-width:320px ) {
+
+        .aboutus {
+            position: relative;
+            top: 5%;
+        }
+
+        #AnduLogo {
+            width: 94px;
+            height: 29px;
+        }
+        .NavBarContainer {
+            height: 12%;
+        }
+        
+        .toggleSidebar {
+            top:0;
+            bottom: 0;
+            left: 80%;
+        }
     }
 
     
     @media (max-width: 1660px) and (min-width:1300px) {
         .ProduitResContainerTwo {
-            top: 900px;
-            margin-top: 400px;
+            top: 0;
+            margin-top: 500px;
             
         }
     }
@@ -1373,7 +1555,7 @@ svg {
     @media (max-width: 1300px) {
 
         .ProduitContainer {
-            top: 60%; 
+            bottom: 10%; 
         }
         .ProduitResContainer {
             display: block;
@@ -1382,7 +1564,7 @@ svg {
 
         .ProduitResContainerTwo {
             display: block;
-            top: 0;
+            top: 100px;
         }
 
         .ProduitIcon, .ProduitIconTwo {
@@ -1408,7 +1590,7 @@ svg {
             margin: auto;
             top: 0;
             bottom: 0;
-            margin-top: 10%; 
+            margin-top: 15%; 
             font-size: 30px;
             line-height: auto;
         }
@@ -1430,6 +1612,15 @@ svg {
     }
 
     @media (max-width:900px) {
+
+
+            .ProduitContainer {
+                top: 0%;
+                bottom: 100%;
+                margin-bottom: 30%;
+
+            }
+            
         .ProduitResContainerTwo {
             display: block;
         }
@@ -1440,7 +1631,7 @@ svg {
 
 
 
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
@@ -1459,6 +1650,18 @@ svg {
         .ProduitResContainerTwo {
             display: block; 
         }
+
+        .NosProduits {
+          
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+
+
+        }
         .IconPoints, .IconPointsTwo {
             position: relative;
             font-size: 16px;
@@ -1472,12 +1675,11 @@ svg {
 
     .Casestudy {
         display: block;
-        height: 3000px;
+        height: 100%;
         width: 100%;
         position: relative;
         padding-top: 5%;
         margin-top: 5%;
-        top: 50%;
 
 
     }
@@ -1487,7 +1689,7 @@ svg {
         position: relative;
         text-align: center;
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 64px;
@@ -1515,7 +1717,7 @@ svg {
             left: 5%;
             top: 7.5%;
 
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 36px;
@@ -1533,7 +1735,7 @@ svg {
         top: 5%;
         width: 86%;
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
@@ -1551,7 +1753,7 @@ svg {
         margin: auto;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr ;
-        height: 23%;
+        min-height: 750px;
         width: 70%;
         position: relative;
         padding:0;
@@ -1567,7 +1769,7 @@ svg {
         
 
         left: 10%;
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 128px;
@@ -1595,7 +1797,7 @@ svg {
         top: 21.5%;
         
         width: 25%;
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.5em;
@@ -1642,7 +1844,7 @@ svg {
             height: 20%;
             bottom: 49.5%;
 
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 32px;
@@ -1679,7 +1881,7 @@ svg {
             height: 20%;
             bottom: 49.5%;
 
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 32px;
@@ -1706,7 +1908,7 @@ svg {
         margin-bottom: 2%;
         top: 10%;
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 32px;
@@ -1727,23 +1929,15 @@ svg {
     }
 
              .BakeliSection {
-            position: absolute;
+            position: relative;
 
          }
 
 
-    @media (max-width: 1660px) and (min-width:1300px) {
-        .Casestudy {
-            top: 1300px;
-         
-        }
-    
-    }
-
     @media (max-width: 1300px) {
 
         .Casestudy {
-            top: 1000px;
+            top: 800px;
             background-color: transparent;
         }
 
@@ -1755,6 +1949,7 @@ svg {
             }
             h4 {
                 left: 8%;
+                width: 85%;
             }
         }
 
@@ -1766,26 +1961,26 @@ svg {
 
         .infoGrid {
             display: grid;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-top: 0;
+
             width: 90%;
             position: relative;
             column-gap: 0;
             row-gap: 0;
 
-            bottom: 20%;
-            margin-top: 20%;
          
             height: fit-content;
 
             display: grid; 
             grid-template-columns: 1fr 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr; 
             grid-template-areas:
-            ". . . ."
             "one one one one"
             "two two three three"
-            "four four four four"
-            ". . . .";
+            "four four four four";
             
             column-gap: 15px;
             row-gap: 15px;
@@ -1804,7 +1999,6 @@ svg {
                 position: relative;
                 margin: auto;
                 width: 90%;
-                background-color: #2C4BFF;
                 bottom: 0;
                 height: fit-content;
                 margin-bottom: 5%;
@@ -1812,7 +2006,7 @@ svg {
 
                 /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
 
-                font-family: 'Inter';
+                font-family: "Inter", sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 30px;
@@ -1853,6 +2047,8 @@ svg {
             display: flex;
             flex-direction: column; 
             margin: 0;
+            height: 80%;
+            
 
             h1 {
                 top: 0;
@@ -1870,14 +2066,15 @@ svg {
                 left: 10%;
                 font-family: "Inter", sans-serif;
                 width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
+                margin-top: 10%;
+                margin-bottom: 30%;
             }
 }
         .three { grid-area: three;
 
             display: flex;
             flex-direction: column; 
+            height: 80%;
   
 
             h1 {
@@ -1896,8 +2093,8 @@ svg {
                 left: 10%;
                 font-family: "Inter", sans-serif;
                 width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
+                margin-top: 10%;
+                margin-bottom: 30%;
             }
         
 }
@@ -1909,13 +2106,13 @@ svg {
             flex-direction: column; 
             height: fit-content;
             border-radius: 20px;
+            bottom: 10%;
             /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
             p {
 
                 position: relative;
                 margin: auto;
                 width: 90%;
-                background-color: #2C4BFF;
                 bottom: 0;
                 height: fit-content;
                 margin-bottom: 5%;
@@ -1925,237 +2122,22 @@ svg {
 
                 /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
 
-                font-family: 'Inter';
+                font-family: "Inter", sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 30px;
                 line-height: 40px;
                 /* or 286% */
 
-                color: #000000;
+                color: #FFFFFF;
             }
 
          }
 
-         .BakeliSection {
-            top: -1000px;
-         }
 
-
-
-    }
-
-    
-    @media (max-width: 1660px) and (min-width:1300px) {
-        .Casestudy {
-            top: 1300px;
-         
+        .BakeliSection {
+            bottom:50%;
         }
-    
-    }
-
-    @media (max-width: 1300px) {
-
-        .Casestudy {
-            top: 1000px;
-            background-color: transparent;
-        }
-
-        .CasTextContainer {
-            p {
-            margin: auto;
-            width: 85%;
-            left: 0;
-            }
-            h4 {
-                left: 8%;
-            }
-        }
-
-        .ImgCompany {
-            left: 7%;
-        }
-
-
-
-        .infoGrid {
-            display: grid;
-            margin: auto;
-            width: 90%;
-            position: relative;
-            column-gap: 0;
-            row-gap: 0;
-
-            bottom: 20%;
-            margin-top: 20%;
-         
-            height: fit-content;
-
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-            grid-template-areas:
-            ". . . ."
-            "one one one one"
-            "two two three three"
-            "four four four four"
-            ". . . .";
-            
-            column-gap: 15px;
-            row-gap: 15px;
-
-
-            
-        }
-
-        .one { 
-            grid-area: one;
-            display: flex;
-            flex-direction: column; 
-            height: fit-content;
-
-            p {
-                position: relative;
-                margin: auto;
-                width: 90%;
-                background-color: #2C4BFF;
-                bottom: 0;
-                height: fit-content;
-                margin-bottom: 5%;
-                
-
-                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
-
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 30px;
-                line-height: 40px;
-                /* or 286% */
-
-                color: #000000;
-
-
-
-            }
-
-            h1 {
-                position: relative;
-                bottom: 10%;
-                left: 12%;
-                margin-top: 5%;
-                margin-bottom: 5%;
-
-                /* +5 */
-
-
-
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 100px;
-                line-height: 77px;
-
-                color: #000000;
-
-
-    
-            }
-        }
-        .two { 
-            grid-area: two;
-            display: flex;
-            flex-direction: column; 
-            margin: 0;
-
-            h1 {
-                top: 0;
-                margin-top: 10%;
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 100px;
-                line-height: 77px;
-            }
-
-            p {
-                position: relative;
-                top: 10%;
-                left: 10%;
-                font-family: "Inter", sans-serif;
-                width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
-            }
-}
-        .three { grid-area: three;
-
-            display: flex;
-            flex-direction: column; 
-  
-
-            h1 {
-                top: 0;
-                margin-top: 10%;
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 100px;
-                line-height: 77px;
-            }
-
-            p {
-                position: relative;
-                top: 10%;
-                left: 10%;
-                font-family: "Inter", sans-serif;
-                width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
-            }
-        
-}
-        .four { 
-            grid-area: four;
-            position:relative;
-
-            display: flex;
-            flex-direction: column; 
-            height: fit-content;
-            border-radius: 20px;
-            /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
-            p {
-
-                position: relative;
-                margin: auto;
-                width: 90%;
-                background-color: #2C4BFF;
-                bottom: 0;
-                height: fit-content;
-                margin-bottom: 5%;
-                margin-top: 5%;
-                left: 0;
-                
-
-                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
-
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 30px;
-                line-height: 40px;
-                /* or 286% */
-
-                color: #000000;
-            }
-
-         }
-
-         .BakeliSection {
-            top: -1000px;
-         }
-
-
 
     }
 
@@ -2163,9 +2145,23 @@ svg {
     @media (max-width: 1000px) {
 
 
+        .CasTitle {
+        
+        bottom: 0.5%;
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        color: #000000;
+
+
+        }
         .CasTextContainer {
             h4 {
-                font-size: 30px;
+                font-size: 35px;
             }
 
             p {
@@ -2176,8 +2172,8 @@ svg {
             font-family: "Inter";
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
+            font-size: 30px;
+            line-height: 40px;
             /* or 162% */
 
             color: #000000;
@@ -2190,7 +2186,7 @@ svg {
             margin-top: 40%;
         }
         .four { 
-            bottom: 50px;
+            bottom: 50%;
             margin-top: 5%;
         }
     }
@@ -2209,7 +2205,7 @@ svg {
             /* À propos de l'application: */
 
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
@@ -2220,17 +2216,16 @@ svg {
 
         }
 
-        .infoGrid {
-            bottom: 15%;
-        }
         .four {
             bottom: 100px;
+            border-radius: 20px;
             p {
                 font-size: 16px;
             }
         }
 
         .one {
+            border-radius: 20px;
             p {
                 font-size: 14px;
             }
@@ -2238,7 +2233,8 @@ svg {
 
         .two {
 
-            height: 70%;
+            height: 50%;
+            border-radius: 20px;
             h1 {
                 font-size: 64px;
 
@@ -2264,7 +2260,8 @@ svg {
         }
 
         .three {
-            height: 70%;
+            height: 50%;
+            border-radius: 20px;
             h1 {
                 font-size: 64px;
             }
@@ -2276,13 +2273,59 @@ svg {
             }
         }
         .BakeliSection {
-            bottom:40%;
+            bottom:60%;
         }
     }
 
+    @media (max-width: 900px) {
+        .Casestudy {
+            top: 0;
+            bottom: 20%;
+        }
+    }
+
+    @media (max-width: 600px) {
+      .ImgCompany {
+    
+
+        width: 220px;
+        height: 45px;
+        bottom: 0.5%;
+
+      }
+
+      .CasTextContainer {
+        h4 {
+            font-size: 30px;
+        }
+
+        p {
+         /* La mise en œuvre de cette plateforme d'apprentissage est soutenue par le programme "Réussir au Sénégal" de la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, financé par le ministère fédéral allemand de la Coopération économique et du Développement (BMZ) et l'État libre de Bavière. DEFARU c’est une application ou nous a ANDU ont a creér LMS pour leur multiples formations. */
+
+
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 162% */
+
+        color: #000000;
+
+
+        }
+    }
+
+      .imgBakeli {
+        width: 151px;
+        width: 75px;
+        padding-bottom: 1%;
+      }
+    }
     @media (max-width: 500px) {  
         .two {
-            height: 60%;
+            height: 50%;
 
             p {
                 line-height: 20px;
@@ -2290,7 +2333,7 @@ svg {
         }
 
         .three {
-            height: 60%;
+            height: 50%;
             margin-top: 0;
             p {
                 line-height: 20px;
@@ -2298,34 +2341,31 @@ svg {
         }
 
         .four {
-            bottom: 170px;
+            bottom: 50%;
         }
 
         .infoGrid {
             width: 95%;
         }
            .BakeliSection {
-            bottom:95%;
+            bottom:45%;
         }
     }
 
     @media (max-width: 400px) {  
 
-        .four {
-            bottom: 200px;
-        }
 
         .two {
-            border-radius: 30px;
+            border-radius: 20px;
             height: 50%;
         }
         .three {
-            border-radius: 30px;
+            border-radius: 20px;
             height: 50%;
         }
 
                 .BakeliSection {
-            bottom:90%;
+            bottom:40%;
         }
     }
    
@@ -2344,10 +2384,11 @@ svg {
         /* Screenshot 2024-06-25 at 13.05.04 1 */
 
     position: relative;
-    width: 186px;
-    height: 96px;
+    width: 166px;
+    height: 76px;
     left: 5%;
-    margin-top: 8%;
+    margin-top: 5%;
+    margin-bottom: 2%;
   
 
     }
@@ -2363,10 +2404,11 @@ svg {
 
 
     .Tarifs {
-        position: relative;
-        height: fit-content;
+        height: 100%;
         width: 100%;
-        top: 90%;
+        padding-bottom: 15%;
+        padding-top: 100px; /* Adjust this value as needed */
+        overflow: visible;
 
         h1 {
             /* Tarifs */
@@ -2375,7 +2417,7 @@ svg {
         top: 0;
         text-align: center;
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 64px;
@@ -2396,7 +2438,7 @@ svg {
         margin-bottom: 0;
 
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
@@ -2421,7 +2463,7 @@ svg {
     margin-top: 20px; 
     color: black;
 
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -2447,7 +2489,7 @@ svg {
        /* Lorem ipsum dolor */
 
 
-        font-family: 'Inter';
+        font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
@@ -2482,7 +2524,7 @@ svg {
         color: black;
 
 
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -2583,7 +2625,7 @@ svg {
         /* Voir les courses */
         h5 {
             text-align: left;
-            font-family: 'Inter';
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 36px;
@@ -2704,10 +2746,15 @@ svg {
         height: fit-content;
     }
 
-    @media (max-width: 1660px) {
-        .Tarifs {
-            top: 1700px;
-        }
+    .footer {
+        position:sticky;
+        width: 100%;
+        height: 20%;
+        background-color: #419488;
+    }
+
+    @media (max-width: 1400px) {
+     
     }
 
     @media (max-width: 1500px) {
@@ -2732,9 +2779,7 @@ svg {
 
     @media (max-width: 1300px) {
 
-        .Tarifs {
-           top: 1000px;
-        }
+
         .TarifContainer {
             position: relative;
             width: 90%;
@@ -2752,7 +2797,6 @@ svg {
     }
 
     .Tarifs {
-    top: 3000px ;
     h4 { 
         width: 100%;
         margin: auto;
@@ -2777,19 +2821,8 @@ svg {
 
 }
 
-@media (max-width: 1000px) {
-
-    .Tarifs {
-       top: 2400px;
-    }
-
-}
-
 @media (max-width: 800px) {
 
-    .Tarifs {
-        top: 1600px;
-     }
  
 
     .TarifContainer { 
@@ -2818,10 +2851,6 @@ svg {
             width: 99%;
         }
 
-        .Tarifs {
-            top: 2000px;
-         }
-
     .t1, .t2, .t3, .t4, .t5, .t6 {
         font-size: 14px;
     }
@@ -2831,9 +2860,12 @@ svg {
     }
 }
 
+@media (max-width: 700px) {
+
+
 @media (max-width: 500px) {
     .Tarifs {
-
+        top: 100px;
         h1 {
             /* Tarifs */
 
@@ -2889,7 +2921,7 @@ svg {
         h3 {
             /* Open Source */
 
-
+        width: 80%;
         font-family: "Inter", sans-serif;
         font-style: normal;
         font-weight: 700;
@@ -2903,7 +2935,6 @@ svg {
 
         h2 {
             /* Free */
-
         top: 35%;
         font-family: "Inter", sans-serif;
         font-style: normal;
@@ -2921,6 +2952,7 @@ svg {
 
             height: 15.35%;
             top: 40%;
+            width: 73.42%;
 
             svg {
                 display: none;
@@ -2929,7 +2961,7 @@ svg {
             h5 {
                 /* Voir les courses */
 
-            text-indent: 10%;
+            text-indent: 5%;
             width: 100%;
             font-family: "Inter", sans-serif;
             font-style: normal;
@@ -2945,3 +2977,26 @@ svg {
     
     }
 }
+
+@media (max-width: 390px) {
+}
+
+/* Default container height */
+.container {
+    height: 75%;
+    border: 0;
+}
+
+/* Extra small screen adjustment */
+@media (max-width: 340px) {
+
+    .Tarifs {
+        top: 500px;
+    }
+    .container {
+        height: 800px;
+    }
+}
+
+}
+

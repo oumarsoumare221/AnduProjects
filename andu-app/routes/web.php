@@ -45,3 +45,6 @@ Route::get('/landing', [LandingPageController::class, 'show']);
 Route::get('/case-studies', [CaseStudyController::class, 'index']);
 //route tarifs
 Route::resource('tarifs', TarifController::class);
+//contacts
+Route::post('/submit-contact', [ContactController::class, 'store'])->name('submit-contact');
+

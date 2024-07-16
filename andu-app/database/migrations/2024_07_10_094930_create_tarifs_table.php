@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('type'); // e.g., Open Source, Établissement Public, Établissement Privé
             $table->string('price'); // e.g., Free, 50,000 XOF, 100,000 XOF
-            $table->text('description')->nullable()->after('price');
+            $table->text('description')->nullable();
+            $table->text('advantage')->nullable();
             $table->timestamps();
         });
     }
