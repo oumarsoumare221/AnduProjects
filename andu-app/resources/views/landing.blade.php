@@ -538,11 +538,11 @@
     $tarif9 = null;
 
     foreach ($tarifs as $tarif) {
-    if ($tarif->id == 1) {
+    if ($tarif->id == 7) {
     $tarif1 = $tarif;
-    } elseif ($tarif->id == 2) {
+    } elseif ($tarif->id == 8) {
     $tarif2 = $tarif;
-    } elseif ($tarif->id == 3) {
+    } elseif ($tarif->id == 9) {
     $tarif3 = $tarif;
     } elseif ($tarif->id == 4) {
     $tarif4 = $tarif;
