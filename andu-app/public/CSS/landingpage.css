@@ -25,6 +25,7 @@ body {
 .bg {
     background-color:#EEEEEE; 
 }
+
 body {
     
     font-family: "Inter", sans-serif;
@@ -35,6 +36,7 @@ body {
     width: 100vw;
     display: block;
     overflow-x: hidden;
+    min-height: 100vh;
 
 }
 
@@ -87,20 +89,11 @@ color: #000000;
 }
 
 main {
-    height: fit-content;
+    height: max-content;
     width: 100%;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    row-gap: 100px;
-    grid-template-areas:
-    "hero"
-    "aboutus"
-    "historyContainer"
-    "container"
-    "gap-between""
-    "ProduitContainer"
-    "Casestudy"
-    "Tarifs" ;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
 }
 
 
@@ -118,7 +111,8 @@ main {
         "container-fluid"
         "ProduitContainer"
         "Casestudy"
-        "Tarifs" ;
+        "Tarifs"
+        "footer" ;
     }
     
 }
@@ -526,9 +520,13 @@ svg {
     .hero {
         display: block;
         width: 92.8%;
-        height: calc(100vh - 10px);
+        height: calc(80vh - 10px);
         overflow: visible;
         gap: 0;
+        align-self: center;
+        margin: auto;
+        right: 0;
+        left: 0;
     }
 
     .ImagesContainer {
@@ -550,13 +548,7 @@ svg {
 
 
     
-        .hero {
-            width: 95%;
-            align-self: center;
-            margin: auto;
-            right: 0;
-            left: 0;
-        }
+    
 
     #heroImg {
         display: none;
@@ -641,7 +633,7 @@ svg {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .ImagesContainer {
         height: 50%; /* Adjust the height for smaller screens */
     }
@@ -653,13 +645,6 @@ svg {
      
        
         }
-
-    .hero {
-        width: 95%;
-        margin: auto;
-        left: 0;
-        top: 0;
-    }
     .toggleSidebar {
         width: 40px;
         height: 40px;
@@ -763,6 +748,29 @@ svg {
     .heroText h3 {
         font-size: 16px;
     }
+}
+
+@media (max-width: 350px) {
+    .hero {
+        display: block;
+        width: 92.8%;
+        height: calc(100vh - 1px);
+        overflow: visible;
+        gap: 0;
+        align-self: center;
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .aboutus {
+        padding-top: 14%;
+    }
+
+    .timeline {
+        margin-top: 15%;
+    }
+
 }
 
 
@@ -1156,17 +1164,22 @@ svg {
             right: -55.8px;
         }
 
+        .aboutus {
+            position: relative;
+            height: fit-content;
+            padding-bottom: 10%;
+        }
 
         @media (max-width: 1300px) {
             .aboutParagraph {
                 text-align: left;
-                font-size: 2.875vw;
+                
                 line-height: auto;
 
             }
 
-            .aboutTitle {
-                font-size: 4.275vw;
+            .aboutus {
+                margin-top: 12%;
             }
 
             .historyContainer {
@@ -1448,14 +1461,12 @@ svg {
     }
 
     @media (max-width: 1200px) {
-        .aboutus {
-            position: relative;
-            top: 5%;
-        }
+
     }
 
     @media (max-width: 800px) {
         .aboutus {
+            margin-top: 0;
             position: relative;
         }
         .aboutTitle {
@@ -1664,12 +1675,11 @@ svg {
 
     .Casestudy {
         display: block;
-        height: 3000px;
+        height: 100%;
         width: 100%;
         position: relative;
         padding-top: 5%;
         margin-top: 5%;
-        top: 50%;
 
 
     }
@@ -1743,7 +1753,7 @@ svg {
         margin: auto;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr ;
-        height: 23%;
+        min-height: 750px;
         width: 70%;
         position: relative;
         padding:0;
@@ -1924,14 +1934,6 @@ svg {
          }
 
 
-    @media (max-width: 1660px) and (min-width:1300px) {
-        .Casestudy {
-            top: 1300px;
-         
-        }
-    
-    }
-
     @media (max-width: 1300px) {
 
         .Casestudy {
@@ -1947,6 +1949,7 @@ svg {
             }
             h4 {
                 left: 8%;
+                width: 85%;
             }
         }
 
@@ -1958,25 +1961,25 @@ svg {
 
         .infoGrid {
             display: grid;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-top: 0;
+
             width: 90%;
             position: relative;
             column-gap: 0;
             row-gap: 0;
 
-            bottom: 20%;
-            margin-top: 20%;
          
             height: fit-content;
 
             display: grid; 
             grid-template-columns: 1fr 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr; 
             grid-template-areas:
             "one one one one"
-            "one one one one"
             "two two three three"
-            "four four four four"
             "four four four four";
             
             column-gap: 15px;
@@ -2042,218 +2045,6 @@ svg {
         .two { 
             grid-area: two;
             display: flex;
-            flex-direction: column;
-            height: 80%;
-            margin: 0;
-
-            h1 {
-                top: 0;
-                margin-top: 10%;
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 100px;
-                line-height: 77px;
-            }
-
-            p {
-                position: relative;
-                left: 10%;
-                font-family: "Inter", sans-serif;
-                width: 90%;
-                margin-top: 20%;
-                margin-bottom: 20%;
-            }
-}
-        .three { grid-area: three;
-
-            display: flex;
-            flex-direction: column;
-            height: 80%; 
-  
-
-            h1 {
-                top: 0;
-                margin-top: 10%;
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 100px;
-                line-height: 77px;
-            }
-
-            p {
-                position: relative;
-                top: 10%;
-                left: 10%;
-                font-family: "Inter", sans-serif;
-                width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
-            }
-        
-}
-        .four { 
-            grid-area: four;
-            position:relative;
-
-            bottom: 20%;
-            display: flex;
-            flex-direction: column; 
-            height: fit-content;
-            border-radius: 20px;
-            /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
-            p {
-
-                position: relative;
-                margin: auto;
-                width: 90%;
-                bottom: 0;
-                height: fit-content;
-                margin-bottom: 5%;
-                margin-top: 5%;
-                left: 0;
-                
-
-                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
-
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 30px;
-                line-height: 40px;
-                /* or 286% */
-
-                color: #FFFFFF;
-            }
-
-         }
-
-
-
-
-    }
-
-    
-    @media (max-width: 1660px) and (min-width:1300px) {
-        .Casestudy {
-            top: 1300px;
-         
-        }
-    
-    }
-
-    @media (max-width: 1300px) {
-
-        .Casestudy {
-            top: 800px;
-            background-color: transparent;
-        }
-
-        .CasTextContainer {
-            p {
-            margin: auto;
-            width: 85%;
-            left: 0;
-            }
-            h4 {
-                left: 8%;
-                width: 85%;
-            }
-        }
-
-        .ImgCompany {
-            left: 7%;
-        }
-
-
-
-        .infoGrid {
-            display: grid;
-            margin: auto;
-            width: 90%;
-            position: relative;
-            column-gap: 0;
-            row-gap: 0;
-
-            bottom: 20%;
-            margin-top: 20%;
-         
-            height: fit-content;
-
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-            grid-template-areas:
-            ". . . ."
-            "one one one one"
-            "two two three three"
-            "four four four four"
-            ". . . .";
-            
-            column-gap: 15px;
-            row-gap: 15px;
-
-
-            
-        }
-
-        .one { 
-            grid-area: one;
-            display: flex;
-            flex-direction: column; 
-            height: fit-content;
-
-            p {
-                position: relative;
-                margin: auto;
-                width: 90%;
-                bottom: 0;
-                height: fit-content;
-                margin-bottom: 5%;
-                
-
-                /* modules de formation ont été intégrés dans un système de gestion de l'apprentissage (LMS) par ANDU, où ils ont mis l'accent sur l'importance des Soft Skills pour réussir professionnellement, trouver un emploi et s'intégrer durablement dans le milieu du travail. */
-
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 30px;
-                line-height: 40px;
-                /* or 286% */
-
-                color: #000000;
-
-
-
-            }
-
-            h1 {
-                position: relative;
-                bottom: 10%;
-                left: 12%;
-                margin-top: 5%;
-                margin-bottom: 5%;
-
-                /* +5 */
-
-
-
-                font-family: "Inter", sans-serif;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 100px;
-                line-height: 77px;
-
-                color: #000000;
-
-
-    
-            }
-        }
-        .two { 
-            grid-area: two;
-            display: flex;
             flex-direction: column; 
             margin: 0;
             height: 80%;
@@ -2275,8 +2066,8 @@ svg {
                 left: 10%;
                 font-family: "Inter", sans-serif;
                 width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
+                margin-top: 10%;
+                margin-bottom: 30%;
             }
 }
         .three { grid-area: three;
@@ -2302,8 +2093,8 @@ svg {
                 left: 10%;
                 font-family: "Inter", sans-serif;
                 width: 90%;
-                margin-top: 20%;
-                margin-bottom: 10%;
+                margin-top: 10%;
+                margin-bottom: 30%;
             }
         
 }
@@ -2315,6 +2106,7 @@ svg {
             flex-direction: column; 
             height: fit-content;
             border-radius: 20px;
+            bottom: 10%;
             /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
             p {
 
@@ -2424,9 +2216,6 @@ svg {
 
         }
 
-        .infoGrid {
-            bottom: 15%;
-        }
         .four {
             bottom: 100px;
             border-radius: 20px;
@@ -2615,13 +2404,11 @@ svg {
 
 
     .Tarifs {
-        position: relative;
-        height: 3000px;
+        height: 100%;
         width: 100%;
-        top: 100px;
-       
-
-        overflow: hidden;
+        padding-bottom: 15%;
+        padding-top: 100px; /* Adjust this value as needed */
+        overflow: visible;
 
         h1 {
             /* Tarifs */
@@ -2959,10 +2746,15 @@ svg {
         height: fit-content;
     }
 
-    @media (max-width: 1660px) {
-        .Tarifs {
-            top: 100%;
-         }
+    .footer {
+        position:sticky;
+        width: 100%;
+        height: 20%;
+        background-color: #419488;
+    }
+
+    @media (max-width: 1400px) {
+     
     }
 
     @media (max-width: 1500px) {
@@ -2987,9 +2779,7 @@ svg {
 
     @media (max-width: 1300px) {
 
-        .Tarifs {
-           top: 2000px;
-        }
+
         .TarifContainer {
             position: relative;
             width: 90%;
@@ -3071,9 +2861,7 @@ svg {
 }
 
 @media (max-width: 700px) {
-    .Tarifs {
-        height: 2000px;
-    }
+
 
 @media (max-width: 500px) {
     .Tarifs {
