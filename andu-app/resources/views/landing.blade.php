@@ -23,6 +23,21 @@
 
 <body class="bg">
 
+    <div class="sidebar show">
+        <div class="greenblock">
+            <button class="close close-sidebar">
+            </button>
+        </div>
+        <br>
+
+        <div class="sidebar-links">
+            <a href="http://127.0.0.1:8000/"> Home</a>
+            <a href="#about">Qui Sommes-Nous</a>
+            <a href="#products">Nos Produits</a>
+            <a href="#cases">Études de cas</a>
+            <a href="#pricing">Tarifs</a>
+        </div>
+    </div>
     <div class="NavBarContainer">
         <img id="AnduLogo" class = "img-responsive" src="{{ asset('../logoAndu.jpg') }}" alt="ANDU Logo" sizes="(max-width: 600px) 480px,
             800px">
@@ -37,11 +52,11 @@
         <div class="button-Rendez">
             <p>Prenez rendez-vous</p>
         </div>
-        <svg class="toggleSidebar" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="toggleSidebar menu_toggle" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="#353840" />
-        </svg>
+        </button>
     </div>
-
+    
     <main class="w-100 d-flex flex-column ">
     <div class="hero">
         <div 
@@ -720,11 +735,46 @@
 </div>
 </main>
     <footer class="footer">
-            
+        <img id="footer-logo" src="{{ asset('../storage/images/Screenshot 2024-06-214 at 16.25.21 2.png') }}" alt="ANDU Logo">
+
+        <div class="footer-links">
+            <a href="http://127.0.0.1:8000/"> Home</a>
+            <a href="#about">Qui Sommes-Nous</a>
+            <a href="#products">Nos Produits</a>
+            <a href="#cases">Études de cas</a>
+            <a href="#pricing">Tarifs</a>
+        </div>  
+        <div class="footer-p">
+            Lörem ipsum od ohet dilogi. 
+            Bell trabel, samuligt, ohöbel utom diska. 
+            Jinesade bel när feras redorade i belogi. 
+            FAR paratyp i muvåning, och pesask vyfisat. 
+            Viktiga poddradio har un mad och inde. 
+        </div>
+        <div class="footer-icons">
+
+        </div>
     </footer>
+    <div class="form">
+        
+    </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+	const menu_toggle = document.querySelector('.menu-toggle');
+		const sidebar = document.querySelector('.sidebar');
+
+		menu_toggle.addEventListener('click', () => {
+			menu_toggle.classList.toggle('is-active');
+			sidebar.classList.toggle('is-active');
+		});
+    </script>
+    <script>
+      AOS.init({
+  disable: function() {
+    var maxWidth = 800;
+    return window.innerWidth < maxWidth;
+  }
+});
     </script>
 </body>
 
