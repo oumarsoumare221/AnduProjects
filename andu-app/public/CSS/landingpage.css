@@ -2157,6 +2157,10 @@ svg {
 <<<<<<< HEAD
 =======
     @media (max-width: 1400px) {
+
+        .Circle {
+            display: none;
+        }
         .one {
             p {
                 font-size: 20px;
