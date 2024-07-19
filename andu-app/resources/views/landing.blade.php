@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ url('CSS/landingpage.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <!-- Inclure la bibliothèque Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
