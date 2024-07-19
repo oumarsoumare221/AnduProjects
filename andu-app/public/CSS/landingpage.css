@@ -37,10 +37,7 @@ body {
     display: block;
     overflow-x: hidden;
     min-height: 100vh;
-<<<<<<< HEAD
-=======
     background-color:#EEEEEE; 
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 
 }
 
@@ -103,17 +100,11 @@ main {
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
-<<<<<<< HEAD
-}
-
-
-=======
    overflow-x: hidden;
 }
 
 
 
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 @media (max-width:1300px) {
     main {
         height: fit-content;
@@ -135,11 +126,7 @@ main {
 }
 .toggleSidebar {
 position: sticky;
-<<<<<<< HEAD
-left: 82.5%;
-=======
 left: 92.5%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 /* Screenshot 2024-06-24 at 16.25.21 1 */
 display: none;
 top: 1%;
@@ -165,8 +152,6 @@ right: 25%;
     opacity: 1;
     width: 137px;
     height: 42px;
-<<<<<<< HEAD
-=======
     overflow: hidden;
 }
 
@@ -185,7 +170,6 @@ right: 25%;
         color: #000000;
 
     }
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 }
 
 }
@@ -464,10 +448,6 @@ color: #000000;
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 @media (max-width:390px) {
     #heroImg {
         width: 92.56%;
@@ -528,11 +508,7 @@ color: #000000;
         height: 100%;
         white-space: normal;
         position: relative;
-<<<<<<< HEAD
-        bottom: 20%;
-=======
         bottom: 10px;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
   
 
     }
@@ -777,8 +753,6 @@ svg {
 
 }
 
-<<<<<<< HEAD
-=======
 @media (max-width: 830px) {
     .toggleSidebar {
         width: 40px;
@@ -789,7 +763,6 @@ svg {
         }
 }
 
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 @media (max-width: 800px) {
     .ImagesContainer {
         height: 50%; /* Adjust the height for smaller screens */
@@ -806,12 +779,8 @@ svg {
         width: 40px;
         height: 40px;
         max-width: 100%;
-<<<<<<< HEAD
-        left: 82.5%;
-=======
         left: 88.5%;
         bottom: 0;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
         .heroText {
             width: 100%;
@@ -873,11 +842,7 @@ svg {
         .DemoButton {
             width: 60%;
             border-radius: 5px ;
-<<<<<<< HEAD
-            height: 40%;
-=======
             height: 50%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             align-self: center;
             margin-top: 5% ;
             margin-left: 25%;
@@ -900,11 +865,7 @@ svg {
     .toggleSidebar {
         width: 30px;
         height: 30px;
-<<<<<<< HEAD
-        left: 82.5%;
-=======
         left: 88%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
 
     .heroText {
@@ -1339,10 +1300,7 @@ svg {
             position: relative;
             height: fit-content;
             padding-bottom: 10%;
-<<<<<<< HEAD
-=======
             padding-top: 10%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
 
         @media (max-width: 1300px) {
@@ -1354,11 +1312,7 @@ svg {
             }
 
             .aboutus {
-<<<<<<< HEAD
-                margin-top: 12%;
-=======
                 margin-top: 15%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             }
 
             .historyContainer {
@@ -1392,14 +1346,10 @@ svg {
 
     @media (max-width: 600px) {
         .timeline {
-<<<<<<< HEAD
-           
-=======
            top: 20%;
         }
         .container {
             margin-top: 40%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
     }
 
@@ -1488,11 +1438,7 @@ svg {
 
         position: relative;
         text-align: center;
-<<<<<<< HEAD
-        bottom: 50px;
-=======
         margin-bottom: 5%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 
         font-family: "Inter", sans-serif;
         font-style: normal;
@@ -1656,11 +1602,7 @@ svg {
 
     @media (max-width: 800px) {
         .aboutus {
-<<<<<<< HEAD
-            margin-top: 0;
-=======
             margin-top: 5%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             position: relative;
         }
         .aboutTitle {
@@ -1718,11 +1660,7 @@ svg {
 
         .aboutus {
             position: relative;
-<<<<<<< HEAD
-            top: 5%;
-=======
             margin-top: 35%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
 
         #AnduLogo {
@@ -1736,11 +1674,7 @@ svg {
         .toggleSidebar {
             top:0;
             bottom: 0;
-<<<<<<< HEAD
-            left: 80%;
-=======
             left: 86%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
     }
 
@@ -1749,8 +1683,6 @@ svg {
         .ProduitResContainerTwo {
             top: 0;
             margin-top: 500px;
-<<<<<<< HEAD
-=======
             
         }
     }
@@ -1759,7 +1691,6 @@ svg {
         .ProduitResContainerTwo {
             top: 0;
             margin-top: 550px;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             
         }
     }
@@ -1894,11 +1825,7 @@ svg {
         width: 100%;
         position: relative;
         padding-top: 5%;
-<<<<<<< HEAD
-        margin-top: 5%;
-=======
         margin-top: 10%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 
 
     }
@@ -2154,8 +2081,6 @@ svg {
          }
 
 
-<<<<<<< HEAD
-=======
     @media (max-width: 1400px) {
 
         .Circle {
@@ -2174,7 +2099,6 @@ svg {
         }
     }
 
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
     @media (max-width: 1300px) {
 
         .Casestudy {
@@ -2190,11 +2114,7 @@ svg {
             }
             h4 {
                 left: 8%;
-<<<<<<< HEAD
-                width: 85%;
-=======
                 width: 95%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             }
         }
 
@@ -2352,11 +2272,7 @@ svg {
             flex-direction: column; 
             height: fit-content;
             border-radius: 20px;
-<<<<<<< HEAD
-            bottom: 10%;
-=======
             bottom: 20%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             /* Avec Bakeli, intégrer la fonctionnalité multi-auteurs dans leur LMS a été un défi majeur pour permettre une collaboration efficace sur le contenu pédagogique, tout en assurant une expérience utilisateur optimale. */
             p {
 
@@ -2432,16 +2348,7 @@ svg {
             }
         }
         .Casestudy {
-<<<<<<< HEAD
-            top: 1000px;
-            margin-top: 40%;
-        }
-        .four { 
-            bottom: 50%;
-            margin-top: 5%;
-=======
             top: 200px;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
     }
 
@@ -2471,10 +2378,6 @@ svg {
         }
 
         .four {
-<<<<<<< HEAD
-            bottom: 100px;
-=======
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             border-radius: 20px;
             p {
                 font-size: 16px;
@@ -2490,11 +2393,7 @@ svg {
 
         .two {
 
-<<<<<<< HEAD
-            height: 50%;
-=======
             height: 60%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             border-radius: 20px;
             h1 {
                 font-size: 64px;
@@ -2520,11 +2419,7 @@ svg {
         }
 
         .three {
-<<<<<<< HEAD
-            height: 50%;
-=======
             height: 60%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
             border-radius: 20px;
             h1 {
                 font-size: 64px;
@@ -2541,22 +2436,14 @@ svg {
             bottom: 40%;
         }
         .BakeliSection {
-<<<<<<< HEAD
-            bottom:60%;
-=======
             bottom:70%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
     }
 
     @media (max-width: 900px) {
         .Casestudy {
             top: 0;
-<<<<<<< HEAD
-            bottom: 20%;
-=======
             bottom: 60%;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         }
     }
 
@@ -2683,12 +2570,8 @@ svg {
         height: 100%;
         width: 100%;
         padding-bottom: 15%;
-<<<<<<< HEAD
-        padding-top: 100px; /* Adjust this value as needed */
-=======
         padding-top: 15%;
     /* Adjust this value as needed */
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         overflow: visible;
 
         h1 {
@@ -3030,14 +2913,6 @@ svg {
     .footer {
         position:sticky;
         width: 100%;
-<<<<<<< HEAD
-        height: 20%;
-        background-color: #419488;
-    }
-
-    @media (max-width: 1400px) {
-     
-=======
         height: 30.5%;
         background-color: #419488;
         display: flex;
@@ -3103,7 +2978,6 @@ svg {
         gap: 15px;
         padding-top: 2%;
         justify-content: center;
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
     }
 
     @media (max-width: 1500px) {
@@ -3295,14 +3169,6 @@ svg {
     }
 }
 
-<<<<<<< HEAD
-@media (max-width: 700px) {
-
-
-@media (max-width: 500px) {
-    .Tarifs {
-        top: 100px;
-=======
 @media (max-width: 900px) {
     .Tarifs {
         margin-top: 0%;
@@ -3317,7 +3183,6 @@ svg {
 }
 @media (max-width: 500px) {
     .Tarifs {
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
         h1 {
             /* Tarifs */
 
@@ -3430,8 +3295,6 @@ svg {
     }
 }
 
-<<<<<<< HEAD
-=======
 @media (max-width: 400px) {
     
     .ImagesContainer {
@@ -3443,7 +3306,6 @@ svg {
         border-radius: 5px;
     }
 }
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 @media (max-width: 390px) {
 }
 
@@ -3456,17 +3318,6 @@ svg {
 /* Extra small screen adjustment */
 @media (max-width: 340px) {
 
-<<<<<<< HEAD
-    .Tarifs {
-        top: 500px;
-    }
-    .container {
-        height: 800px;
-    }
-}
-
-}
-=======
     .container {
         height: 800px;
     }
@@ -3486,5 +3337,4 @@ svg {
 }
 
 
->>>>>>> 7db1ee81b77078e503db593b7073adcd0d53ed1f
 
