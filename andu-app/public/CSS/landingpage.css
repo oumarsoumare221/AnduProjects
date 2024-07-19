@@ -175,6 +175,7 @@ right: 25%;
 }
 
 #sidebar {
+    display: none;
     position: absolute;
     height: 100%;
     width: 40%;
@@ -239,6 +240,7 @@ right: 25%;
 
 
 #sidebar.open {
+    display: block;
 	transform: translateX(0);
 }
 
